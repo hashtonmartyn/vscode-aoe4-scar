@@ -18,7 +18,7 @@ end
 ---@param AIPlayer_SetMarkerToUpdateCachedPathToHQ(Player Void
 ---@param marker MarkerID
 ---@param pathCheckIntervalSecs Real
-function 0(AIPlayer_SetMarkerToUpdateCachedPathToHQ(Player,marker,pathCheckIntervalSecs)
+function 0(AIPlayer_SetMarkerToUpdateCachedPathToHQ(Player, marker, pathCheckIntervalSecs)
 end
 
 ---comment Setup a cached path that periodically updates its path between specified marker and position. This allows the AI to detect whenever pathability is changed to between the marker and position (e.g. being walled off).
@@ -26,13 +26,13 @@ end
 ---@param toMarker MarkerID
 ---@param fromPosition Position
 ---@param pathCheckIntervalSecs Real
-function 0(AIPlayer_SetMarkerToUpdateCachedPathToPosition(Player,toMarker,fromPosition,pathCheckIntervalSecs)
+function 0(AIPlayer_SetMarkerToUpdateCachedPathToPosition(Player, toMarker, fromPosition, pathCheckIntervalSecs)
 end
 
 ---comment Set whether or not an action marker is visible.
 ---@param name String
 ---@param visible Boolean
-function ActionMarker_SetVisible(name,visible)
+function ActionMarker_SetVisible(name, visible)
 end
 
 ---comment Start the given action marker's FX.
@@ -49,7 +49,7 @@ end
 ---@param pPlayer PlayerID
 ---@param ebp ScarEntityPBG
 ---@param occupancyOverride Integer
-function AI_AddHeavyCoverEbpOccupancyOverride(pPlayer,ebp,occupancyOverride)
+function AI_AddHeavyCoverEbpOccupancyOverride(pPlayer, ebp, occupancyOverride)
 end
 
 ---comment Adds a prefab to the AIPrefab system. Target must be set up in a follow up call with returned ID
@@ -61,14 +61,14 @@ end
 ---@param maxDifficulty Integer
 ---@param canReassign Boolean
 ---@param active Boolean
-function AI_AddPrefab(player,name,behaviourName,radius,minDifficulty,maxDifficulty,canReassign,active)
+function AI_AddPrefab(player, name, behaviourName, radius, minDifficulty, maxDifficulty, canReassign, active)
 end
 
 ---comment Log the combat result features of all squads owned by a player for a given conflict
 ---@param conflictID Integer
 ---@param playerA PlayerID
 ---@param playerB PlayerID
-function AI_CacheCombatFeatureTrainingData(conflictID,playerA,playerB)
+function AI_CacheCombatFeatureTrainingData(conflictID, playerA, playerB)
 end
 
 ---comment Get combat fitness estimate. Return value will be between 1.0 and 0.0. 1.0 means teamA wins outright, 0.0 means teamB wins outright.
@@ -81,13 +81,13 @@ end
 ---@param aiPlayerA PlayerID
 ---@param playerB PlayerID
 ---@param playerAIsAttacker Boolean
-function AI_CalculateCombatFitnessEstimate(teamASquads,teamAEntities,teamAPBGs,teamBSquads,teamBEntities,teamBPBGs,aiPlayerA,playerB,playerAIsAttacker)
+function AI_CalculateCombatFitnessEstimate(teamASquads, teamAEntities, teamAPBGs, teamBSquads, teamBEntities, teamBPBGs, aiPlayerA, playerB, playerAIsAttacker)
 end
 
 ---comment Checks if this entity can cause suppression
 ---@param aiPlayer PlayerID
 ---@param entity EntityID
-function AI_CanEntityCauseSuppression(aiPlayer,entity)
+function AI_CanEntityCauseSuppression(aiPlayer, entity)
 end
 
 ---comment Check if the entity can load squad and shoot its target after loading (This function should only be called by AI)
@@ -95,19 +95,19 @@ end
 ---@param squad SquadID
 ---@param bCheckSquadState Boolean
 ---@param bOverload Boolean
-function AI_CanLoadSquadAndAttackCurrentTarget(entity,squad,bCheckSquadState,bOverload)
+function AI_CanLoadSquadAndAttackCurrentTarget(entity, squad, bCheckSquadState, bOverload)
 end
 
 ---comment Checks if this squad can cause suppression
 ---@param aiPlayer PlayerID
 ---@param pSquad SquadID
-function AI_CanSquadCauseSuppression(aiPlayer,pSquad)
+function AI_CanSquadCauseSuppression(aiPlayer, pSquad)
 end
 
 ---comment Checks if this squad can decrew the entity
 ---@param pDriverSquad SquadID
 ---@param pDecrewTargetEntity EntityID
-function AI_CanSquadDecrew(pDriverSquad,pDecrewTargetEntity)
+function AI_CanSquadDecrew(pDriverSquad, pDecrewTargetEntity)
 end
 
 ---comment Clear a combat entry from the cache, typically done instead of logging it
@@ -118,19 +118,19 @@ end
 ---comment This clears the repair priority value for a given squad or building PBG.
 ---@param pPlayer PlayerID
 ---@param pbgShortname String
-function AI_ClearPBGRepairPriority(pPlayer,pbgShortname)
+function AI_ClearPBGRepairPriority(pPlayer, pbgShortname)
 end
 
 ---comment Clear all intents associated with this AIPrefab
 ---@param prefabId UniqueID
 ---@param player PlayerID
-function AI_ClearPrefabAIIntents(prefabId,player)
+function AI_ClearPrefabAIIntents(prefabId, player)
 end
 
 ---comment Returns true if the configured input feature calculators characterizes this squad
 ---@param player PlayerID
 ---@param squadPBG PropertyBagGroup
-function AI_CombatFitnessCharacterizesSquad(player,squadPBG)
+function AI_CombatFitnessCharacterizesSquad(player, squadPBG)
 end
 
 ---comment Returns the defensive upgrades for this structure archetype member
@@ -187,7 +187,7 @@ end
 ---comment Create a new encounter for player
 ---@param pPlayer PlayerID
 ---@param encounterType Integer
-function AI_CreateEncounter(pPlayer,encounterType)
+function AI_CreateEncounter(pPlayer, encounterType)
 end
 
 ---comment Enables/disables debugging of AI Attack Encounter Encounter Position Scoring
@@ -203,13 +203,13 @@ end
 ---@param sgroup SGroupID
 ---@param egroup EGroupID
 ---@param player PlayerID
-function AI_DebugLogGroupCombatRatings(sgroup,egroup,player)
+function AI_DebugLogGroupCombatRatings(sgroup, egroup, player)
 end
 
 ---comment Prints detailed rating debug info in the AILog for all the PBGs in the list
 ---@param pbgList PropertyBagGroup
 ---@param player PlayerID
-function AI_DebugLogPBGCombatRatings(pbgList,player)
+function AI_DebugLogPBGCombatRatings(pbgList, player)
 end
 
 ---comment Enables/disables AI Lua Debugging
@@ -256,13 +256,13 @@ end
 ---comment Execute a string as lua in the given player's AI LuaConfig
 ---@param playerID Integer
 ---@param string String
-function AI_DoString(playerID,string)
+function AI_DoString(playerID, string)
 end
 
 ---comment Enables or Disables an AI player
 ---@param pPlayer PlayerID
 ---@param enable Boolean
-function AI_Enable(pPlayer,enable)
+function AI_Enable(pPlayer, enable)
 end
 
 ---comment Enables or Disables all AI players
@@ -274,32 +274,32 @@ end
 ---@param pPlayer PlayerID
 ---@param overrideName String
 ---@param enable Boolean
-function AI_EnableEconomyOverride(pPlayer,overrideName,enable)
+function AI_EnableEconomyOverride(pPlayer, overrideName, enable)
 end
 
 ---comment Finds an AISquad owned by the specified player
 ---@param pPlayer PlayerID
 ---@param UID Integer
-function AI_FindAISquadByID(pPlayer,UID)
+function AI_FindAISquadByID(pPlayer, UID)
 end
 
 ---comment Find the current best producible Entity PBG corresponding to the specified Entity Types.
 ---@param player PlayerID
 ---@param entityTypeNames String
-function AI_FindBestProducibleEntityPBGforEntityTypes(player,entityTypeNames)
+function AI_FindBestProducibleEntityPBGforEntityTypes(player, entityTypeNames)
 end
 
 ---comment Find the current best producible Squad PBG corresponding to the specified Squad Types.
 ---@param player PlayerID
 ---@param squadTypeNames String
-function AI_FindBestProducibleSquadPBGforSquadTypes(player,squadTypeNames)
+function AI_FindBestProducibleSquadPBGforSquadTypes(player, squadTypeNames)
 end
 
 ---comment Find the closest open position from a given position for a given ability blueprint
 ---@param caster ConstTargetHandle
 ---@param pAbilityPBG PropertyBagGroup
 ---@param posIn Position
-function AI_FindClosestOpenPositionForAbility(caster,pAbilityPBG,posIn)
+function AI_FindClosestOpenPositionForAbility(caster, pAbilityPBG, posIn)
 end
 
 ---comment Find the closest open position from a given position and ability blueprint, taking into account a min
@@ -308,21 +308,21 @@ end
 ---@param posIn Position
 ---@param minDist Integer
 ---@param maxDist Integer
-function AI_FindClosestOpenPositionForAbilityWithinRange(caster,pAbilityPBG,posIn,minDist,maxDist)
+function AI_FindClosestOpenPositionForAbilityWithinRange(caster, pAbilityPBG, posIn, minDist, maxDist)
 end
 
 ---comment Find the closest open position from a given position for a given Entity blueprint
 ---@param aiPlayer PlayerID
 ---@param pEntityPBG PropertyBagGroup
 ---@param posIn Position
-function AI_FindClosestOpenPositionForStructure(aiPlayer,pEntityPBG,posIn)
+function AI_FindClosestOpenPositionForStructure(aiPlayer, pEntityPBG, posIn)
 end
 
 ---comment Find a valid construction location for a pbg, using a spiral search. Returns INVALID_POS if it fails.
 ---@param pPlayer PlayerID
 ---@param pPbg PropertyBagGroup
 ---@param position Position
-function AI_FindConstructionLocation(pPlayer,pPbg,position)
+function AI_FindConstructionLocation(pPlayer, pPbg, position)
 end
 
 ---comment Returns the maximum number of targets for the given ability, or -1 if the ability is invalid.
@@ -334,7 +334,7 @@ end
 ---@param pAIPlayer PlayerID
 ---@param type AIMilitaryTargetType
 ---@param egroup EGroupID
-function AI_GetAllMilitaryPointsOfType(pAIPlayer,type,egroup)
+function AI_GetAllMilitaryPointsOfType(pAIPlayer, type, egroup)
 end
 
 ---comment Get and reserve the next available AITaskID (which can be used to create an AIEncounter from SCAR).
@@ -394,7 +394,7 @@ end
 ---comment Returns true when position in a sector that is adjacent to an in-supply sector
 ---@param aiPlayer PlayerID
 ---@param position Position
-function AI_IsPositionNearInSupplySector(aiPlayer,position)
+function AI_IsPositionNearInSupplySector(aiPlayer, position)
 end
 
 ---comment Checks if this is a valid AISquad
@@ -405,19 +405,19 @@ end
 ---comment Locks the entity and disables its tactics (if any) and the AI will no longer use this object
 ---@param pPlayer PlayerID
 ---@param pEntity EntityID
-function AI_LockEntity(pPlayer,pEntity)
+function AI_LockEntity(pPlayer, pEntity)
 end
 
 ---comment Locks the squad and disables its tactics (if any) and the AI will no longer use this object
 ---@param pPlayer PlayerID
 ---@param pSquad SquadID
-function AI_LockSquad(pPlayer,pSquad)
+function AI_LockSquad(pPlayer, pSquad)
 end
 
 ---comment Locks the squads and disables its tactics (if any) and the AI will no longer use these objects
 ---@param pPlayer PlayerID
 ---@param squads SGroupID
-function AI_LockSquads(pPlayer,squads)
+function AI_LockSquads(pPlayer, squads)
 end
 
 ---comment Log the combat input features of all squads owned by two players for a given conflict
@@ -425,13 +425,13 @@ end
 ---@param playerA PlayerID
 ---@param playerB PlayerID
 ---@param score Real
-function AI_LogCombatTrainingData(conflictID,playerA,playerB,score)
+function AI_LogCombatTrainingData(conflictID, playerA, playerB, score)
 end
 
 ---comment Pauses or unpauses currently running tasks
 ---@param pPlayer PlayerID
 ---@param pause Boolean
-function AI_PauseCurrentTasks(pPlayer,pause)
+function AI_PauseCurrentTasks(pPlayer, pause)
 end
 
 ---comment Add an Exclusion area to the AI Player
@@ -439,7 +439,7 @@ end
 ---@param position Position
 ---@param noPathRadius Real
 ---@param noTargetRadius Real
-function AI_PlayerAddExclusionArea(pPlayer,position,noPathRadius,noTargetRadius)
+function AI_PlayerAddExclusionArea(pPlayer, position, noPathRadius, noTargetRadius)
 end
 
 ---comment Remove the Exclusion area from the AI Player
@@ -447,20 +447,20 @@ end
 ---@param position Position
 ---@param noPathRadius Real
 ---@param noTargetRadius Real
-function AI_PlayerRemoveExclusionArea(pPlayer,position,noPathRadius,noTargetRadius)
+function AI_PlayerRemoveExclusionArea(pPlayer, position, noPathRadius, noTargetRadius)
 end
 
 ---comment Push an ai intent to an existing AIPrefab. Requires an ai_prefab_intent pbg name
 ---@param prefabId UniqueID
 ---@param player PlayerID
 ---@param aiPrefabIntentBagName String
-function AI_PushPrefabAIIntent(prefabId,player,aiPrefabIntentBagName)
+function AI_PushPrefabAIIntent(prefabId, player, aiPrefabIntentBagName)
 end
 
 ---comment This clears the importance bonus on this capture point
 ---@param pPlayer PlayerID
 ---@param pEntity EntityID
-function AI_RemoveCapturePointHighPriority(pPlayer,pEntity)
+function AI_RemoveCapturePointHighPriority(pPlayer, pEntity)
 end
 
 ---comment Restarts the AI
@@ -476,100 +476,100 @@ end
 ---comment Set Combat Range Policy for the AISquad, overrides the one set at Encounter/task level
 ---@param pSquadAI SquadID
 ---@param policy CombatRangePolicy
-function AI_SetAISquadCombatRangePolicyTaskOverride(pSquadAI,policy)
+function AI_SetAISquadCombatRangePolicyTaskOverride(pSquadAI, policy)
 end
 
 ---comment Enables or Disables an AI player to be targetable by other AI players.
 ---@param pPlayer PlayerID
 ---@param targetable Boolean
-function AI_SetAITargetable(pPlayer,targetable)
+function AI_SetAITargetable(pPlayer, targetable)
 end
 
 ---comment This sets importance bonus of the given capture point
 ---@param pPlayer PlayerID
 ---@param pEntity EntityID
-function AI_SetCapturePointAsHighPriority(pPlayer,pEntity)
+function AI_SetCapturePointAsHighPriority(pPlayer, pEntity)
 end
 
 ---comment Enable or disable the AI debug display
 ---@param pPlayer PlayerID
 ---@param enable Boolean
-function AI_SetDebugDisplay(pPlayer,enable)
+function AI_SetDebugDisplay(pPlayer, enable)
 end
 
 ---comment Set the difficulty level of this AI player
 ---@param pPlayer PlayerID
 ---@param difficultyLevel Integer
-function AI_SetDifficulty(pPlayer,difficultyLevel)
+function AI_SetDifficulty(pPlayer, difficultyLevel)
 end
 
 ---comment This sets the repair priority value for a given squad or building PBG.
 ---@param pPlayer PlayerID
 ---@param pbgShortname String
 ---@param priorityValue Real
-function AI_SetPBGRepairPriority(pPlayer,pbgShortname,priorityValue)
+function AI_SetPBGRepairPriority(pPlayer, pbgShortname, priorityValue)
 end
 
 ---comment Set the personality name of this AI player
 ---@param pPlayer PlayerID
 ---@param personalityName String
-function AI_SetPersonality(pPlayer,personalityName)
+function AI_SetPersonality(pPlayer, personalityName)
 end
 
 ---comment Set the active status of an existing AIPrefab
 ---@param prefabId UniqueID
 ---@param player PlayerID
 ---@param active Boolean
-function AI_SetPrefabActive(prefabId,player,active)
+function AI_SetPrefabActive(prefabId, player, active)
 end
 
 ---comment Set the can_reassign state of an existing AIPrefab
 ---@param prefabId UniqueID
 ---@param player PlayerID
 ---@param canReassign Boolean
-function AI_SetPrefabCanReassign(prefabId,player,canReassign)
+function AI_SetPrefabCanReassign(prefabId, player, canReassign)
 end
 
 ---comment Set the squad selection of an existing AIPrefab by SGROUP
 ---@param prefabId UniqueID
 ---@param player PlayerID
 ---@param squads SGroupID
-function AI_SetPrefabSelection_SGroup(prefabId,player,squads)
+function AI_SetPrefabSelection_SGroup(prefabId, player, squads)
 end
 
 ---comment Set the target of an existing AIPrefab by EGROUP
 ---@param prefabId UniqueID
 ---@param player PlayerID
 ---@param entities EGroupID
-function AI_SetPrefabTarget_EGroup(prefabId,player,entities)
+function AI_SetPrefabTarget_EGroup(prefabId, player, entities)
 end
 
 ---comment Set the target of an existing AIPrefab by Position
 ---@param prefabId UniqueID
 ---@param player PlayerID
 ---@param position Position
-function AI_SetPrefabTarget_Position(prefabId,player,position)
+function AI_SetPrefabTarget_Position(prefabId, player, position)
 end
 
 ---comment Set the target of an existing AIPrefab by SGROUP
 ---@param prefabId UniqueID
 ---@param player PlayerID
 ---@param squads SGroupID
-function AI_SetPrefabTarget_SGroup(prefabId,player,squads)
+function AI_SetPrefabTarget_SGroup(prefabId, player, squads)
 end
 
 ---comment Set the target of an existing AIPrefab via waypoints
 ---@param prefabId UniqueID
 ---@param player PlayerID
 ---@param waypointName String
-function AI_SetPrefabTarget_Waypoints(prefabId,player,waypointName)
+function AI_SetPrefabTarget_Waypoints(prefabId, player, waypointName)
 end
 
 ---comment Set an AI Player's desired income of specified resource type at specified value. This will affect the AI resource gathering, building construction and production priority in trying to achieve the specified resource income.
 ---@param player PlayerID
 ---@param resourceType Integer
 ---@param desiredIncome Real
-function AI_SetResourceIncomeDesire(player,resourceType,desiredIncome)
+function AI_SetResourceIncomeDesire(player, resourceType, desiredIncome)
 end
 
 ---comment Set current debug AI player to the next AI player
@@ -589,19 +589,19 @@ end
 ---comment Unlocks this entity so that AI can use it again
 ---@param pPlayer PlayerID
 ---@param pEntity EntityID
-function AI_UnlockEntity(pPlayer,pEntity)
+function AI_UnlockEntity(pPlayer, pEntity)
 end
 
 ---comment Unlocks the given squad so the AI can use it again
 ---@param pPlayer PlayerID
 ---@param pSquad SquadID
-function AI_UnlockSquad(pPlayer,pSquad)
+function AI_UnlockSquad(pPlayer, pSquad)
 end
 
 ---comment Locks the squads and disables its tactics (if any) and the AI will no longer use these objects
 ---@param pPlayer PlayerID
 ---@param squads SGroupID
-function AI_UnlockSquads(pPlayer,squads)
+function AI_UnlockSquads(pPlayer, squads)
 end
 
 ---comment Re-updates the AI in regards to all the static objects in the world (if SCAR creates new strategic points dynamically this will need to be called)
@@ -612,7 +612,7 @@ end
 ---comment Set ability for ability encounter
 ---@param pEncounter AIEncounterID
 ---@param abilityPBG PropertyBagGroup
-function AIAbilityEncounter_AbilityGuidance_SetAbilityPBG(pEncounter,abilityPBG)
+function AIAbilityEncounter_AbilityGuidance_SetAbilityPBG(pEncounter, abilityPBG)
 end
 
 ---comment Ends the encounter and deletes it.
@@ -623,25 +623,25 @@ end
 ---comment add the EGroup to the Encounter forced target list. NOTE: supported only by the Attack Encounter
 ---@param pEncounter AIEncounterID
 ---@param egroup EGroupID
-function AIEncounter_CombatGuidance_AddForcedCombatTargetEGroup(pEncounter,egroup)
+function AIEncounter_CombatGuidance_AddForcedCombatTargetEGroup(pEncounter, egroup)
 end
 
 ---comment add the Entity to the Encounter forced target list. NOTE: supported only by the Attack Encounter
 ---@param pEncounter AIEncounterID
 ---@param pEntity EntityID
-function AIEncounter_CombatGuidance_AddForcedCombatTargetEntity(pEncounter,pEntity)
+function AIEncounter_CombatGuidance_AddForcedCombatTargetEntity(pEncounter, pEntity)
 end
 
 ---comment add the SGroup to the Encounter forced target list. NOTE: supported only by the Attack Encounter
 ---@param pEncounter AIEncounterID
 ---@param sgroup SGroupID
-function AIEncounter_CombatGuidance_AddForcedCombatTargetSGroup(pEncounter,sgroup)
+function AIEncounter_CombatGuidance_AddForcedCombatTargetSGroup(pEncounter, sgroup)
 end
 
 ---comment add the Squad to the Encounter forced target list. NOTE: supported only by the Attack Encounter
 ---@param pEncounter AIEncounterID
 ---@param pSquad SquadID
-function AIEncounter_CombatGuidance_AddForcedCombatTargetSquad(pEncounter,pSquad)
+function AIEncounter_CombatGuidance_AddForcedCombatTargetSquad(pEncounter, pSquad)
 end
 
 ---comment Clear the encounter Forced Combat Targets
@@ -652,56 +652,56 @@ end
 ---comment Enables/disables squads in combat garrisoning.
 ---@param pEncounter AIEncounterID
 ---@param enable Boolean
-function AIEncounter_CombatGuidance_EnableCombatGarrison(pEncounter,enable)
+function AIEncounter_CombatGuidance_EnableCombatGarrison(pEncounter, enable)
 end
 
 ---comment remove the EGroup from the Encounter forced target list. NOTE: supported only by the Attack Encounter
 ---@param pEncounter AIEncounterID
 ---@param egroup EGroupID
-function AIEncounter_CombatGuidance_RemoveForcedCombatTargetEGroup(pEncounter,egroup)
+function AIEncounter_CombatGuidance_RemoveForcedCombatTargetEGroup(pEncounter, egroup)
 end
 
 ---comment remove the Entity from the Encounter forced target list. NOTE: supported only by the Attack Encounter
 ---@param pEncounter AIEncounterID
 ---@param pEntity EntityID
-function AIEncounter_CombatGuidance_RemoveForcedCombatTargetEntity(pEncounter,pEntity)
+function AIEncounter_CombatGuidance_RemoveForcedCombatTargetEntity(pEncounter, pEntity)
 end
 
 ---comment remove the SGroup from the Encounter forced target list. NOTE: supported only by the Attack Encounter
 ---@param pEncounter AIEncounterID
 ---@param sgroup SGroupID
-function AIEncounter_CombatGuidance_RemoveForcedCombatTargetSGroup(pEncounter,sgroup)
+function AIEncounter_CombatGuidance_RemoveForcedCombatTargetSGroup(pEncounter, sgroup)
 end
 
 ---comment remove the Squad from the Encounter forced target list. NOTE: supported only by the Attack Encounter
 ---@param pEncounter AIEncounterID
 ---@param pSquad SquadID
-function AIEncounter_CombatGuidance_RemoveForcedCombatTargetSquad(pEncounter,pSquad)
+function AIEncounter_CombatGuidance_RemoveForcedCombatTargetSquad(pEncounter, pSquad)
 end
 
 ---comment Set Combat Range Policy for the encounter
 ---@param pEncounter AIEncounterID
 ---@param policy CombatRangePolicy
-function AIEncounter_CombatGuidance_SetCombatRangePolicy(pEncounter,policy)
+function AIEncounter_CombatGuidance_SetCombatRangePolicy(pEncounter, policy)
 end
 
 ---comment Set if the Attack Encounter should spread the attackers on multiple targets
 ---@param pEncounter AIEncounterID
 ---@param value Boolean
-function AIEncounter_CombatGuidance_SetSpreadAttackers(pEncounter,value)
+function AIEncounter_CombatGuidance_SetSpreadAttackers(pEncounter, value)
 end
 
 ---comment Enables/disables idle squads garrisoning.
 ---@param pEncounter AIEncounterID
 ---@param enable Boolean
-function AIEncounter_DefenseGuidance_EnableIdleGarrison(pEncounter,enable)
+function AIEncounter_DefenseGuidance_EnableIdleGarrison(pEncounter, enable)
 end
 
 ---comment Adds a setup location and facing direction for this encounter not specifically assigned to any squad
 ---@param pEncounter AIEncounterID
 ---@param pos Position
 ---@param facingDir Position
-function AIEncounter_EngagementGuidance_AddEncouterSetupLocation(pEncounter,pos,facingDir)
+function AIEncounter_EngagementGuidance_AddEncouterSetupLocation(pEncounter, pos, facingDir)
 end
 
 ---comment clears the encounter setup locations
@@ -712,68 +712,68 @@ end
 ---comment Enable / disable aggressive move into engagement area
 ---@param pEncounter AIEncounterID
 ---@param enable Boolean
-function AIEncounter_EngagementGuidance_EnableAggressiveEngagementMove(pEncounter,enable)
+function AIEncounter_EngagementGuidance_EnableAggressiveEngagementMove(pEncounter, enable)
 end
 
 ---comment Enable construction in Town Life encounters
 ---@param pEncounter AIEncounterID
 ---@param enable Boolean
-function AIEncounter_EngagementGuidance_EnableConstruction(pEncounter,enable)
+function AIEncounter_EngagementGuidance_EnableConstruction(pEncounter, enable)
 end
 
 ---comment Enable setup locations in attack and defend encounters
 ---@param pEncounter AIEncounterID
 ---@param enable Boolean
-function AIEncounter_EngagementGuidance_EnableSetupLocations(pEncounter,enable)
+function AIEncounter_EngagementGuidance_EnableSetupLocations(pEncounter, enable)
 end
 
 ---comment Sets a TownLife Encounter whether to allow resource gathering from deposits outside of Encounter leash.
 ---@param pEncounter AIEncounterID
 ---@param allowOutsideLeash Boolean
-function AIEncounter_EngagementGuidance_SetAllowResourceGatheringOutsideLeash(pEncounter,allowOutsideLeash)
+function AIEncounter_EngagementGuidance_SetAllowResourceGatheringOutsideLeash(pEncounter, allowOutsideLeash)
 end
 
 ---comment Enable encounter to return to previous stages if they fail to meet conditions for current stage.
 ---@param pEncounter AIEncounterID
 ---@param enable Boolean
-function AIEncounter_EngagementGuidance_SetAllowReturnToPreviousStages(pEncounter,enable)
+function AIEncounter_EngagementGuidance_SetAllowReturnToPreviousStages(pEncounter, enable)
 end
 
 ---comment Enable coordinated arrival in attack encounters
 ---@param pEncounter AIEncounterID
 ---@param enable Boolean
-function AIEncounter_EngagementGuidance_SetCoordinatedSetup(pEncounter,enable)
+function AIEncounter_EngagementGuidance_SetCoordinatedSetup(pEncounter, enable)
 end
 
 ---comment Enables/disables sniper reactions
 ---@param pEncounter AIEncounterID
 ---@param enable Boolean
-function AIEncounter_EngagementGuidance_SetEnableSniperReactions(pEncounter,enable)
+function AIEncounter_EngagementGuidance_SetEnableSniperReactions(pEncounter, enable)
 end
 
 ---comment Enables/disables SubEngagementAreas
 ---@param pEncounter AIEncounterID
 ---@param enable Boolean
-function AIEncounter_EngagementGuidance_SetEnableSubEngagementAreas(pEncounter,enable)
+function AIEncounter_EngagementGuidance_SetEnableSubEngagementAreas(pEncounter, enable)
 end
 
 ---comment Sets max time, in seconds, to accomplish encounter, once the target is engaged.
 ---@param pEncounter AIEncounterID
 ---@param seconds Real
-function AIEncounter_EngagementGuidance_SetMaxEngagementTime(pEncounter,seconds)
+function AIEncounter_EngagementGuidance_SetMaxEngagementTime(pEncounter, seconds)
 end
 
 ---comment Sets max time, in seconds, to remain idle at encounter target, once engaged.
 ---@param pEncounter AIEncounterID
 ---@param seconds Real
-function AIEncounter_EngagementGuidance_SetMaxIdleTime(pEncounter,seconds)
+function AIEncounter_EngagementGuidance_SetMaxIdleTime(pEncounter, seconds)
 end
 
 ---comment set the sbp setup location priority override
 ---@param pEncounter AIEncounterID
 ---@param sbp ScarSquadPBG
 ---@param priority Real
-function AIEncounter_EngagementGuidance_SetSetupLocationSbpPriority(pEncounter,sbp,priority)
+function AIEncounter_EngagementGuidance_SetSetupLocationSbpPriority(pEncounter, sbp, priority)
 end
 
 ---comment set the squad setup location and facing direction
@@ -781,118 +781,118 @@ end
 ---@param pSquad SquadID
 ---@param pos Position
 ---@param facingDir Position
-function AIEncounter_EngagementGuidance_SetSquadSetupLocation(pEncounter,pSquad,pos,facingDir)
+function AIEncounter_EngagementGuidance_SetSquadSetupLocation(pEncounter, pSquad, pos, facingDir)
 end
 
 ---comment Enable/Disable Reinforce during combat
 ---@param pEncounter AIEncounterID
 ---@param value Boolean
-function AIEncounter_FallbackGuidance_EnableReinforceDuringCombat(pEncounter,value)
+function AIEncounter_FallbackGuidance_EnableReinforceDuringCombat(pEncounter, value)
 end
 
 ---comment Enable retreat to break pinned.
 ---@param pEncounter AIEncounterID
 ---@param enable Boolean
-function AIEncounter_FallbackGuidance_EnableRetreatOnPinned(pEncounter,enable)
+function AIEncounter_FallbackGuidance_EnableRetreatOnPinned(pEncounter, enable)
 end
 
 ---comment Enable retreat to break suppression.
 ---@param pEncounter AIEncounterID
 ---@param enable Boolean
-function AIEncounter_FallbackGuidance_EnableRetreatOnSuppression(pEncounter,enable)
+function AIEncounter_FallbackGuidance_EnableRetreatOnSuppression(pEncounter, enable)
 end
 
 ---comment Set entities remaining threshold of encounter [-1 to N] to fallback at. (negative disables)
 ---@param pEncounter AIEncounterID
 ---@param value Real
-function AIEncounter_FallbackGuidance_SetEntitiesRemainingThreshold(pEncounter,value)
+function AIEncounter_FallbackGuidance_SetEntitiesRemainingThreshold(pEncounter, value)
 end
 
 ---comment Set capacity threshold [-1 to 1] to fallback at. (negative disables)
 ---@param pEncounter AIEncounterID
 ---@param value Real
-function AIEncounter_FallbackGuidance_SetFallbackCapacityPercentage(pEncounter,value)
+function AIEncounter_FallbackGuidance_SetFallbackCapacityPercentage(pEncounter, value)
 end
 
 ---comment Set combat rating threshold of area [0.0 to 1.0] to fallback at. (0.0 disables)
 ---@param pEncounter AIEncounterID
 ---@param value Real
-function AIEncounter_FallbackGuidance_SetFallbackCombatRating(pEncounter,value)
+function AIEncounter_FallbackGuidance_SetFallbackCombatRating(pEncounter, value)
 end
 
 ---comment Set Squad health threshold [-1 to 1] to fallback at. (negative disables)
 ---@param pEncounter AIEncounterID
 ---@param fallbackStartValue Real
 ---@param fallbackEndValue Real
-function AIEncounter_FallbackGuidance_SetFallbackSquadHealthPercentage(pEncounter,fallbackStartValue,fallbackEndValue)
+function AIEncounter_FallbackGuidance_SetFallbackSquadHealthPercentage(pEncounter, fallbackStartValue, fallbackEndValue)
 end
 
 ---comment Set Squad Shield threshold [-1 to 1] to fallback at. (negative disables)
 ---@param pEncounter AIEncounterID
 ---@param fallbackStartValue Real
 ---@param fallbackEndValue Real
-function AIEncounter_FallbackGuidance_SetFallbackSquadShieldPercentage(pEncounter,fallbackStartValue,fallbackEndValue)
+function AIEncounter_FallbackGuidance_SetFallbackSquadShieldPercentage(pEncounter, fallbackStartValue, fallbackEndValue)
 end
 
 ---comment Set Vehicle health threshold [-1 to 1] to fallback at. (negative disables)
 ---@param pEncounter AIEncounterID
 ---@param fallbackStartValue Real
 ---@param fallbackEndValue Real
-function AIEncounter_FallbackGuidance_SetFallbackVehicleHealthPercentage(pEncounter,fallbackStartValue,fallbackEndValue)
+function AIEncounter_FallbackGuidance_SetFallbackVehicleHealthPercentage(pEncounter, fallbackStartValue, fallbackEndValue)
 end
 
 ---comment Set global fallback threshold (negative for individual squad).
 ---@param pEncounter AIEncounterID
 ---@param value Real
-function AIEncounter_FallbackGuidance_SetGlobalFallbackPercentage(pEncounter,value)
+function AIEncounter_FallbackGuidance_SetGlobalFallbackPercentage(pEncounter, value)
 end
 
 ---comment Set global retreat type (true for retreat; false for fallback).
 ---@param pEncounter AIEncounterID
 ---@param value Boolean
-function AIEncounter_FallbackGuidance_SetGlobalFallbackRetreat(pEncounter,value)
+function AIEncounter_FallbackGuidance_SetGlobalFallbackRetreat(pEncounter, value)
 end
 
 ---comment Set the Reinforce Health Percentage [-1 to 1] (negative disables retreat)
 ---@param pEncounter AIEncounterID
 ---@param value Real
-function AIEncounter_FallbackGuidance_SetReinforceHealthPercentage(pEncounter,value)
+function AIEncounter_FallbackGuidance_SetReinforceHealthPercentage(pEncounter, value)
 end
 
 ---comment Set the Max Reinforce Distance (negative value: no distance constrain)
 ---@param pEncounter AIEncounterID
 ---@param value Real
-function AIEncounter_FallbackGuidance_SetReinforceMaxDistance(pEncounter,value)
+function AIEncounter_FallbackGuidance_SetReinforceMaxDistance(pEncounter, value)
 end
 
 ---comment Set the Min Health Ratio Required To Reach Reinforce Point [0.0, 1.0] (negative value: no constrain)
 ---@param pEncounter AIEncounterID
 ---@param value Real
-function AIEncounter_FallbackGuidance_SetReinforceMinHealthRatioToReachReinforcePoint(pEncounter,value)
+function AIEncounter_FallbackGuidance_SetReinforceMinHealthRatioToReachReinforcePoint(pEncounter, value)
 end
 
 ---comment Set combat rating threshold of area [-1 to 1] to fallback at. (negative disables)
 ---@param pEncounter AIEncounterID
 ---@param value Real
-function AIEncounter_FallbackGuidance_SetRetreatCapacityPercentage(pEncounter,value)
+function AIEncounter_FallbackGuidance_SetRetreatCapacityPercentage(pEncounter, value)
 end
 
 ---comment Set combat rating threshold of area [0.0 to 1.0] to retreat at. (0.0 disables)
 ---@param pEncounter AIEncounterID
 ---@param value Real
-function AIEncounter_FallbackGuidance_SetRetreatCombatRating(pEncounter,value)
+function AIEncounter_FallbackGuidance_SetRetreatCombatRating(pEncounter, value)
 end
 
 ---comment Set retreat health threshold of area [-1 to 1] (negative disables)
 ---@param pEncounter AIEncounterID
 ---@param value Real
-function AIEncounter_FallbackGuidance_SetRetreatHealthPercentage(pEncounter,value)
+function AIEncounter_FallbackGuidance_SetRetreatHealthPercentage(pEncounter, value)
 end
 
 ---comment Set fallback target.
 ---@param pEncounter AIEncounterID
 ---@param pos Position
-function AIEncounter_FallbackGuidance_SetTargetPosition(pEncounter,pos)
+function AIEncounter_FallbackGuidance_SetTargetPosition(pEncounter, pos)
 end
 
 ---comment Asks the encounter to terminate in its next update (allows PhaseEncounter to set its exit info)
@@ -903,19 +903,19 @@ end
 ---comment Set formup type for formation encounter to be at building of type from AE tuning list (must set before triggering)
 ---@param encounter AIEncounterID
 ---@param unitTypeList String
-function AIEncounter_FormationGuidance_SetFormUpAtBuildingOfType(encounter,unitTypeList)
+function AIEncounter_FormationGuidance_SetFormUpAtBuildingOfType(encounter, unitTypeList)
 end
 
 ---comment Set formup entity for formation encounter (must set before triggering)
 ---@param encounter AIEncounterID
 ---@param entity EntityID
-function AIEncounter_FormationGuidance_SetFormUpAtEntityTarget(encounter,entity)
+function AIEncounter_FormationGuidance_SetFormUpAtEntityTarget(encounter, entity)
 end
 
 ---comment Set formup position for formation encounter (must set before triggering)
 ---@param encounter AIEncounterID
 ---@param postion Position
-function AIEncounter_FormationGuidance_SetFormUpAtPositionTarget(encounter,postion)
+function AIEncounter_FormationGuidance_SetFormUpAtPositionTarget(encounter, postion)
 end
 
 ---comment Set formup position for formation encounter at the average of current squad positions (must set before triggering)
@@ -927,7 +927,7 @@ end
 ---@param encounter AIEncounterID
 ---@param timeoutSeconds Real
 ---@param requiredSquadsPercent Real
-function AIEncounter_FormationGuidance_SetFormUpAtTimeOutParams(encounter,timeoutSeconds,requiredSquadsPercent)
+function AIEncounter_FormationGuidance_SetFormUpAtTimeOutParams(encounter, timeoutSeconds, requiredSquadsPercent)
 end
 
 ---comment Get the average position of squads of this finished formation phase encounter (may be the same as target if successful).  You should call AIEncounter_FormationPhase_HasValidExitInfo before this to avoid an error
@@ -944,7 +944,7 @@ end
 ---@param encounterID AITaskID
 ---@param enemySquads SGroupID
 ---@param enemyBuildings EGroupID
-function AIEncounter_FormationPhase_GetEnemiesAtEnd(encounterID,enemySquads,enemyBuildings)
+function AIEncounter_FormationPhase_GetEnemiesAtEnd(encounterID, enemySquads, enemyBuildings)
 end
 
 ---comment Get the combat fitness result for a finished phase encounter, will only be valid for exit states CombatFitnessThreshold or WasAttacked.  -1.0f means invalid.
@@ -956,7 +956,7 @@ end
 ---@param encounterID AITaskID
 ---@param squadsAvailable SGroupID
 ---@param squadsUnavailable SGroupID
-function AIEncounter_FormationPhase_GetSquadsAvailableAtEnd(encounterID,squadsAvailable,squadsUnavailable)
+function AIEncounter_FormationPhase_GetSquadsAvailableAtEnd(encounterID, squadsAvailable, squadsUnavailable)
 end
 
 ---comment Query if there is valid exit info for this encounter (will only return true for phase encounters)
@@ -967,7 +967,7 @@ end
 ---comment Assign a property bag contains data to support sub task coordination for combat encounters
 ---@param encounter AIEncounterID
 ---@param coordinatorPBG PropertyBagGroup
-function AIEncounter_FormationPhaseGuidance_SetCombatCoordinator(encounter,coordinatorPBG)
+function AIEncounter_FormationPhaseGuidance_SetCombatCoordinator(encounter, coordinatorPBG)
 end
 
 ---comment Set params for terminating a formation phase encounter based on combat, fallback params can also be used
@@ -978,7 +978,7 @@ end
 ---@param testEnemyBuildingsCleared Boolean
 ---@param enemyScanRange Real
 ---@param excludeBuildingTypeNames String
-function AIEncounter_FormationPhaseGuidance_SetCombatExitParams(encounter,timeoutSeconds,testTargetDestroyed,testEnemySquadsCleared,testEnemyBuildingsCleared,enemyScanRange,excludeBuildingTypeNames)
+function AIEncounter_FormationPhaseGuidance_SetCombatExitParams(encounter, timeoutSeconds, testTargetDestroyed, testEnemySquadsCleared, testEnemyBuildingsCleared, enemyScanRange, excludeBuildingTypeNames)
 end
 
 ---comment Set params for terminating a formation phase encounter that is moving somewhere and encounters enemies
@@ -989,7 +989,7 @@ end
 ---@param enemyFormationPosition Real
 ---@param enemyFormationDistance Real
 ---@param excludeBuildingTypeNames String
-function AIEncounter_FormationPhaseGuidance_SetMoveEnemiesExitParams(encounter,enemyScanRange,combatFitnessThreshold,enemyFormationHeading,enemyFormationPosition,enemyFormationDistance,excludeBuildingTypeNames)
+function AIEncounter_FormationPhaseGuidance_SetMoveEnemiesExitParams(encounter, enemyScanRange, combatFitnessThreshold, enemyFormationHeading, enemyFormationPosition, enemyFormationDistance, excludeBuildingTypeNames)
 end
 
 ---comment Set params for terminating a formation phase encounter that is moving somewhere
@@ -997,7 +997,7 @@ end
 ---@param timeoutSeconds Real
 ---@param requiredSquadsPercent Real
 ---@param wasRecentlyAttackedSecs Real
-function AIEncounter_FormationPhaseGuidance_SetMoveExitParams(encounter,timeoutSeconds,requiredSquadsPercent,wasRecentlyAttackedSecs)
+function AIEncounter_FormationPhaseGuidance_SetMoveExitParams(encounter, timeoutSeconds, requiredSquadsPercent, wasRecentlyAttackedSecs)
 end
 
 ---comment Specify data for formation encounter to create a formation min range task state
@@ -1010,7 +1010,7 @@ end
 ---@param useTactics Boolean
 ---@param unitTypeNames String
 ---@param targetPriorityPBG PropertyBagGroup
-function AIEncounter_FormationTaskStateGuidance_MinRange(encounter,priority,minSquads,maxSquads,maxTasks,repositionIntervalSecs,useTactics,unitTypeNames,targetPriorityPBG)
+function AIEncounter_FormationTaskStateGuidance_MinRange(encounter, priority, minSquads, maxSquads, maxTasks, repositionIntervalSecs, useTactics, unitTypeNames, targetPriorityPBG)
 end
 
 ---comment Specify data for formation encounter to create a formation min range task state with protect task
@@ -1030,7 +1030,7 @@ end
 ---@param protectRepositionThreshold Real
 ---@param protectRepositionIntervalSecs Real
 ---@param protectUnitTypeNames String
-function AIEncounter_FormationTaskStateGuidance_MinRangeWithProtect(encounter,priority,minSquads,maxSquads,maxTasks,repositionIntervalSecs,useTactics,unitTypeNames,targetPriorityPBG,protectMinSquads,protectMaxSquads,protectProportionSquads,protectDistance,protectRepositionThreshold,protectRepositionIntervalSecs,protectUnitTypeNames)
+function AIEncounter_FormationTaskStateGuidance_MinRangeWithProtect(encounter, priority, minSquads, maxSquads, maxTasks, repositionIntervalSecs, useTactics, unitTypeNames, targetPriorityPBG, protectMinSquads, protectMaxSquads, protectProportionSquads, protectDistance, protectRepositionThreshold, protectRepositionIntervalSecs, protectUnitTypeNames)
 end
 
 ---comment Specify data for formation encounter to create a formation move task state
@@ -1041,7 +1041,7 @@ end
 ---@param maxSquads Integer
 ---@param maxTasks Integer
 ---@param unitTypeNames String
-function AIEncounter_FormationTaskStateGuidance_Move(encounter,attackMove,priority,minSquads,maxSquads,maxTasks,unitTypeNames)
+function AIEncounter_FormationTaskStateGuidance_Move(encounter, attackMove, priority, minSquads, maxSquads, maxTasks, unitTypeNames)
 end
 
 ---comment Specify data for formation encounter to create a formation setup ranged task state
@@ -1052,7 +1052,7 @@ end
 ---@param maxTasks Integer
 ---@param unitTypeNames String
 ---@param targetPriorityPBG PropertyBagGroup
-function AIEncounter_FormationTaskStateGuidance_SetupRanged(encounter,priority,minSquads,maxSquads,maxTasks,unitTypeNames,targetPriorityPBG)
+function AIEncounter_FormationTaskStateGuidance_SetupRanged(encounter, priority, minSquads, maxSquads, maxTasks, unitTypeNames, targetPriorityPBG)
 end
 
 ---comment Specify data for formation encounter to create a formation setup ranged task state and along with a formation of other units to protect it
@@ -1070,7 +1070,7 @@ end
 ---@param protectRepositionThreshold Real
 ---@param protectRepositionIntervalSecs Real
 ---@param protectUnitTypeNames String
-function AIEncounter_FormationTaskStateGuidance_SetupRangedWithProtect(encounter,priority,minSquads,maxSquads,maxTasks,unitTypeNames,targetPriorityPBG,protectMinSquads,protectMaxSquads,protectProportionSquads,protectDistance,protectRepositionThreshold,protectRepositionIntervalSecs,protectUnitTypeNames)
+function AIEncounter_FormationTaskStateGuidance_SetupRangedWithProtect(encounter, priority, minSquads, maxSquads, maxTasks, unitTypeNames, targetPriorityPBG, protectMinSquads, protectMaxSquads, protectProportionSquads, protectDistance, protectRepositionThreshold, protectRepositionIntervalSecs, protectUnitTypeNames)
 end
 
 ---comment Specify data for formation encounter to create a formation simple melee task state
@@ -1081,7 +1081,7 @@ end
 ---@param maxTasks Integer
 ---@param unitTypeNames String
 ---@param targetPriorityPBG PropertyBagGroup
-function AIEncounter_FormationTaskStateGuidance_SimpleMelee(encounter,priority,minSquads,maxSquads,maxTasks,unitTypeNames,targetPriorityPBG)
+function AIEncounter_FormationTaskStateGuidance_SimpleMelee(encounter, priority, minSquads, maxSquads, maxTasks, unitTypeNames, targetPriorityPBG)
 end
 
 ---comment Specify data for formation encounter to create a formation transport move task state
@@ -1096,13 +1096,13 @@ end
 ---@param unloadAbilityPBG PropertyBagGroup
 ---@param passengerUnitTypeNames String
 ---@param targetPriorityPBG PropertyBagGroup
-function AIEncounter_FormationTaskStateGuidance_TransportMove(encounter,priority,minSquads,maxSquads,maxTasks,unitTypeNames,minPassengerSquads,maxPassengerSquadsPerTransport,unloadAbilityPBG,passengerUnitTypeNames,targetPriorityPBG)
+function AIEncounter_FormationTaskStateGuidance_TransportMove(encounter, priority, minSquads, maxSquads, maxTasks, unitTypeNames, minPassengerSquads, maxPassengerSquadsPerTransport, unloadAbilityPBG, passengerUnitTypeNames, targetPriorityPBG)
 end
 
 ---comment Returns the encounter pointer from the ID, always test for nil before using...
 ---@param player PlayerID
 ---@param taskID AITaskID
-function AIEncounter_GetEncounterFromID(player,taskID)
+function AIEncounter_GetEncounterFromID(player, taskID)
 end
 
 ---comment Returns true if enconter has a valid AI player
@@ -1113,26 +1113,26 @@ end
 ---comment Determines if encounter is still valid.  Must be true before calling any other of the AIEncounter_* function.  Return true if valid, false otherwise.
 ---@param PlayerUniqueID UniqueID
 ---@param encounterTaskID AITaskID
-function AIEncounter_IsValid(PlayerUniqueID,encounterTaskID)
+function AIEncounter_IsValid(PlayerUniqueID, encounterTaskID)
 end
 
 ---comment in non RTM builds, if verboseEncounterLogging is enabled, will spew string to AI log file
 ---@param pPlayer PlayerID
 ---@param encounterID Integer
 ---@param debugString String
-function AIEncounter_LogDebug(pPlayer,encounterID,debugString)
+function AIEncounter_LogDebug(pPlayer, encounterID, debugString)
 end
 
 ---comment Enable / disable aggressive movements on way to engagement targets
 ---@param pEncounter AIEncounterID
 ---@param enable Boolean
-function AIEncounter_MoveGuidance_EnableAggressiveMove(pEncounter,enable)
+function AIEncounter_MoveGuidance_EnableAggressiveMove(pEncounter, enable)
 end
 
 ---comment Set radius (follow distance) for coordinated move phase (<= 0 disables coordinated movement)
 ---@param pEncounter AIEncounterID
 ---@param radius Real
-function AIEncounter_MoveGuidance_SetSquadCoherenceRadius(pEncounter,radius)
+function AIEncounter_MoveGuidance_SetSquadCoherenceRadius(pEncounter, radius)
 end
 
 ---comment Clears all notification callbacks for encounter
@@ -1143,26 +1143,26 @@ end
 ---comment enables/disabled the sniped callback
 ---@param pEncounter AIEncounterID
 ---@param value Boolean
-function AIEncounter_Notify_SetEnableSnipedCallbacks(pEncounter,value)
+function AIEncounter_Notify_SetEnableSnipedCallbacks(pEncounter, value)
 end
 
 ---comment Sets the ID for the notification event sent out by encounter
 ---@param pEncounter AIEncounterID
 ---@param id Integer
-function AIEncounter_Notify_SetPlayerEventEncounterID(pEncounter,id)
+function AIEncounter_Notify_SetPlayerEventEncounterID(pEncounter, id)
 end
 
 ---comment Pause/Unpause this encounter
 ---@param pEncounter AIEncounterID
 ---@param bPause Boolean
-function AIEncounter_Pause(pEncounter,bPause)
+function AIEncounter_Pause(pEncounter, bPause)
 end
 
 ---comment Calculates approximately how long it will take for a specified Encounter to produce a specified squad.
 ---@param pEncounter AIEncounterID
 ---@param pbgShortname String
 ---@param canAffordNowOnly Boolean
-function AIEncounter_ResourceGuidance_CalculateEstimatedSquadProductionTime(pEncounter,pbgShortname,canAffordNowOnly)
+function AIEncounter_ResourceGuidance_CalculateEstimatedSquadProductionTime(pEncounter, pbgShortname, canAffordNowOnly)
 end
 
 ---comment Removes all resource entities from encounter.
@@ -1178,31 +1178,31 @@ end
 ---comment Sets the resource entities for encounter.
 ---@param pEncounter AIEncounterID
 ---@param entities EGroupID
-function AIEncounter_ResourceGuidance_EntityGroup(pEncounter,entities)
+function AIEncounter_ResourceGuidance_EntityGroup(pEncounter, entities)
 end
 
 ---comment Checks if a squad group is equal to the resource squads of an encounter.
 ---@param pEncounter AIEncounterID
 ---@param squads SGroupID
-function AIEncounter_ResourceGuidance_IsSquadGroupEqual(pEncounter,squads)
+function AIEncounter_ResourceGuidance_IsSquadGroupEqual(pEncounter, squads)
 end
 
 ---comment Sets the resource money for an encounter.
 ---@param pEncounter AIEncounterID
 ---@param resourceAmount ResourceAmount
-function AIEncounter_ResourceGuidance_SetResourceMoney(pEncounter,resourceAmount)
+function AIEncounter_ResourceGuidance_SetResourceMoney(pEncounter, resourceAmount)
 end
 
 ---comment Sets the resource squads for encounter.
 ---@param pEncounter AIEncounterID
 ---@param squads SGroupID
-function AIEncounter_ResourceGuidance_SquadGroup(pEncounter,squads)
+function AIEncounter_ResourceGuidance_SquadGroup(pEncounter, squads)
 end
 
 ---comment Set encounter name for debugging.
 ---@param pEncounter AIEncounterID
 ---@param name String
-function AIEncounter_SetDebugName(pEncounter,name)
+function AIEncounter_SetDebugName(pEncounter, name)
 end
 
 ---comment Reset all tactic filters for encounter
@@ -1218,13 +1218,13 @@ end
 ---comment Reset ability priority for all squads in encounter
 ---@param pEncounter AIEncounterID
 ---@param abilityPBG PropertyBagGroup
-function AIEncounter_TacticFilter_ResetAbilityPriority(pEncounter,abilityPBG)
+function AIEncounter_TacticFilter_ResetAbilityPriority(pEncounter, abilityPBG)
 end
 
 ---comment Reset tactic priority for all squads in encounter
 ---@param pEncounter AIEncounterID
 ---@param tactic AITacticType
-function AIEncounter_TacticFilter_ResetPriority(pEncounter,tactic)
+function AIEncounter_TacticFilter_ResetPriority(pEncounter, tactic)
 end
 
 ---comment Reset all tactic constraints for encounter
@@ -1248,14 +1248,14 @@ end
 ---@param initialWait Boolean
 ---@param maxRange Real
 ---@param castChanceOverride Real
-function AIEncounter_TacticFilter_SetAbilityGuidance(pEncounter,ability,maxCasters,retrySecs,waitSelfSecs,waitEncounterSecs,timeoutSecs,initialWait,maxRange,castChanceOverride)
+function AIEncounter_TacticFilter_SetAbilityGuidance(pEncounter, ability, maxCasters, retrySecs, waitSelfSecs, waitEncounterSecs, timeoutSecs, initialWait, maxRange, castChanceOverride)
 end
 
 ---comment Set ability priority for all squads in encounter; negative priority disables
 ---@param pEncounter AIEncounterID
 ---@param abilityPBG PropertyBagGroup
 ---@param priority Real
-function AIEncounter_TacticFilter_SetAbilityPriority(pEncounter,abilityPBG,priority)
+function AIEncounter_TacticFilter_SetAbilityPriority(pEncounter, abilityPBG, priority)
 end
 
 ---comment Set ability priority for squad in encounter
@@ -1263,7 +1263,7 @@ end
 ---@param squad SquadID
 ---@param abilityPBG PropertyBagGroup
 ---@param priority Real
-function AIEncounter_TacticFilter_SetAbilityPriorityForSquad(pEncounter,squad,abilityPBG,priority)
+function AIEncounter_TacticFilter_SetAbilityPriorityForSquad(pEncounter, squad, abilityPBG, priority)
 end
 
 ---comment Set default tactic ability constraints for encounter (ability specific guidance takes priority over defaults)
@@ -1276,7 +1276,7 @@ end
 ---@param initialWait Boolean
 ---@param maxRange Real
 ---@param castChanceOverride Real
-function AIEncounter_TacticFilter_SetDefaultAbilityGuidance(pEncounter,maxCasters,retrySecs,waitSelfSecs,waitEncounterSecs,timeoutSecs,initialWait,maxRange,castChanceOverride)
+function AIEncounter_TacticFilter_SetDefaultAbilityGuidance(pEncounter, maxCasters, retrySecs, waitSelfSecs, waitEncounterSecs, timeoutSecs, initialWait, maxRange, castChanceOverride)
 end
 
 ---comment Set default tactic constraints for encounter (tactic specific guidance takes priority over defaults)
@@ -1287,14 +1287,14 @@ end
 ---@param timeoutSecs Real
 ---@param initialWait Boolean
 ---@param maxRange Real
-function AIEncounter_TacticFilter_SetDefaultTacticGuidance(pEncounter,maxUsers,retrySecs,waitSecs,timeoutSecs,initialWait,maxRange)
+function AIEncounter_TacticFilter_SetDefaultTacticGuidance(pEncounter, maxUsers, retrySecs, waitSecs, timeoutSecs, initialWait, maxRange)
 end
 
 ---comment Set tactic priority for all squads in encounter; negative priority disables
 ---@param pEncounter AIEncounterID
 ---@param tactic AITacticType
 ---@param priority Real
-function AIEncounter_TacticFilter_SetPriority(pEncounter,tactic,priority)
+function AIEncounter_TacticFilter_SetPriority(pEncounter, tactic, priority)
 end
 
 ---comment Set tactic priority for squads in encounter
@@ -1302,7 +1302,7 @@ end
 ---@param squad SquadID
 ---@param tactic AITacticType
 ---@param priority Real
-function AIEncounter_TacticFilter_SetPriorityForSquad(pEncounter,squad,tactic,priority)
+function AIEncounter_TacticFilter_SetPriorityForSquad(pEncounter, squad, tactic, priority)
 end
 
 ---comment Set tactic constraints for encounter
@@ -1314,19 +1314,19 @@ end
 ---@param timeoutSecs Real
 ---@param initialWait Boolean
 ---@param maxRange Real
-function AIEncounter_TacticFilter_SetTacticGuidance(pEncounter,tactic,maxUsers,retrySecs,waitSecs,timeoutSecs,initialWait,maxRange)
+function AIEncounter_TacticFilter_SetTacticGuidance(pEncounter, tactic, maxUsers, retrySecs, waitSecs, timeoutSecs, initialWait, maxRange)
 end
 
 ---comment Set tactic target priority for encounter
 ---@param pEncounter AIEncounterID
 ---@param policy TargetPreference
-function AIEncounter_TacticFilter_SetTargetPolicy(pEncounter,policy)
+function AIEncounter_TacticFilter_SetTargetPolicy(pEncounter, policy)
 end
 
 ---comment Disables the patrol for the passed Squad
 ---@param pEncounter AIEncounterID
 ---@param pSquad SquadID
-function AIEncounter_TargetGuidance_DisableSquadPatrol(pEncounter,pSquad)
+function AIEncounter_TargetGuidance_DisableSquadPatrol(pEncounter, pSquad)
 end
 
 ---comment Sets target patrol path for encounter
@@ -1335,7 +1335,7 @@ end
 ---@param delaySecs Real
 ---@param invertPathAtEnd Boolean
 ---@param startInverted Boolean
-function AIEncounter_TargetGuidance_SetPatrolPathByName(pEncounter,pathName,delaySecs,invertPathAtEnd,startInverted)
+function AIEncounter_TargetGuidance_SetPatrolPathByName(pEncounter, pathName, delaySecs, invertPathAtEnd, startInverted)
 end
 
 ---comment Sets random wander target patrol for encounter; delaySecs is the time in secs to pause at each random point
@@ -1345,7 +1345,7 @@ end
 ---@param radiusOverride Real
 ---@param overrideCenter Boolean
 ---@param centerOverride Position
-function AIEncounter_TargetGuidance_SetPatrolWander(pEncounter,delaySecs,radiusMode,radiusOverride,overrideCenter,centerOverride)
+function AIEncounter_TargetGuidance_SetPatrolWander(pEncounter, delaySecs, radiusMode, radiusOverride, overrideCenter, centerOverride)
 end
 
 ---comment Sets target patrol path for the squad
@@ -1355,7 +1355,7 @@ end
 ---@param delaySecs Real
 ---@param invertPathAtEnd Boolean
 ---@param startInverted Boolean
-function AIEncounter_TargetGuidance_SetSquadPatrolPathByName(pEncounter,pSquad,pathName,delaySecs,invertPathAtEnd,startInverted)
+function AIEncounter_TargetGuidance_SetSquadPatrolPathByName(pEncounter, pSquad, pathName, delaySecs, invertPathAtEnd, startInverted)
 end
 
 ---comment Sets random wander target patrol for the squad; delaySecs is the time in secs to pause at each random point
@@ -1366,37 +1366,37 @@ end
 ---@param radiusOverride Real
 ---@param overrideCenter Boolean
 ---@param centerOverride Position
-function AIEncounter_TargetGuidance_SetSquadPatrolWander(pEncounter,pSquad,delaySecs,radiusMode,radiusOverride,overrideCenter,centerOverride)
+function AIEncounter_TargetGuidance_SetSquadPatrolWander(pEncounter, pSquad, delaySecs, radiusMode, radiusOverride, overrideCenter, centerOverride)
 end
 
 ---comment Sets engagement area radius around the target.
 ---@param pEncounter AIEncounterID
 ---@param radius Real
-function AIEncounter_TargetGuidance_SetTargetArea(pEncounter,radius)
+function AIEncounter_TargetGuidance_SetTargetArea(pEncounter, radius)
 end
 
 ---comment Sets target Entity for encounter
 ---@param pEncounter AIEncounterID
 ---@param entity EntityID
-function AIEncounter_TargetGuidance_SetTargetEntity(pEncounter,entity)
+function AIEncounter_TargetGuidance_SetTargetEntity(pEncounter, entity)
 end
 
 ---comment Sets leash radius around target where squads should stay within.
 ---@param pEncounter AIEncounterID
 ---@param radius Real
-function AIEncounter_TargetGuidance_SetTargetLeash(pEncounter,radius)
+function AIEncounter_TargetGuidance_SetTargetLeash(pEncounter, radius)
 end
 
 ---comment Sets target position for encounter
 ---@param pEncounter AIEncounterID
 ---@param pos Position
-function AIEncounter_TargetGuidance_SetTargetPosition(pEncounter,pos)
+function AIEncounter_TargetGuidance_SetTargetPosition(pEncounter, pos)
 end
 
 ---comment Sets target Squad for encounter
 ---@param pEncounter AIEncounterID
 ---@param squad SquadID
-function AIEncounter_TargetGuidance_SetTargetSquad(pEncounter,squad)
+function AIEncounter_TargetGuidance_SetTargetSquad(pEncounter, squad)
 end
 
 ---comment Set encounter name for debugging.
@@ -1409,25 +1409,25 @@ end
 ---@param requestingID Integer
 ---@param minDistToEnemyTerritory Real
 ---@param unused Boolean
-function AIPlayer_CachedPathCrossesEnemyTerritory(aiPlayer,requestingID,minDistToEnemyTerritory,unused)
+function AIPlayer_CachedPathCrossesEnemyTerritory(aiPlayer, requestingID, minDistToEnemyTerritory, unused)
 end
 
 ---comment Checks if the squad can lock the tactic item
 ---@param tacticItemEntity EntityID
 ---@param lockingAISquad SquadID
-function AIPlayer_CanAISquadLockTacticItem(tacticItemEntity,lockingAISquad)
+function AIPlayer_CanAISquadLockTacticItem(tacticItemEntity, lockingAISquad)
 end
 
 ---comment Test if player can see entity
 ---@param aiPlayer PlayerID
 ---@param canSee EntityID
-function AIPlayer_CanSeeEntity(aiPlayer,canSee)
+function AIPlayer_CanSeeEntity(aiPlayer, canSee)
 end
 
 ---comment Delete the cached path with this ID, please remember to do this
 ---@param player PlayerID
 ---@param requestingID Integer
-function AIPlayer_ClearCachedPath(player,requestingID)
+function AIPlayer_ClearCachedPath(player, requestingID)
 end
 
 ---comment returns true if enemy territory has been detected
@@ -1441,14 +1441,14 @@ end
 ---@param minSections Integer
 ---@param unbreached Boolean
 ---@param refPosition Position
-function AIPlayer_FindClosestSiegeTarget(player,eGroup,minSections,unbreached,refPosition)
+function AIPlayer_FindClosestSiegeTarget(player, eGroup, minSections, unbreached, refPosition)
 end
 
 ---comment Find a clump containing the given position, or return -1 if there isn't one.
 ---@param aiPlayer PlayerID
 ---@param pos Position
 ---@param targetFilterFlags Integer
-function AIPlayer_FindClumpContainingPosition(aiPlayer,pos,targetFilterFlags)
+function AIPlayer_FindClumpContainingPosition(aiPlayer, pos, targetFilterFlags)
 end
 
 ---comment Returns the anchor build position
@@ -1464,7 +1464,7 @@ end
 ---@param maxRange Real
 ---@param targetFilterFlags Integer
 ---@param minNumSquads Integer
-function AIPlayer_GetBestClumpForPositionIdx(pPlayer,position,pAbilityPBG,minRange,maxRange,targetFilterFlags,minNumSquads)
+function AIPlayer_GetBestClumpForPositionIdx(pPlayer, position, pAbilityPBG, minRange, maxRange, targetFilterFlags, minNumSquads)
 end
 
 ---comment returns a 0-based index of the best clump of enemy squads within the given tolerance to the AI squad
@@ -1475,7 +1475,7 @@ end
 ---@param maxRange Real
 ---@param targetFilterFlags Integer
 ---@param minNumSquads Integer
-function AIPlayer_GetBestClumpForSquadIdx(pPlayer,pSquad,pAbilityPBG,minRange,maxRange,targetFilterFlags,minNumSquads)
+function AIPlayer_GetBestClumpForSquadIdx(pPlayer, pSquad, pAbilityPBG, minRange, maxRange, targetFilterFlags, minNumSquads)
 end
 
 ---comment returns a 0-based index of the best clump of allied or enemy squads within the given tolerance to the AI player
@@ -1485,7 +1485,7 @@ end
 ---@param clumpSelectionGlobalBestMinRatio Real
 ---@param targetFilterFlags Integer
 ---@param minNumSquads Integer
-function AIPlayer_GetBestClumpIdx(pPlayer,minRange,maxRange,clumpSelectionGlobalBestMinRatio,targetFilterFlags,minNumSquads)
+function AIPlayer_GetBestClumpIdx(pPlayer, minRange, maxRange, clumpSelectionGlobalBestMinRatio, targetFilterFlags, minNumSquads)
 end
 
 ---comment returns a 0-based index of the best clump of allied or enemy squads within the given tolerance to the AI player
@@ -1496,7 +1496,7 @@ end
 ---@param clumpSelectionGlobalBestMinRatio Real
 ---@param targetFilterFlags Integer
 ---@param minNumSquads Integer
-function AIPlayer_GetBestClumpIdxForAbility(pPlayer,pAbilityPBG,minRange,maxRange,clumpSelectionGlobalBestMinRatio,targetFilterFlags,minNumSquads)
+function AIPlayer_GetBestClumpIdxForAbility(pPlayer, pAbilityPBG, minRange, maxRange, clumpSelectionGlobalBestMinRatio, targetFilterFlags, minNumSquads)
 end
 
 ---comment returns a 0-based index of the best clump of owned squads within the given tolerance to the AI player
@@ -1506,7 +1506,7 @@ end
 ---@param clumpSelectionGlobalBestMinRatio Real
 ---@param targetFilterFlags Integer
 ---@param minNumSquads Integer
-function AIPlayer_GetBestOwnedClumpIdx(pPlayer,minRange,maxRange,clumpSelectionGlobalBestMinRatio,targetFilterFlags,minNumSquads)
+function AIPlayer_GetBestOwnedClumpIdx(pPlayer, minRange, maxRange, clumpSelectionGlobalBestMinRatio, targetFilterFlags, minNumSquads)
 end
 
 ---comment returns a 0-based index of the best clump of owned squads within the given tolerance to the AI player
@@ -1517,19 +1517,19 @@ end
 ---@param clumpSelectionGlobalBestMinRatio Real
 ---@param targetFilterFlags Integer
 ---@param minNumSquads Integer
-function AIPlayer_GetBestOwnedClumpIdxForAbility(pPlayer,pAbilityPBG,minRange,maxRange,clumpSelectionGlobalBestMinRatio,targetFilterFlags,minNumSquads)
+function AIPlayer_GetBestOwnedClumpIdxForAbility(pPlayer, pAbilityPBG, minRange, maxRange, clumpSelectionGlobalBestMinRatio, targetFilterFlags, minNumSquads)
 end
 
 ---comment Get the distance of the path requested with the given ID. < 0 means invalid request.
 ---@param player PlayerID
 ---@param requestingID Integer
-function AIPlayer_GetCachedPathLength(player,requestingID)
+function AIPlayer_GetCachedPathLength(player, requestingID)
 end
 
 ---comment Return the path points of the calculated path from a previous pathfinding request if the result was successful and the path has at least two points.
 ---@param player PlayerID
 ---@param requestingID Integer
-function AIPlayer_GetCachedPathPoints(player,requestingID)
+function AIPlayer_GetCachedPathPoints(player, requestingID)
 end
 
 ---comment Returns an EGroup containing all capture points on the map owned by a player with the specified
@@ -1537,45 +1537,45 @@ end
 ---@param relationshipEnum StackVar
 ---@param onlyCanPlaceSecuringStructure Boolean
 ---@param egroupOut EGroupID
-function AIPlayer_GetCapturePoints(aiPlayer,relationshipEnum,onlyCanPlaceSecuringStructure,egroupOut)
+function AIPlayer_GetCapturePoints(aiPlayer, relationshipEnum, onlyCanPlaceSecuringStructure, egroupOut)
 end
 
 ---comment Used for tactics; returns a "special error position" on failure that's nowhere inside the world
 ---@param pPlayer PlayerID
 ---@param clumpIndex Integer
 ---@param targetFilterFlags Integer
-function AIPlayer_GetClumpPosition(pPlayer,clumpIndex,targetFilterFlags)
+function AIPlayer_GetClumpPosition(pPlayer, clumpIndex, targetFilterFlags)
 end
 
 ---comment returns how close a position is to enemy territory
 ---@param player PlayerID
 ---@param position Position
-function AIPlayer_GetDistanceToEnemyTerritory(player,position)
+function AIPlayer_GetDistanceToEnemyTerritory(player, position)
 end
 
 ---comment Calculate product of all multipliers in tableName
 ---@param aiPlayer PlayerID
 ---@param tableName Key
-function AIPlayer_GetDynamicMultiplier(aiPlayer,tableName)
+function AIPlayer_GetDynamicMultiplier(aiPlayer, tableName)
 end
 
 ---comment Calculate product of all unit type multipliers that match the entity's unit types
 ---@param aiPlayer PlayerID
 ---@param targetEntity Entity&
-function AIPlayer_GetDynamicUnitTypeMultipliersForEntity(aiPlayer,targetEntity)
+function AIPlayer_GetDynamicUnitTypeMultipliersForEntity(aiPlayer, targetEntity)
 end
 
 ---comment Calculate product of all unit type multipliers that match a unit type of an entity in the squad
 ---@param aiPlayer PlayerID
 ---@param targetSquad Squad&
-function AIPlayer_GetDynamicUnitTypeMultipliersForSquad(aiPlayer,targetSquad)
+function AIPlayer_GetDynamicUnitTypeMultipliersForSquad(aiPlayer, targetSquad)
 end
 
 ---comment Returns a list of all resource deposit entities seen by the AI player
 ---@param aiPlayer PlayerID
 ---@param resourceType String
 ---@param includeDepleted Boolean
-function AIPlayer_GetKnownResourceDeposits(aiPlayer,resourceType,includeDepleted)
+function AIPlayer_GetKnownResourceDeposits(aiPlayer, resourceType, includeDepleted)
 end
 
 ---comment Returns the local AIPlayer given a PlayerId (1000 and up)
@@ -1591,7 +1591,7 @@ end
 ---comment Returns the Player at specified index out of all opponent players.  Use in conjunction with `AIPlayer_GetOpponentPlayerCount`.
 ---@param aiPlayer PlayerID
 ---@param index Integer
-function AIPlayer_GetOpponentPlayerAtIndex(aiPlayer,index)
+function AIPlayer_GetOpponentPlayerAtIndex(aiPlayer, index)
 end
 
 ---comment Returns the number of opponent Players to the specified AIPlayer.
@@ -1602,68 +1602,68 @@ end
 ---comment Get a homebase at the given position. If one doesn't exist it will be created.
 ---@param aiPlayer PlayerID
 ---@param targetPosition Position
-function AIPlayer_GetOrCreateHomebase(aiPlayer,targetPosition)
+function AIPlayer_GetOrCreateHomebase(aiPlayer, targetPosition)
 end
 
 ---comment Used for tactics; returns a "special error position" on failure that's nowhere inside the world
 ---@param pPlayer PlayerID
 ---@param clumpIndex Integer
-function AIPlayer_GetOwnedClumpPosition(pPlayer,clumpIndex)
+function AIPlayer_GetOwnedClumpPosition(pPlayer, clumpIndex)
 end
 
 ---comment Returns an EGroup listing all military points owned by a player within a certain range of the position passed in that match a certain type
 ---@param militaryPointPBG EntityPBG
 ---@param position Position
 ---@param range Number
-function AIPlayer_GetOwnedMilitaryPointEntitiesInRange(militaryPointPBG,position,range)
+function AIPlayer_GetOwnedMilitaryPointEntitiesInRange(militaryPointPBG, position, range)
 end
 
 ---comment Returns all positions of military points allied with a player
 ---@param aiPlayer PlayerID
 ---@param relationshipEnum StackVar
-function AIPlayer_GetPositionsOfMilitaryPointsWithRelation(aiPlayer,relationshipEnum)
+function AIPlayer_GetPositionsOfMilitaryPointsWithRelation(aiPlayer, relationshipEnum)
 end
 
 ---comment Returns the utility of building the squad specified by the PBG, or 0 if not found
 ---@param aiPlayer PlayerID
 ---@param squadPBG ScarSquadPBG
-function AIPlayer_GetSquadPBGProductionUtility(aiPlayer,squadPBG)
+function AIPlayer_GetSquadPBGProductionUtility(aiPlayer, squadPBG)
 end
 
 ---comment Returns a table of squad ids from the AIPlayer's state model corresponding to the given key.
 ---@param aiPlayer PlayerID
 ---@param key String
-function AIPlayer_GetStateModelAISquadListEntries(aiPlayer,key)
+function AIPlayer_GetStateModelAISquadListEntries(aiPlayer, key)
 end
 
 ---comment Returns a boolean value from the AIPlayer's state model corresponding to the given key.
 ---@param aiPlayer PlayerID
 ---@param key String
-function AIPlayer_GetStateModelBool(aiPlayer,key)
+function AIPlayer_GetStateModelBool(aiPlayer, key)
 end
 
 ---comment Returns a float value from the AIPlayer's state model corresponding to the given key.
 ---@param aiPlayer PlayerID
 ---@param key String
-function AIPlayer_GetStateModelFloat(aiPlayer,key)
+function AIPlayer_GetStateModelFloat(aiPlayer, key)
 end
 
 ---comment Returns an integer value from the AIPlayer's state model corresponding to the given key.
 ---@param aiPlayer PlayerID
 ---@param key String
-function AIPlayer_GetStateModelInt(aiPlayer,key)
+function AIPlayer_GetStateModelInt(aiPlayer, key)
 end
 
 ---comment Returns a PropertyBagGroup value from the AIPlayer's state model corresponding to the given key.
 ---@param aiPlayer PlayerID
 ---@param key String
-function AIPlayer_GetStateModelPBG(aiPlayer,key)
+function AIPlayer_GetStateModelPBG(aiPlayer, key)
 end
 
 ---comment Returns a table of targets from the AIPlayer's state model corresponding to the given key.
 ---@param aiPlayer PlayerID
 ---@param key String
-function AIPlayer_GetStateModelTargetListEntries(aiPlayer,key)
+function AIPlayer_GetStateModelTargetListEntries(aiPlayer, key)
 end
 
 ---comment Has path to target passes through a netural damaged structure
@@ -1673,7 +1673,7 @@ end
 ---@param damagePercentage Real
 ---@param searchRadius Real
 ---@param targetPosition Position
-function AIPlayer_IsDamagedStructureOnPathToTarget(aiPlayer,squad,structurePbg,damagePercentage,searchRadius,targetPosition)
+function AIPlayer_IsDamagedStructureOnPathToTarget(aiPlayer, squad, structurePbg, damagePercentage, searchRadius, targetPosition)
 end
 
 ---comment Returns whether the player is on an island (naval map) or not
@@ -1683,7 +1683,7 @@ end
 ---comment Has the requested path been processed
 ---@param aiPlayer PlayerID
 ---@param requestedPathRequestID Integer
-function AIPlayer_IsPathProcessed(aiPlayer,requestedPathRequestID)
+function AIPlayer_IsPathProcessed(aiPlayer, requestedPathRequestID)
 end
 
 ---comment Returns whether or not a point is threatened (from the perspective of the player passed in)
@@ -1691,45 +1691,45 @@ end
 ---@param pos Position
 ---@param filterEnemyBuildings Boolean
 ---@param thresholdFitness Real
-function AIPlayer_IsPointThreatened(aiPlayer,pos,filterEnemyBuildings,thresholdFitness)
+function AIPlayer_IsPointThreatened(aiPlayer, pos, filterEnemyBuildings, thresholdFitness)
 end
 
 ---comment Checks if a tactic item is locked
 ---@param player PlayerID
 ---@param tacticItemEntity EntityID
-function AIPlayer_IsTacticItemLocked(player,tacticItemEntity)
+function AIPlayer_IsTacticItemLocked(player, tacticItemEntity)
 end
 
 ---comment Checks if a tactic item is locked by the squad
 ---@param tacticItemEntity EntityID
 ---@param lockingAISquad SquadID
-function AIPlayer_IsTacticItemLockedByAISquad(tacticItemEntity,lockingAISquad)
+function AIPlayer_IsTacticItemLockedByAISquad(tacticItemEntity, lockingAISquad)
 end
 
 ---comment Locks a tactic item for the passed player
 ---@param tacticItemEntity EntityID
 ---@param lockingAISquad SquadID
-function AIPlayer_LockTacticItemForAISquad(tacticItemEntity,lockingAISquad)
+function AIPlayer_LockTacticItemForAISquad(tacticItemEntity, lockingAISquad)
 end
 
 ---comment Remove a multiplier previously applied to change the weight of a criteria in target scoring
 ---@param aiPlayer PlayerID
 ---@param tuningValueName Key
 ---@param id AIScoreMultiplierID
-function AIPlayer_PopScoreMultiplier(aiPlayer,tuningValueName,id)
+function AIPlayer_PopScoreMultiplier(aiPlayer, tuningValueName, id)
 end
 
 ---comment Remove a multiplier previously applied to a unit type for target scoring
 ---@param aiPlayer PlayerID
 ---@param unitTypeName Key
 ---@param id AIScoreMultiplierID
-function AIPlayer_PopUnitTypeScoreMultiplier(aiPlayer,unitTypeName,id)
+function AIPlayer_PopUnitTypeScoreMultiplier(aiPlayer, unitTypeName, id)
 end
 
 ---comment Was the processed path successful? Only supply requestID for a processed path
 ---@param aiPlayer PlayerID
 ---@param processedPathRequestID Integer
-function AIPlayer_ProcessedPathSuccessful(aiPlayer,processedPathRequestID)
+function AIPlayer_ProcessedPathSuccessful(aiPlayer, processedPathRequestID)
 end
 
 ---comment Add a multiplier to change the weight of a criteria in target scoring
@@ -1737,7 +1737,7 @@ end
 ---@param tuningValueName Key
 ---@param multiplier Real
 ---@param multiplierID AIScoreMultiplierID
-function AIPlayer_PushScoreMultiplier(aiPlayer,tuningValueName,multiplier,multiplierID)
+function AIPlayer_PushScoreMultiplier(aiPlayer, tuningValueName, multiplier, multiplierID)
 end
 
 ---comment Add a multiplier to give weight to a unit type in target scoring
@@ -1745,19 +1745,19 @@ end
 ---@param unitTypeName Key
 ---@param multiplier Real
 ---@param multiplierID AIScoreMultiplierID
-function AIPlayer_PushUnitTypeScoreMultiplier(aiPlayer,unitTypeName,multiplier,multiplierID)
+function AIPlayer_PushUnitTypeScoreMultiplier(aiPlayer, unitTypeName, multiplier, multiplierID)
 end
 
 ---comment Remove entities (buildings) homebase assignment. Entities must be owned by player.
 ---@param aiPlayer PlayerID
 ---@param eGroup EGroupID
-function AIPlayer_RemoveEntityHomebase(aiPlayer,eGroup)
+function AIPlayer_RemoveEntityHomebase(aiPlayer, eGroup)
 end
 
 ---comment Remove squads homebase assignment. Squads must be owned by player.
 ---@param aiPlayer PlayerID
 ---@param sGroup SGroupID
-function AIPlayer_RemoveSquadHomebase(aiPlayer,sGroup)
+function AIPlayer_RemoveSquadHomebase(aiPlayer, sGroup)
 end
 
 ---comment Request a high path between the start and destination, supply a unique ID and the PBG of the largest entity that will be following the path.
@@ -1767,52 +1767,52 @@ end
 ---@param end Position
 ---@param pathingEntityPBG PropertyBagGroup
 ---@param requiresPartialPath Boolean
-function AIPlayer_RequestHighPath(player,requestingID,start,end,pathingEntityPBG,requiresPartialPath)
+function AIPlayer_RequestHighPath(player, requestingID, start, end, pathingEntityPBG, requiresPartialPath)
 end
 
 ---comment Clears the ability priority override
 ---@param player PlayerID
 ---@param abilityPBG PropertyBagGroup
-function AIPlayer_ResetAbilityPriorityOverride(player,abilityPBG)
+function AIPlayer_ResetAbilityPriorityOverride(player, abilityPBG)
 end
 
 ---comment Clears the ability priority override for all the abilities contained in the AIAbilityBag
 ---@param player PlayerID
 ---@param aiAbilityPBG PropertyBagGroup
-function AIPlayer_ResetAIAbilityPriorityOverride(player,aiAbilityPBG)
+function AIPlayer_ResetAIAbilityPriorityOverride(player, aiAbilityPBG)
 end
 
 ---comment Temporarily hides all of the known squads belonging to the enemy player for the specified AI
 ---@param player PlayerID
 ---@param enemyPlayer PlayerID
-function AIPlayer_ResetEnemySquadsVisibility(player,enemyPlayer)
+function AIPlayer_ResetEnemySquadsVisibility(player, enemyPlayer)
 end
 
 ---comment Sets the ability priority override for all the AISquads owned by the player. -1 to disable the ability. NOTE: Encounter overrides have higher priority.
 ---@param player PlayerID
 ---@param abilityPBG PropertyBagGroup
 ---@param priority Real
-function AIPlayer_SetAbilityPriorityOverride(player,abilityPBG,priority)
+function AIPlayer_SetAbilityPriorityOverride(player, abilityPBG, priority)
 end
 
 ---comment Sets the ability priority override for all the abilities contained in the AIAbilityBag for all the AISquads owned by the player. -1 to disable the ability. NOTE: Encounter overrides have higher priority.
 ---@param player PlayerID
 ---@param aiAbilityPBG PropertyBagGroup
 ---@param priority Real
-function AIPlayer_SetAIAbilityPriorityOverride(player,aiAbilityPBG,priority)
+function AIPlayer_SetAIAbilityPriorityOverride(player, aiAbilityPBG, priority)
 end
 
 ---comment Add entities (buildings) to a homebase. Entities must be owned by player.
 ---@param aiPlayer PlayerID
 ---@param eGroup EGroupID
 ---@param homeBaseID Integer
-function AIPlayer_SetEntityHomebase(aiPlayer,eGroup,homeBaseID)
+function AIPlayer_SetEntityHomebase(aiPlayer, eGroup, homeBaseID)
 end
 
 ---comment Set the target distribution of how the ai player should use their units for gathering
 ---@param aiPlayer PlayerID
 ---@param luaGatherDistro Real
-function AIPlayer_SetGathererDistributionOverride(aiPlayer,luaGatherDistro)
+function AIPlayer_SetGathererDistributionOverride(aiPlayer, luaGatherDistro)
 end
 
 ---comment marks the player to force the stats squads to update
@@ -1824,26 +1824,26 @@ end
 ---@param aiPlayer PlayerID
 ---@param sGroup SGroupID
 ---@param homeBaseID Integer
-function AIPlayer_SetSquadHomebase(aiPlayer,sGroup,homeBaseID)
+function AIPlayer_SetSquadHomebase(aiPlayer, sGroup, homeBaseID)
 end
 
 ---comment Set the base strategic intention of a player
 ---@param player PlayerID
 ---@param intentionName String
 ---@param value Real
-function AIPlayer_SetStrategicBaseIntention(player,intentionName,value)
+function AIPlayer_SetStrategicBaseIntention(player, intentionName, value)
 end
 
 ---comment Toggle debug draw for the specified path, -1 will draw all of them
 ---@param requestingID Integer
 ---@param on Boolean
-function AIPlayer_ToggleDrawCachedPath(requestingID,on)
+function AIPlayer_ToggleDrawCachedPath(requestingID, on)
 end
 
 ---comment UnLocks a tactic item for the passed player
 ---@param tacticItemEntity EntityID
 ---@param lockingAISquad SquadID
-function AIPlayer_UnLockTacticItemForAISquad(tacticItemEntity,lockingAISquad)
+function AIPlayer_UnLockTacticItemForAISquad(tacticItemEntity, lockingAISquad)
 end
 
 ---comment Updates what the skirmish AI is wanting to gather
@@ -1877,7 +1877,7 @@ end
 ---@param maxFitness Real
 ---@param aiArmyType Integer
 ---@param highFitnessIsGood Boolean
-function AIProductionScoring_AlliedCombatFitness(aiPlayer,minFitness,maxFitness,aiArmyType,highFitnessIsGood)
+function AIProductionScoring_AlliedCombatFitness(aiPlayer, minFitness, maxFitness, aiArmyType, highFitnessIsGood)
 end
 
 ---comment Create a AlliedCombatFitness scoring function (versus strongest enemy).
@@ -1886,7 +1886,7 @@ end
 ---@param maxFitness Real
 ---@param aiArmyType Integer
 ---@param highFitnessIsGood Boolean
-function AIProductionScoring_AlliedCombatFitnessVsStrongestEnemy(aiPlayer,minFitness,maxFitness,aiArmyType,highFitnessIsGood)
+function AIProductionScoring_AlliedCombatFitnessVsStrongestEnemy(aiPlayer, minFitness, maxFitness, aiArmyType, highFitnessIsGood)
 end
 
 ---comment Create a AlliedCombatFitness scoring function (versus the weakest enemy).
@@ -1895,13 +1895,13 @@ end
 ---@param maxFitness Real
 ---@param aiArmyType Integer
 ---@param highFitnessIsGood Boolean
-function AIProductionScoring_AlliedCombatFitnessVsWeakestEnemy(aiPlayer,minFitness,maxFitness,aiArmyType,highFitnessIsGood)
+function AIProductionScoring_AlliedCombatFitnessVsWeakestEnemy(aiPlayer, minFitness, maxFitness, aiArmyType, highFitnessIsGood)
 end
 
 ---comment Create an AmountOfResourceNeeded scoring function.
 ---@param aiPlayer PlayerID
 ---@param maxResources Real
-function AIProductionScoring_AmountOfResourceNeeded(aiPlayer,maxResources)
+function AIProductionScoring_AmountOfResourceNeeded(aiPlayer, maxResources)
 end
 
 ---comment Check if now is an appropriate time to be making scoring functions.
@@ -1914,19 +1914,19 @@ end
 ---@param min Real
 ---@param max Real
 ---@param innerScoringFunction ScoringFunction*
-function AIProductionScoring_ClampedScoringFunction(aiPlayer,min,max,innerScoringFunction)
+function AIProductionScoring_ClampedScoringFunction(aiPlayer, min, max, innerScoringFunction)
 end
 
 ---comment Create a CounterScore scoring function
 ---@param aiPlayer PlayerID
 ---@param baseScoreContributuion Real
-function AIProductionScoring_CounterScore(aiPlayer,baseScoreContributuion)
+function AIProductionScoring_CounterScore(aiPlayer, baseScoreContributuion)
 end
 
 ---comment Create a DropOffScore scoring function.
 ---@param aiPlayer PlayerID
 ---@param weight Real
-function AIProductionScoring_DeficiencyScore(aiPlayer,weight)
+function AIProductionScoring_DeficiencyScore(aiPlayer, weight)
 end
 
 ---comment Create a EntityCombatUpgrade scoring function.
@@ -1938,7 +1938,7 @@ end
 ---@param aiPlayer PlayerID
 ---@param minGameTime Real
 ---@param increasePerSecond Real
-function AIProductionScoring_IncreaseOverTime(aiPlayer,minGameTime,increasePerSecond)
+function AIProductionScoring_IncreaseOverTime(aiPlayer, minGameTime, increasePerSecond)
 end
 
 ---comment Create an InverseRandomIntScore scoring function.
@@ -1956,62 +1956,62 @@ end
 ---@param resourceType ResourceType
 ---@param scarceAmount Real
 ---@param wellOffAmount Real
-function AIProductionScoring_LackOfSecuredResourceDeposits(aiPlayer,resourceType,scarceAmount,wellOffAmount)
+function AIProductionScoring_LackOfSecuredResourceDeposits(aiPlayer, resourceType, scarceAmount, wellOffAmount)
 end
 
 ---comment Create a LuaScoringFunction scoring function.
 ---@param aiPlayer PlayerID
 ---@param scoringFunction LuaFunction
-function AIProductionScoring_LuaScoringFunction(aiPlayer,scoringFunction)
+function AIProductionScoring_LuaScoringFunction(aiPlayer, scoringFunction)
 end
 
 ---comment Create a MaximumGameTime scoring function.
 ---@param aiPlayer PlayerID
 ---@param maxGameTime Real
-function AIProductionScoring_MaximumGameTime(aiPlayer,maxGameTime)
+function AIProductionScoring_MaximumGameTime(aiPlayer, maxGameTime)
 end
 
 ---comment Create a MaxPopCapPercentage scoring function
 ---@param aiPlayer PlayerID
 ---@param targetPopulationPercentageAlive Real
 ---@param groupPopulation Boolean
-function AIProductionScoring_MaxPopCapPercentage(aiPlayer,targetPopulationPercentageAlive,groupPopulation)
+function AIProductionScoring_MaxPopCapPercentage(aiPlayer, targetPopulationPercentageAlive, groupPopulation)
 end
 
 ---comment Create a MaxScoringFunction scoring function.
 ---@param aiPlayer PlayerID
 ---@param innerScoringFunction vector<ScoringFunction*>
-function AIProductionScoring_MaxScoringFunction(aiPlayer,innerScoringFunction)
+function AIProductionScoring_MaxScoringFunction(aiPlayer, innerScoringFunction)
 end
 
 ---comment Create a MaxWeaponDamage scoring function.
 ---@param aiPlayer PlayerID
 ---@param maxDamage Real
-function AIProductionScoring_MaxWeaponDamage(aiPlayer,maxDamage)
+function AIProductionScoring_MaxWeaponDamage(aiPlayer, maxDamage)
 end
 
 ---comment Create a MilitaryPlayerUpgrade scoring function.
 ---@param aiPlayer PlayerID
 ---@param upgradeExponent Real
-function AIProductionScoring_MilitaryPlayerUpgrade(aiPlayer,upgradeExponent)
+function AIProductionScoring_MilitaryPlayerUpgrade(aiPlayer, upgradeExponent)
 end
 
 ---comment Create a MinimumGameTime scoring function.
 ---@param aiPlayer PlayerID
 ---@param minGameTime Real
-function AIProductionScoring_MinimumGameTime(aiPlayer,minGameTime)
+function AIProductionScoring_MinimumGameTime(aiPlayer, minGameTime)
 end
 
 ---comment Create a MultipleProduced scoring function
 ---@param aiPlayer PlayerID
 ---@param additionalFactor Real
-function AIProductionScoring_MultipleProduced(aiPlayer,additionalFactor)
+function AIProductionScoring_MultipleProduced(aiPlayer, additionalFactor)
 end
 
 ---comment Create a MultiplyListScoringFunction scoring function.
 ---@param aiPlayer PlayerID
 ---@param innerScoringFunction vector<ScoringFunction*>
-function AIProductionScoring_MultiplyListScoringFunction(aiPlayer,innerScoringFunction)
+function AIProductionScoring_MultiplyListScoringFunction(aiPlayer, innerScoringFunction)
 end
 
 ---comment Create a NavalTransportRequired scoring function.
@@ -2027,7 +2027,7 @@ end
 ---comment Create an NotProducedRecently scoring function.
 ---@param aiPlayer PlayerID
 ---@param timePeriodSeconds Real
-function AIProductionScoring_NotProducedRecently(aiPlayer,timePeriodSeconds)
+function AIProductionScoring_NotProducedRecently(aiPlayer, timePeriodSeconds)
 end
 
 ---comment Create a OnlyProduceOneAtATime scoring function.
@@ -2038,14 +2038,14 @@ end
 ---comment Create a PlannedPlacementScore scoring function.
 ---@param aiPlayer PlayerID
 ---@param minPlacementScore Real
-function AIProductionScoring_PlannedPlacementScore(aiPlayer,minPlacementScore)
+function AIProductionScoring_PlannedPlacementScore(aiPlayer, minPlacementScore)
 end
 
 ---comment Create a PlayerGatheringUpgrade scoring function
 ---@param aiPlayer PlayerID
 ---@param improvementScalingFactor Real
 ---@param approxDistToDeposit Real
-function AIProductionScoring_PlayerGatheringUpgrade(aiPlayer,improvementScalingFactor,approxDistToDeposit)
+function AIProductionScoring_PlayerGatheringUpgrade(aiPlayer, improvementScalingFactor, approxDistToDeposit)
 end
 
 ---comment Create an AIPlayersOnDifferentIslands scoring function.
@@ -2064,34 +2064,34 @@ end
 ---@param scoreDropOffFactor Real
 ---@param groupPopulation Boolean
 ---@param useSquadPopulation Boolean
-function AIProductionScoring_PopulationPercentage(aiPlayer,targetPopulationPercentageAlive,scoreDropOffFactor,groupPopulation,useSquadPopulation)
+function AIProductionScoring_PopulationPercentage(aiPlayer, targetPopulationPercentageAlive, scoreDropOffFactor, groupPopulation, useSquadPopulation)
 end
 
 ---comment Create a PresenceOfEnemyTypes scoring function
 ---@param aiPlayer PlayerID
 ---@param weights Real
 ---@param squadTypes Boolean
-function AIProductionScoring_PresenceOfEnemyTypes(aiPlayer,weights,squadTypes)
+function AIProductionScoring_PresenceOfEnemyTypes(aiPlayer, weights, squadTypes)
 end
 
 ---comment Create a PresenceOfMyTypes scoring function
 ---@param aiPlayer PlayerID
 ---@param weights Real
 ---@param squadTypes Boolean
-function AIProductionScoring_PresenceOfMyTypes(aiPlayer,weights,squadTypes)
+function AIProductionScoring_PresenceOfMyTypes(aiPlayer, weights, squadTypes)
 end
 
 ---comment Create a PresenceOfUpgradeableSquads scoring function.
 ---@param aiPlayer PlayerID
 ---@param weight Real
-function AIProductionScoring_PresenceOfUpgradeableSquads(aiPlayer,weight)
+function AIProductionScoring_PresenceOfUpgradeableSquads(aiPlayer, weight)
 end
 
 ---comment Create a ProductionQueueContention scoring function.
 ---@param aiPlayer PlayerID
 ---@param contentionThreshold Real
 ---@param normalFactor Real
-function AIProductionScoring_ProductionQueueContention(aiPlayer,contentionThreshold,normalFactor)
+function AIProductionScoring_ProductionQueueContention(aiPlayer, contentionThreshold, normalFactor)
 end
 
 ---comment Create an RandomIntScore scoring function.
@@ -2102,13 +2102,13 @@ end
 ---comment Create an RemainingPersonnelPopCap scoring function.
 ---@param aiPlayer PlayerID
 ---@param requiredRemainingPop Real
-function AIProductionScoring_RemainingPersonnelPopCap(aiPlayer,requiredRemainingPop)
+function AIProductionScoring_RemainingPersonnelPopCap(aiPlayer, requiredRemainingPop)
 end
 
 ---comment Create a ResourceGeneratorScore scoring function.
 ---@param aiPlayer PlayerID
 ---@param depletionTimeThreshold Real
-function AIProductionScoring_ResourceGeneratorScore(aiPlayer,depletionTimeThreshold)
+function AIProductionScoring_ResourceGeneratorScore(aiPlayer, depletionTimeThreshold)
 end
 
 ---comment Create a DropOffScore scoring function.
@@ -2129,19 +2129,19 @@ end
 ---comment Returns 1 if not a naval map, 0 otherwise
 ---@param aiPlayer PlayerID
 ---@param shouldIncludeLimitedNaval Boolean
-function AIProductionScoring_ShouldNotConsiderNaval(aiPlayer,shouldIncludeLimitedNaval)
+function AIProductionScoring_ShouldNotConsiderNaval(aiPlayer, shouldIncludeLimitedNaval)
 end
 
 ---comment Create a StrategicIntention scoring function
 ---@param aiPlayer PlayerID
 ---@param weights Real
-function AIProductionScoring_StrategicIntention(aiPlayer,weights)
+function AIProductionScoring_StrategicIntention(aiPlayer, weights)
 end
 
 ---comment Create a TierUpgrade scoring function.
 ---@param aiPlayer PlayerID
 ---@param weight Real
-function AIProductionScoring_TierUpgrade(aiPlayer,weight)
+function AIProductionScoring_TierUpgrade(aiPlayer, weight)
 end
 
 ---comment Create a TimeToAcquire scoring function
@@ -2150,13 +2150,13 @@ end
 ---@param includeTimeToGather Boolean
 ---@param includeTimeToBuildThis Boolean
 ---@param includeTimeToBuildRequirements Boolean
-function AIProductionScoring_TimeToAcquire(aiPlayer,maxTimeSeconds,includeTimeToGather,includeTimeToBuildThis,includeTimeToBuildRequirements)
+function AIProductionScoring_TimeToAcquire(aiPlayer, maxTimeSeconds, includeTimeToGather, includeTimeToBuildThis, includeTimeToBuildRequirements)
 end
 
 ---comment Create a ResourceDesireVsIncome scoring function.
 ---@param aiPlayer PlayerID
 ---@param landRoute Boolean
-function AIProductionScoring_TradeRouteExistsScore(aiPlayer,landRoute)
+function AIProductionScoring_TradeRouteExistsScore(aiPlayer, landRoute)
 end
 
 ---comment Create a UnderCountLimit scoring function
@@ -2164,33 +2164,33 @@ end
 ---@param maxAlive Integer
 ---@param maxEverProduced Integer
 ---@param groupPopulation Boolean
-function AIProductionScoring_UnderCountLimit(aiPlayer,maxAlive,maxEverProduced,groupPopulation)
+function AIProductionScoring_UnderCountLimit(aiPlayer, maxAlive, maxEverProduced, groupPopulation)
 end
 
 ---comment Create a UnderCountLimit scoring function
 ---@param aiPlayer PlayerID
 ---@param keyMaxAlive String
-function AIProductionScoring_UnderCountLimitFromStateModel(aiPlayer,keyMaxAlive)
+function AIProductionScoring_UnderCountLimitFromStateModel(aiPlayer, keyMaxAlive)
 end
 
 ---comment Create an VehicleUnderCountLimit scoring function.
 ---@param aiPlayer PlayerID
 ---@param groupPopulation Boolean
 ---@param maxCap Boolean
-function AIProductionScoring_VehicleUnderCountLimit(aiPlayer,groupPopulation,maxCap)
+function AIProductionScoring_VehicleUnderCountLimit(aiPlayer, groupPopulation, maxCap)
 end
 
 ---comment Clears a TargetHandle value in the AISquad's state model corresponding to the given key and table row index (0 based).
 ---@param aiSquad SquadID
 ---@param key String
 ---@param tableRowIndex Integer
-function AISquad_ClearStateModelEnumTableTarget(aiSquad,key,tableRowIndex)
+function AISquad_ClearStateModelEnumTableTarget(aiSquad, key, tableRowIndex)
 end
 
 ---comment Clears a TargetHandle value in the AISquad's state model corresponding to the given key.
 ---@param aiSquad SquadID
 ---@param key String
-function AISquad_ClearStateModelTarget(aiSquad,key)
+function AISquad_ClearStateModelTarget(aiSquad, key)
 end
 
 ---comment Find the best squad target which is not part of a clump.
@@ -2198,14 +2198,14 @@ end
 ---@param targetSquads SGroupID
 ---@param tacticTargetPolicy TargetPreference
 ---@param targetAllies Boolean
-function AISquad_FindBestIsolatedSquadTarget(aiSquad,targetSquads,tacticTargetPolicy,targetAllies)
+function AISquad_FindBestIsolatedSquadTarget(aiSquad, targetSquads, tacticTargetPolicy, targetAllies)
 end
 
 ---comment returns the best squad target in the sgroup based on the passed tacticTargetPolicy
 ---@param aiSquad SquadID
 ---@param targetSquads SGroupID
 ---@param tacticTargetPolicy TargetPreference
-function AISquad_FindBestSquadTarget(aiSquad,targetSquads,tacticTargetPolicy)
+function AISquad_FindBestSquadTarget(aiSquad, targetSquads, tacticTargetPolicy)
 end
 
 ---comment Tries to find cover within a certain radius of a position, traveling a max distance to get there, and possibly comparing against current position's cover. If no cover is found, it returns an invalid position
@@ -2213,40 +2213,40 @@ end
 ---@param aiSquad SquadID
 ---@param maxPathDistanceFromGoal Real
 ---@param compareToCurrentCover Boolean
-function AISquad_FindFilteredCoverCompareCurrent(player,aiSquad,maxPathDistanceFromGoal,compareToCurrentCover)
+function AISquad_FindFilteredCoverCompareCurrent(player, aiSquad, maxPathDistanceFromGoal, compareToCurrentCover)
 end
 
 ---comment returns the safest position for the AISquad in the current encounter leash area
 ---@param aiSquad SquadID
 ---@param maxRadius Real
-function AISquad_FindSafePositionInEncounterLeash(aiSquad,maxRadius)
+function AISquad_FindSafePositionInEncounterLeash(aiSquad, maxRadius)
 end
 
 ---comment Returns the closest cuttable obstruction entity to the given squad
 ---@param pSquad SquadID
 ---@param radius Real
-function AISquad_GetClosestCuttableObstruction(pSquad,radius)
+function AISquad_GetClosestCuttableObstruction(pSquad, radius)
 end
 
 ---comment Returns the closest obstruction entity to the given squad
 ---@param pSquad SquadID
 ---@param radius Real
 ---@param bFilterAllied Boolean
-function AISquad_GetClosestObstruction(pSquad,radius,bFilterAllied)
+function AISquad_GetClosestObstruction(pSquad, radius, bFilterAllied)
 end
 
 ---comment Returns the closest obstruction entity to the given squad
 ---@param pSquad SquadID
 ---@param radius Real
 ---@param pbgtype PropertyBagGroup
-function AISquad_GetClosestObstructionOfType(pSquad,radius,pbgtype)
+function AISquad_GetClosestObstructionOfType(pSquad, radius, pbgtype)
 end
 
 ---comment Get the position on the far side of the given clump relative to the given squad.
 ---@param aiSquad SquadID
 ---@param clumpIndex Integer
 ---@param targetFilterFlags Integer
-function AISquad_GetClumpFarBound(aiSquad,clumpIndex,targetFilterFlags)
+function AISquad_GetClumpFarBound(aiSquad, clumpIndex, targetFilterFlags)
 end
 
 ---comment returns the current fallback position
@@ -2257,144 +2257,144 @@ end
 ---comment Returns a boolean value from the AISquad's state model corresponding to the given key.
 ---@param aiSquad SquadID
 ---@param key String
-function AISquad_GetStateModelBool(aiSquad,key)
+function AISquad_GetStateModelBool(aiSquad, key)
 end
 
 ---comment Returns an Entity value from the AISquad's state model corresponding to the given key.
 ---@param aiSquad SquadID
 ---@param key String
-function AISquad_GetStateModelEntityTarget(aiSquad,key)
+function AISquad_GetStateModelEntityTarget(aiSquad, key)
 end
 
 ---comment Returns a boolean value from the AISquad's state model corresponding to the given key and table row index (0 based).
 ---@param aiSquad SquadID
 ---@param key String
 ---@param tableRowIndex Integer
-function AISquad_GetStateModelEnumTableBool(aiSquad,key,tableRowIndex)
+function AISquad_GetStateModelEnumTableBool(aiSquad, key, tableRowIndex)
 end
 
 ---comment Returns an Entity value from the AISquad's state model corresponding to the given key and table row index (0 based).
 ---@param aiSquad SquadID
 ---@param key String
 ---@param tableRowIndex Integer
-function AISquad_GetStateModelEnumTableEntityTarget(aiSquad,key,tableRowIndex)
+function AISquad_GetStateModelEnumTableEntityTarget(aiSquad, key, tableRowIndex)
 end
 
 ---comment Returns a float value from the AISquad's state model corresponding to the given key and table row index (0 based).
 ---@param aiSquad SquadID
 ---@param key String
 ---@param tableRowIndex Integer
-function AISquad_GetStateModelEnumTableFloat(aiSquad,key,tableRowIndex)
+function AISquad_GetStateModelEnumTableFloat(aiSquad, key, tableRowIndex)
 end
 
 ---comment Returns an integer value from the AISquad's state model corresponding to the given key and table row index (0 based).
 ---@param aiSquad SquadID
 ---@param key String
 ---@param tableRowIndex Integer
-function AISquad_GetStateModelEnumTableInt(aiSquad,key,tableRowIndex)
+function AISquad_GetStateModelEnumTableInt(aiSquad, key, tableRowIndex)
 end
 
 ---comment Returns a pbg value from the AISquad's state model corresponding to the given key and table row index (0 based).
 ---@param aiSquad SquadID
 ---@param key String
 ---@param tableRowIndex Integer
-function AISquad_GetStateModelEnumTablePBG(aiSquad,key,tableRowIndex)
+function AISquad_GetStateModelEnumTablePBG(aiSquad, key, tableRowIndex)
 end
 
 ---comment Returns a Player value from the AISquad's state model corresponding to the given key and table row index (0 based).
 ---@param aiSquad SquadID
 ---@param key String
 ---@param tableRowIndex Integer
-function AISquad_GetStateModelEnumTablePlayerTarget(aiSquad,key,tableRowIndex)
+function AISquad_GetStateModelEnumTablePlayerTarget(aiSquad, key, tableRowIndex)
 end
 
 ---comment Returns a Squad value from the AISquad's state model corresponding to the given key and table row index (0 based).
 ---@param aiSquad SquadID
 ---@param key String
 ---@param tableRowIndex Integer
-function AISquad_GetStateModelEnumTableSquadTarget(aiSquad,key,tableRowIndex)
+function AISquad_GetStateModelEnumTableSquadTarget(aiSquad, key, tableRowIndex)
 end
 
 ---comment Returns a Vector3f value from the AISquad's state model corresponding to the given key and table row index (0 based).
 ---@param aiSquad SquadID
 ---@param key String
 ---@param tableRowIndex Integer
-function AISquad_GetStateModelEnumTableVector3f(aiSquad,key,tableRowIndex)
+function AISquad_GetStateModelEnumTableVector3f(aiSquad, key, tableRowIndex)
 end
 
 ---comment Returns a float value from the AISquad's state model corresponding to the given key.
 ---@param aiSquad SquadID
 ---@param key String
-function AISquad_GetStateModelFloat(aiSquad,key)
+function AISquad_GetStateModelFloat(aiSquad, key)
 end
 
 ---comment Returns an integer value from the AISquad's state model corresponding to the given key.
 ---@param aiSquad SquadID
 ---@param key String
-function AISquad_GetStateModelInt(aiSquad,key)
+function AISquad_GetStateModelInt(aiSquad, key)
 end
 
 ---comment Returns a pbg value from the AISquad's state model corresponding to the given key.
 ---@param aiSquad SquadID
 ---@param key String
-function AISquad_GetStateModelPBG(aiSquad,key)
+function AISquad_GetStateModelPBG(aiSquad, key)
 end
 
 ---comment Returns a Player value from the AISquad's state model corresponding to the given key.
 ---@param aiSquad SquadID
 ---@param key String
-function AISquad_GetStateModelPlayerTarget(aiSquad,key)
+function AISquad_GetStateModelPlayerTarget(aiSquad, key)
 end
 
 ---comment Returns a Squad value from the AISquad's state model corresponding to the given key.
 ---@param aiSquad SquadID
 ---@param key String
-function AISquad_GetStateModelSquadTarget(aiSquad,key)
+function AISquad_GetStateModelSquadTarget(aiSquad, key)
 end
 
 ---comment Returns a Vector3f value from the AISquad's state model corresponding to the given key.
 ---@param aiSquad SquadID
 ---@param key String
-function AISquad_GetStateModelVector3f(aiSquad,key)
+function AISquad_GetStateModelVector3f(aiSquad, key)
 end
 
 ---comment Checks if the squad has been attacked within this time
 ---@param pAISquad SquadID
 ---@param historyTicks Integer
-function AISquad_HasBeenAttacked(pAISquad,historyTicks)
+function AISquad_HasBeenAttacked(pAISquad, historyTicks)
 end
 
 ---comment Checks if the squad has fired its weapon within this time
 ---@param pAISquad SquadID
 ---@param historyTicks Integer
-function AISquad_HasFiredWeapon(pAISquad,historyTicks)
+function AISquad_HasFiredWeapon(pAISquad, historyTicks)
 end
 
 ---comment Returns true if a path shorter than maxDistance between the AISquad and the target exists
 ---@param aiSquad SquadID
 ---@param targetPosition Position
 ---@param maxDistance Real
-function AISquad_HasPathWithinDistance(aiSquad,targetPosition,maxDistance)
+function AISquad_HasPathWithinDistance(aiSquad, targetPosition, maxDistance)
 end
 
 ---comment returns true if the AISquad is currently running the AISquadAbilityTactic for the passed abilityPBG
 ---@param aiSquad SquadID
 ---@param abilityPBG PropertyBagGroup
-function AISquad_IsRunningSquadTacticAbility(aiSquad,abilityPBG)
+function AISquad_IsRunningSquadTacticAbility(aiSquad, abilityPBG)
 end
 
 ---comment Sets a boolean value in the AISquad's state model corresponding to the given key.
 ---@param aiSquad SquadID
 ---@param key String
 ---@param value Boolean
-function AISquad_SetStateModelBool(aiSquad,key,value)
+function AISquad_SetStateModelBool(aiSquad, key, value)
 end
 
 ---comment Sets an Entity TargetHandle value in the AISquad's state model corresponding to the given key.
 ---@param aiSquad SquadID
 ---@param key String
 ---@param value EntityID
-function AISquad_SetStateModelEntityTarget(aiSquad,key,value)
+function AISquad_SetStateModelEntityTarget(aiSquad, key, value)
 end
 
 ---comment Sets a boolean value in the AISquad's state model corresponding to the given key and table row index (0 based).
@@ -2402,7 +2402,7 @@ end
 ---@param key String
 ---@param tableRowIndex Integer
 ---@param value Boolean
-function AISquad_SetStateModelEnumTableBool(aiSquad,key,tableRowIndex,value)
+function AISquad_SetStateModelEnumTableBool(aiSquad, key, tableRowIndex, value)
 end
 
 ---comment Sets an Entity TargetHandle value in the AISquad's state model corresponding to the given key and table row index (0 based).
@@ -2410,7 +2410,7 @@ end
 ---@param key String
 ---@param tableRowIndex Integer
 ---@param value EntityID
-function AISquad_SetStateModelEnumTableEntityTarget(aiSquad,key,tableRowIndex,value)
+function AISquad_SetStateModelEnumTableEntityTarget(aiSquad, key, tableRowIndex, value)
 end
 
 ---comment Sets a float value in the AISquad's state model corresponding to the given key and table row index (0 based).
@@ -2418,7 +2418,7 @@ end
 ---@param key String
 ---@param tableRowIndex Integer
 ---@param value Real
-function AISquad_SetStateModelEnumTableFloat(aiSquad,key,tableRowIndex,value)
+function AISquad_SetStateModelEnumTableFloat(aiSquad, key, tableRowIndex, value)
 end
 
 ---comment Sets an integer value in the AISquad's state model corresponding to the given key and table row index (0 based).
@@ -2426,7 +2426,7 @@ end
 ---@param key String
 ---@param tableRowIndex Integer
 ---@param value Integer
-function AISquad_SetStateModelEnumTableInt(aiSquad,key,tableRowIndex,value)
+function AISquad_SetStateModelEnumTableInt(aiSquad, key, tableRowIndex, value)
 end
 
 ---comment Sets a pbg value in the AISquad's state model corresponding to the given key and table row index (0 based).
@@ -2434,7 +2434,7 @@ end
 ---@param key String
 ---@param tableRowIndex Integer
 ---@param value PropertyBagGroup
-function AISquad_SetStateModelEnumTablePBG(aiSquad,key,tableRowIndex,value)
+function AISquad_SetStateModelEnumTablePBG(aiSquad, key, tableRowIndex, value)
 end
 
 ---comment Sets a Player TargetHandle value in the AISquad's state model corresponding to the given key and table row index (0 based).
@@ -2442,7 +2442,7 @@ end
 ---@param key String
 ---@param tableRowIndex Integer
 ---@param value PlayerID
-function AISquad_SetStateModelEnumTablePlayerTarget(aiSquad,key,tableRowIndex,value)
+function AISquad_SetStateModelEnumTablePlayerTarget(aiSquad, key, tableRowIndex, value)
 end
 
 ---comment Sets a Squad TargetHandle value in the AISquad's state model corresponding to the given key and table row index (0 based).
@@ -2450,7 +2450,7 @@ end
 ---@param key String
 ---@param tableRowIndex Integer
 ---@param value SquadID
-function AISquad_SetStateModelEnumTableSquadTarget(aiSquad,key,tableRowIndex,value)
+function AISquad_SetStateModelEnumTableSquadTarget(aiSquad, key, tableRowIndex, value)
 end
 
 ---comment Sets a Vector3f value in the AISquad's state model corresponding to the given key and table row index (0 based).
@@ -2458,49 +2458,49 @@ end
 ---@param key String
 ---@param tableRowIndex Integer
 ---@param value Position
-function AISquad_SetStateModelEnumTableVector3f(aiSquad,key,tableRowIndex,value)
+function AISquad_SetStateModelEnumTableVector3f(aiSquad, key, tableRowIndex, value)
 end
 
 ---comment Sets a float value in the AISquad's state model corresponding to the given key.
 ---@param aiSquad SquadID
 ---@param key String
 ---@param value Real
-function AISquad_SetStateModelFloat(aiSquad,key,value)
+function AISquad_SetStateModelFloat(aiSquad, key, value)
 end
 
 ---comment Sets an integer value in the AISquad's state model corresponding to the given key.
 ---@param aiSquad SquadID
 ---@param key String
 ---@param value Integer
-function AISquad_SetStateModelInt(aiSquad,key,value)
+function AISquad_SetStateModelInt(aiSquad, key, value)
 end
 
 ---comment Sets a pbg value in the AISquad's state model corresponding to the given key.
 ---@param aiSquad SquadID
 ---@param key String
 ---@param value PropertyBagGroup
-function AISquad_SetStateModelPBG(aiSquad,key,value)
+function AISquad_SetStateModelPBG(aiSquad, key, value)
 end
 
 ---comment Sets a Player TargetHandle value in the AISquad's state model corresponding to the given key.
 ---@param aiSquad SquadID
 ---@param key String
 ---@param value PlayerID
-function AISquad_SetStateModelPlayerTarget(aiSquad,key,value)
+function AISquad_SetStateModelPlayerTarget(aiSquad, key, value)
 end
 
 ---comment Sets a Squad TargetHandle value in the AISquad's state model corresponding to the given key.
 ---@param aiSquad SquadID
 ---@param key String
 ---@param value SquadID
-function AISquad_SetStateModelSquadTarget(aiSquad,key,value)
+function AISquad_SetStateModelSquadTarget(aiSquad, key, value)
 end
 
 ---comment Sets a Vector3f value in the AISquad's state model corresponding to the given key.
 ---@param aiSquad SquadID
 ---@param key String
 ---@param value Position
-function AISquad_SetStateModelVector3f(aiSquad,key,value)
+function AISquad_SetStateModelVector3f(aiSquad, key, value)
 end
 
 ---comment Checks if the squad should fall back or brace itself given the current situation.
@@ -2522,7 +2522,7 @@ end
 ---@param stateModelBoolTunings Boolean
 ---@param stateModelFloatTunings Real
 ---@param stateModelIntTunings Integer
-function AIStateTree_SpawnRootControllerWithStateModelTunings(pPlayer,openingBranchName,keepAlive,stateModelTuningsScarPBG,stateModelSGroupListTunings,stateModelEGroupListTunings,stateModelPositionTargetListTunings,stateModelMarkerTargetListTunings,stateModelEntityTypeListTunings,stateModelCoordinatorPBGListTunings,stateModelBoolTunings,stateModelFloatTunings,stateModelIntTunings)
+function AIStateTree_SpawnRootControllerWithStateModelTunings(pPlayer, openingBranchName, keepAlive, stateModelTuningsScarPBG, stateModelSGroupListTunings, stateModelEGroupListTunings, stateModelPositionTargetListTunings, stateModelMarkerTargetListTunings, stateModelEntityTypeListTunings, stateModelCoordinatorPBGListTunings, stateModelBoolTunings, stateModelFloatTunings, stateModelIntTunings)
 end
 
 ---comment calculates a valid target position for a jump slide ability
@@ -2530,7 +2530,7 @@ end
 ---@param abilityPBG PropertyBagGroup
 ---@param slideOffset Real
 ---@param targetPosition Position
-function AITactic_AdjustJumpSlideAbilityTarget(aiSquad,abilityPBG,slideOffset,targetPosition)
+function AITactic_AdjustJumpSlideAbilityTarget(aiSquad, abilityPBG, slideOffset, targetPosition)
 end
 
 ---comment Issue an AI move command to a squad
@@ -2538,7 +2538,7 @@ end
 ---@param target Position
 ---@param acceptableProximity Real
 ---@param reverseMove Boolean
-function AITactic_AICommandSquadMove(aiSquad,target,acceptableProximity,reverseMove)
+function AITactic_AICommandSquadMove(aiSquad, target, acceptableProximity, reverseMove)
 end
 
 ---comment Get the number of seconds on an objective timer.
@@ -2549,19 +2549,19 @@ end
 ---comment Get tactic priority for a squad.
 ---@param pSquad SquadID
 ---@param tacticType AITacticType
-function AITactic_GetTacticPriority(pSquad,tacticType)
+function AITactic_GetTacticPriority(pSquad, tacticType)
 end
 
 ---comment Returns all ScarMarkers from the Scenario Editor with the given name. If you don't care about the type, pass in an empty string ( "" )
 ---@param name String
 ---@param type String
-function AllMarkers_FromName(name,type)
+function AllMarkers_FromName(name, type)
 end
 
 ---comment Returns all ScarMarkers from the Mission Editor with the given name. If you don't care about the type, pass in an empty string ( "" )
 ---@param name String
 ---@param type String
-function AllMarkersFromName(name,type)
+function AllMarkersFromName(name, type)
 end
 
 ---comment Remove the movie mode framerate restriction
@@ -2640,13 +2640,13 @@ end
 ---comment Returns an entity blueprint of type BLUEPRINT_ARCHETYPE index for the associated race for the player.
 ---@param player Player&
 ---@param index FamilyIndex
-function BP_GetEntityArchetypeBlueprintForPlayer(player,index)
+function BP_GetEntityArchetypeBlueprintForPlayer(player, index)
 end
 
 ---comment Returns an entity blueprint of type BLUEPRINT_ARCHETYPE index for the associated race.
 ---@param racePBG ScarRacePBG
 ---@param index FamilyIndex
-function BP_GetEntityArchetypeBlueprintForRace(racePBG,index)
+function BP_GetEntityArchetypeBlueprintForRace(racePBG, index)
 end
 
 ---comment Returns an entity property bag group.
@@ -2668,13 +2668,13 @@ end
 ---@param entityBag ScarEntityPBG
 ---@param getModifiedSpeed Boolean
 ---@param player PlayerID
-function BP_GetEntityBPDefaultSpeed(entityBag,getModifiedSpeed,player)
+function BP_GetEntityBPDefaultSpeed(entityBag, getModifiedSpeed, player)
 end
 
 ---comment Returns the child blueprint of the specified entity blueprint at specified index.
 ---@param pbgShortname String
 ---@param index Integer
-function BP_GetEntityChildBlueprintAtIndex(pbgShortname,index)
+function BP_GetEntityChildBlueprintAtIndex(pbgShortname, index)
 end
 
 ---comment Returns the number of child blueprints of the specified entity blueprint.
@@ -2685,7 +2685,7 @@ end
 ---comment Returns the parent blueprint of the specified entity blueprint at specified index
 ---@param pbgShortname String
 ---@param index Integer
-function BP_GetEntityParentBlueprintAtIndex(pbgShortname,index)
+function BP_GetEntityParentBlueprintAtIndex(pbgShortname, index)
 end
 
 ---comment Returns the number of parent blueprints of the specified entity blueprint.
@@ -2696,7 +2696,7 @@ end
 ---comment Returns race blueprint associated with an entity blueprint type_ext at specified index.
 ---@param pbgShortname String
 ---@param index Integer
-function BP_GetEntityTypeExtRaceBlueprintAtIndex(pbgShortname,index)
+function BP_GetEntityTypeExtRaceBlueprintAtIndex(pbgShortname, index)
 end
 
 ---comment Returns the number of race blueprints associated with an entity blueprint type_ext.
@@ -2752,7 +2752,7 @@ end
 ---comment Return the path name of the group at the specified index
 ---@param type PropertyBagGroupType
 ---@param index Integer
-function BP_GetPropertyBagGroupPathName(type,index)
+function BP_GetPropertyBagGroupPathName(type, index)
 end
 
 ---comment Returns a UIReticuleBag property bag group.
@@ -2773,13 +2773,13 @@ end
 ---comment Returns a squad blueprint of type BLUEPRINT_ARCHETYPE index for the associated race of the player.
 ---@param player Player&
 ---@param index FamilyIndex
-function BP_GetSquadArchetypeBlueprintForPlayer(player,index)
+function BP_GetSquadArchetypeBlueprintForPlayer(player, index)
 end
 
 ---comment Returns a squad blueprint of type BLUEPRINT_ARCHETYPE index for the associated race.
 ---@param racePBG ScarRacePBG
 ---@param index FamilyIndex
-function BP_GetSquadArchetypeBlueprintForRace(racePBG,index)
+function BP_GetSquadArchetypeBlueprintForRace(racePBG, index)
 end
 
 ---comment Returns a squad property bag group.
@@ -2795,7 +2795,7 @@ end
 ---comment Returns the child blueprint of the specified squad blueprint at specified index.
 ---@param pbgShortname String
 ---@param index Integer
-function BP_GetSquadChildBlueprintAtIndex(pbgShortname,index)
+function BP_GetSquadChildBlueprintAtIndex(pbgShortname, index)
 end
 
 ---comment Returns the number of child blueprints of the specified squad blueprint.
@@ -2806,7 +2806,7 @@ end
 ---comment Returns the parent blueprint of the specified squad blueprint at specified index
 ---@param pbgShortname String
 ---@param index Integer
-function BP_GetSquadParentBlueprintAtIndex(pbgShortname,index)
+function BP_GetSquadParentBlueprintAtIndex(pbgShortname, index)
 end
 
 ---comment Returns the number of parent blueprints of the specified squad blueprint.
@@ -2817,7 +2817,7 @@ end
 ---comment Returns race blueprint associated with a squad blueprint squad_type_ext at specified index.
 ---@param pbgShortname String
 ---@param index Integer
-function BP_GetSquadTypeExtRaceBlueprintAtIndex(pbgShortname,index)
+function BP_GetSquadTypeExtRaceBlueprintAtIndex(pbgShortname, index)
 end
 
 ---comment Returns the number of race blueprints associated with a squad blueprint squad_type_ext.
@@ -2828,7 +2828,7 @@ end
 ---comment Returns a table containing the ui_ext info for given squad and race
 ---@param sbp ScarSquadPBG
 ---@param rbp ScarRacePBG
-function BP_GetSquadUIInfo(sbp,rbp)
+function BP_GetSquadUIInfo(sbp, rbp)
 end
 
 ---comment Returns the type of a blueprint.
@@ -2864,7 +2864,7 @@ end
 ---comment Returns true if the UpgradePGB's list of types includes the given type
 ---@param upgradePBG ScarUpgradePBG
 ---@param key String
-function BP_IsUpgradeOfType(upgradePBG,key)
+function BP_IsUpgradeOfType(upgradePBG, key)
 end
 
 ---comment Clamps the camera's target position to a marker.
@@ -2875,7 +2875,7 @@ end
 ---comment Execute spline pan based on queued control points. Use B-Spline interpolation of points
 ---@param totalT Real
 ---@param controlRotation Boolean
-function Camera_ExecuteBSplinePan(totalT,controlRotation)
+function Camera_ExecuteBSplinePan(totalT, controlRotation)
 end
 
 ---comment Executes a camera pan that was captured using the Capture Tool. Expects that the "camera_spline" Camera set was pushed to the CameraSwitchboard, using Camera_Push("camera_spline") Returns the duration of the spline, so that the user can call Camera_Pop()
@@ -2886,13 +2886,13 @@ end
 ---comment Execute spline pan based on queued control points. Use Catmull-Rom interpolation of points
 ---@param totalT Real
 ---@param controlRotation Boolean
-function Camera_ExecuteCatromSplinePan(totalT,controlRotation)
+function Camera_ExecuteCatromSplinePan(totalT, controlRotation)
 end
 
 ---comment Execute spline pan based on queued control points. Use linear interpolation between points
 ---@param totalT Real
 ---@param controlRotation Boolean
-function Camera_ExecuteLinearSplinePan(totalT,controlRotation)
+function Camera_ExecuteLinearSplinePan(totalT, controlRotation)
 end
 
 ---comment Focus the camera on the specified position.
@@ -3032,13 +3032,13 @@ end
 ---comment Orbit the camera a given number of degrees clockwise from the current orbit position in a given amount of time.
 ---@param deltaOrbit Real
 ---@param totalT Real
-function Camera_StartDeltaOrbit(deltaOrbit,totalT)
+function Camera_StartDeltaOrbit(deltaOrbit, totalT)
 end
 
 ---comment Orbit the camera to an end orbit position from the current orbit position in a given amount of time. Will choose shortest rotational direction.
 ---@param endOrbit Real
 ---@param totalT Real
-function Camera_StartOrbit(endOrbit,totalT)
+function Camera_StartOrbit(endOrbit, totalT)
 end
 
 ---comment Pan the camera between two positions in a given amount of time. Interpolates the camera to the given zoom.
@@ -3046,40 +3046,40 @@ end
 ---@param endPos Position
 ---@param totalT Real
 ---@param zoomDistance Real
-function Camera_StartPan(startPos,endPos,totalT,zoomDistance)
+function Camera_StartPan(startPos, endPos, totalT, zoomDistance)
 end
 
 ---comment Pan the camera to a position in a given amount of time from the position in front of the queue.
 ---@param endPos Position
 ---@param totalT Real
 ---@param zoomDistance Real
-function Camera_StartPanTo(endPos,totalT,zoomDistance)
+function Camera_StartPanTo(endPos, totalT, zoomDistance)
 end
 
 ---comment Pan the camera by some amount in a given amount of time. This is relative to the position in front of the queue.
 ---@param deltaPos Position
 ---@param totalT Real
 ---@param zoomDistance Real
-function Camera_StartRelativePan(deltaPos,totalT,zoomDistance)
+function Camera_StartRelativePan(deltaPos, totalT, zoomDistance)
 end
 
 ---comment Start a transition to a relative zoom distance over a certain amount of time.
 ---@param deltaZoomDist Real
 ---@param totalT Real
-function Camera_StartRelativeZoomDist(deltaZoomDist,totalT)
+function Camera_StartRelativeZoomDist(deltaZoomDist, totalT)
 end
 
 ---comment Start a transition from one zoom distance to another over a certain amount of time.
 ---@param startZoomDist Real
 ---@param endZoomDist Real
 ---@param totalT Real
-function Camera_StartZoomDist(startZoomDist,endZoomDist,totalT)
+function Camera_StartZoomDist(startZoomDist, endZoomDist, totalT)
 end
 
 ---comment Start a transition to a zoom distance over a certain amount of time.
 ---@param endZoomDist Real
 ---@param totalT Real
-function Camera_StartZoomDistTo(endZoomDist,totalT)
+function Camera_StartZoomDistTo(endZoomDist, totalT)
 end
 
 ---comment Stop an ongoing camera pan.
@@ -3117,7 +3117,7 @@ end
 ---@param dest PlayerID
 ---@param messageType Integer
 ---@param message String
-function Command_PlayerBroadcastMessage(player,dest,messageType,message)
+function Command_PlayerBroadcastMessage(player, dest, messageType, message)
 end
 
 ---comment Toggle cursor position distance drawring
@@ -3143,7 +3143,7 @@ end
 ---comment Set the cursor position
 ---@param x Real
 ---@param y Real
-function cursor_setposition(x,y)
+function cursor_setposition(x, y)
 end
 
 ---comment Show the cursor
@@ -3161,7 +3161,7 @@ end
 ---comment Get dca variable value for an entity. Can be used to validate presentation state from lua.
 ---@param pEntity EntityID
 ---@param variableName String
-function dca_get_variable_value(pEntity,variableName)
+function dca_get_variable_value(pEntity, variableName)
 end
 
 ---comment Toggles on or off under mouse check. If ignoring mouse check, all entities will have the enabled debug info displayed
@@ -3187,7 +3187,7 @@ end
 ---@param g Integer
 ---@param b Integer
 ---@param a Integer
-function Decal_Create(decalName,position,xScale,yScale,zScale,rotationDegrees,r,g,b,a)
+function Decal_Create(decalName, position, xScale, yScale, zScale, rotationDegrees, r, g, b, a)
 end
 
 ---comment Destroy a decal by unique id
@@ -3247,7 +3247,7 @@ end
 ---@param device String
 ---@param subsystem String
 ---@param revision String
-function DisplayAdapterDatabase_GetAdapterFromID(vendor,device,subsystem,revision)
+function DisplayAdapterDatabase_GetAdapterFromID(vendor, device, subsystem, revision)
 end
 
 ---comment Output basic information about the current display adapter.
@@ -3259,7 +3259,7 @@ end
 ---@param device String
 ---@param subsystem String
 ---@param revision String
-function DisplayAdapterDatabase_GetAdapterMinimumDriverVersion(vendor,device,subsystem,revision)
+function DisplayAdapterDatabase_GetAdapterMinimumDriverVersion(vendor, device, subsystem, revision)
 end
 
 ---comment Query the display adapter database for the performance class of the currently-installed display adapter.
@@ -3289,7 +3289,7 @@ end
 ---@param r Integer
 ---@param g Integer
 ---@param b Integer
-function dr_drawCircle(frame,x,y,z,radius,r,g,b)
+function dr_drawCircle(frame, x, y, z, radius, r, g, b)
 end
 
 ---comment Draw line. If you don't pass in a name, TerrainLine is used.
@@ -3299,19 +3299,19 @@ end
 ---@param g Integer
 ---@param b Integer
 ---@param svar StackVar
-function dr_drawline(pos0,pos1,r,g,b,svar)
+function dr_drawline(pos0, pos1, r, g, b, svar)
 end
 
 ---comment Set auto clear for named frame.
 ---@param frame String
 ---@param bEnable Boolean
-function dr_setautoclear(frame,bEnable)
+function dr_setautoclear(frame, bEnable)
 end
 
 ---comment Set display of named frame.
 ---@param frame String
 ---@param bEnable Boolean
-function dr_setdisplay(frame,bEnable)
+function dr_setdisplay(frame, bEnable)
 end
 
 ---comment Draw circle on terrain.
@@ -3322,7 +3322,7 @@ end
 ---@param b Real
 ---@param divs Integer
 ---@param frame String
-function dr_terraincircle(pos,radius,r,g,b,divs,frame)
+function dr_terraincircle(pos, radius, r, g, b, divs, frame)
 end
 
 ---comment Draw circle on terrain with lifetime.
@@ -3334,7 +3334,7 @@ end
 ---@param divs Integer
 ---@param frame String
 ---@param lifetime Real
-function dr_terraincirclewithlifetime(pos,radius,r,g,b,divs,frame,lifetime)
+function dr_terraincirclewithlifetime(pos, radius, r, g, b, divs, frame, lifetime)
 end
 
 ---comment Draw rectangle on terrian.
@@ -3345,7 +3345,7 @@ end
 ---@param g Real
 ---@param b Real
 ---@param rads Real
-function dr_terrainrect(pos,w,h,r,g,b,rads)
+function dr_terrainrect(pos, w, h, r, g, b, rads)
 end
 
 ---comment Draw text, positioned in 2D, aligned to the screen.
@@ -3356,7 +3356,7 @@ end
 ---@param r Integer
 ---@param g Integer
 ---@param b Integer
-function dr_text2d(frame,x,y,cmd,r,g,b)
+function dr_text2d(frame, x, y, cmd, r, g, b)
 end
 
 ---comment Draw text, positioned in 3D, aligned to screen.
@@ -3368,13 +3368,13 @@ end
 ---@param r Integer
 ---@param g Integer
 ---@param b Integer
-function dr_text3d(frame,x,y,z,cmd,r,g,b)
+function dr_text3d(frame, x, y, z, cmd, r, g, b)
 end
 
 ---comment Draw the ref-posed OBB of a model
 ---@param pModel RenderModel*
 ---@param transform Transform&
-function DrawOBB(pModel,transform)
+function DrawOBB(pModel, transform)
 end
 
 ---comment Returns true if an entity blueprint exists with the given name.
@@ -3385,26 +3385,26 @@ end
 ---comment Returns whether the entity blueprint is of specified race
 ---@param pbgShortname String
 ---@param race ScarRacePBG
-function EBP_IsOfRace(pbgShortname,race)
+function EBP_IsOfRace(pbgShortname, race)
 end
 
 ---comment get Entity blueprint pop cost, use CT_Personnel, CT_Vehicle, CT_Medic for captype
 ---@param ebpUnit PropertyBagGroup
 ---@param player PlayerID
 ---@param type CapType
-function EBP_PopulationCost(ebpUnit,player,type)
+function EBP_PopulationCost(ebpUnit, player, type)
 end
 
 ---comment Adds an entity to the end of a group if the group doesnt already have it.
 ---@param group EGroupID
 ---@param entity EntityID
-function EGroup_Add(group,entity)
+function EGroup_Add(group, entity)
 end
 
 ---comment Appends the entities in one group to another group.
 ---@param group EGroupID
 ---@param grouptoadd EGroupID
-function EGroup_AddEGroup(group,grouptoadd)
+function EGroup_AddEGroup(group, grouptoadd)
 end
 
 ---comment Removes all entities from a group
@@ -3415,7 +3415,7 @@ end
 ---comment Returns true if the contents of the two groups are equal. Order of the entities does not matter.
 ---@param group1 EGroupID
 ---@param group2 EGroupID
-function EGroup_Compare(group1,group2)
+function EGroup_Compare(group1, group2)
 end
 
 ---comment Returns the total number of spawned and despawned entities in a group.
@@ -3458,20 +3458,20 @@ end
 ---@param blueprints StackVar
 ---@param filterType ScarFilterType
 ---@param optionalSplitGroup StackVar
-function EGroup_Filter_Internal(group,blueprints,filterType,optionalSplitGroup)
+function EGroup_Filter_Internal(group, blueprints, filterType, optionalSplitGroup)
 end
 
 ---comment Call a lua function for each item in a group. Function will recieve (groupid, itemindex, itemid) and should return true to break or false to continue.
 ---@param egroup EGroupID
 ---@param f StackVarFunction
-function EGroup_ForEach(egroup,f)
+function EGroup_ForEach(egroup, f)
 end
 
 ---comment Call a lua function for each item in a group. Function will receive (groupid, itemindex, itemid) and should return a bool.
 ---@param egroup EGroupID
 ---@param all Boolean
 ---@param f StackVarFunction
-function EGroup_ForEachAllOrAny(egroup,all,f)
+function EGroup_ForEachAllOrAny(egroup, all, f)
 end
 
 ---comment Same as EGroup_ForEachAllOrAny except you have a choice to iterate over spawned entities, despawned entities, or both.
@@ -3480,7 +3480,7 @@ end
 ---@param f StackVarFunction
 ---@param spawned Boolean
 ---@param despawned Boolean
-function EGroup_ForEachAllOrAnyEx(egroup,all,f,spawned,despawned)
+function EGroup_ForEachAllOrAnyEx(egroup, all, f, spawned, despawned)
 end
 
 ---comment Same as EGroup_ForEach except you have a choice to iterate over spawned entities, despawned entities, or both.
@@ -3488,7 +3488,7 @@ end
 ---@param f StackVarFunction
 ---@param spawned Boolean
 ---@param despawned Boolean
-function EGroup_ForEachEx(egroup,f,spawned,despawned)
+function EGroup_ForEachEx(egroup, f, spawned, despawned)
 end
 
 ---comment Find an entity group with a given name.
@@ -3499,13 +3499,13 @@ end
 ---comment Returns the despawned entity at the given index.
 ---@param group EGroupID
 ---@param int Integer
-function EGroup_GetDeSpawnedEntityAt(group,int)
+function EGroup_GetDeSpawnedEntityAt(group, int)
 end
 
 ---comment Returns the entity at the given index.
 ---@param group EGroupID
 ---@param int Integer
-function EGroup_GetEntityAt(group,int)
+function EGroup_GetEntityAt(group, int)
 end
 
 ---comment Returns the name of a given entity group.
@@ -3521,13 +3521,13 @@ end
 ---comment Returns the spawned entity at the given index.
 ---@param group EGroupID
 ---@param int Integer
-function EGroup_GetSpawnedEntityAt(group,int)
+function EGroup_GetSpawnedEntityAt(group, int)
 end
 
 ---comment Performs a group intersection.
 ---@param group EGroupID
 ---@param grouptointersect EGroupID
-function EGroup_Intersection(group,grouptointersect)
+function EGroup_Intersection(group, grouptointersect)
 end
 
 ---comment Check to see if an egroup still exists without needing the name.
@@ -3538,13 +3538,13 @@ end
 ---comment Removes an entity from a group.
 ---@param group EGroupID
 ---@param entity EntityID
-function EGroup_Remove(group,entity)
+function EGroup_Remove(group, entity)
 end
 
 ---comment Removes any entites that exist in both groups.
 ---@param group EGroupID
 ---@param grouptocompare EGroupID
-function EGroup_RemoveAllMatching(group,grouptocompare)
+function EGroup_RemoveAllMatching(group, grouptocompare)
 end
 
 ---comment Removes all the entities from the EGroup that don't have HoldExt on them
@@ -3555,32 +3555,32 @@ end
 ---comment Sorts the EGroup based on health
 ---@param egroup EGroupID
 ---@param ascending Boolean
-function EGroup_SortBasedOnHealth(egroup,ascending)
+function EGroup_SortBasedOnHealth(egroup, ascending)
 end
 
 ---comment Returns true if the active command is of the type we specified
 ---@param entity EntityID
 ---@param cmdtype EntityCommandType
-function Entity_ActiveCommandIs(entity,cmdtype)
+function Entity_ActiveCommandIs(entity, cmdtype)
 end
 
 ---comment Allows the entity to use this ability
 ---@param entity EntityID
 ---@param ability ScarAbilityPBG
-function Entity_AddAbility(entity,ability)
+function Entity_AddAbility(entity, ability)
 end
 
 ---comment Add a specific amount of a certain resource type to an entity.
 ---@param entity EntityID
 ---@param type Integer
 ---@param amount Real
-function Entity_AddResource(entity,type,amount)
+function Entity_AddResource(entity, type, amount)
 end
 
 ---comment Advance ability cooldown
 ---@param entity EntityID
 ---@param tickAmount Integer
-function Entity_AdjustAbilityCooldown(entity,tickAmount)
+function Entity_AdjustAbilityCooldown(entity, tickAmount)
 end
 
 ---comment Builds the cycle list based on current tagged entity
@@ -3591,25 +3591,25 @@ end
 ---@param ebp ScarEntityPBG
 ---@param ructingPlayer PlayerID
 ---@param inputPosition Position
-function Entity_CalcConstructionPlacement(ebp,ructingPlayer,inputPosition)
+function Entity_CalcConstructionPlacement(ebp, ructingPlayer, inputPosition)
 end
 
 ---comment pass in a entity and position to resolve the position into a open space position, if the position is not free, position returned will try to be the closest position near the original position
 ---@param entity EntityID
 ---@param pos Position
-function Entity_CalculatePassableSpawnPosition(entity,pos)
+function Entity_CalculatePassableSpawnPosition(entity, pos)
 end
 
 ---comment Returns whether an entity can attack a target without moving or turning.
 ---@param attacker EntityID
 ---@param target Position
-function Entity_CanAttackNow(attacker,target)
+function Entity_CanAttackNow(attacker, target)
 end
 
 ---comment Cancels an item in a production queue.  Index 0 is the currently producing item.
 ---@param entity EntityID
 ---@param index Integer
-function Entity_CancelProductionQueueItem(entity,index)
+function Entity_CancelProductionQueueItem(entity, index)
 end
 
 ---comment Check if an entity can currently be damaged.
@@ -3622,26 +3622,26 @@ end
 ---@param squad SquadID
 ---@param assumeEmpty Boolean
 ---@param assumeVisible Boolean
-function Entity_CanLoadSquad(entity,squad,assumeEmpty,assumeVisible)
+function Entity_CanLoadSquad(entity, squad, assumeEmpty, assumeVisible)
 end
 
 ---comment Returns true if the distance between a target entity and the source entity is less than it entity's sight distance.  There is no LOS or FOW check.
 ---@param entity EntityID
 ---@param target EntityID
-function Entity_CanSeeEntity(entity,target)
+function Entity_CanSeeEntity(entity, target)
 end
 
 ---comment Returns true if the distance between a target squad and the source entity is less than it entity's sight distance.  There is no LOS or FOW check.
 ---@param entity EntityID
 ---@param target SquadID
-function Entity_CanSeeSquad(entity,target)
+function Entity_CanSeeSquad(entity, target)
 end
 
 ---comment Check if an entity can target and attack another entity.
 ---@param entity Entity&
 ---@param target Entity&
 ---@param checkFOW Boolean
-function Entity_CanTargetEntity(entity,target,checkFOW)
+function Entity_CanTargetEntity(entity, target, checkFOW)
 end
 
 ---comment Clear the pending death flag manually. Should be used when campaign leaders are revived.
@@ -3658,13 +3658,13 @@ end
 ---@param entity EntityID
 ---@param key String
 ---@param tableRowIndex Integer
-function Entity_ClearStateModelEnumTableTarget(entity,key,tableRowIndex)
+function Entity_ClearStateModelEnumTableTarget(entity, key, tableRowIndex)
 end
 
 ---comment Clears a TargetHandle value in the entity's state model corresponding to the given key.
 ---@param entity EntityID
 ---@param key String
-function Entity_ClearStateModelTarget(entity,key)
+function Entity_ClearStateModelTarget(entity, key)
 end
 
 ---comment Clears the tagged entity used for debugging
@@ -3674,13 +3674,13 @@ end
 ---comment Instantly adds an upgrade to a given entity
 ---@param pEntity EntityID
 ---@param upgradePBG ScarUpgradePBG
-function Entity_CompleteUpgrade(pEntity,upgradePBG)
+function Entity_CompleteUpgrade(pEntity, upgradePBG)
 end
 
 ---comment Converts Entity's blueprint to the specified blueprint.
 ---@param entity Entity&
 ---@param pbg PropertyBagGroup
-function Entity_ConvertBlueprint(entity,pbg)
+function Entity_ConvertBlueprint(entity, pbg)
 end
 
 ---comment Creates an entity at a given position and assigns it to a given player. This function does not spawn the entity so you will need to call Entity_Spawn to see this entity
@@ -3688,7 +3688,7 @@ end
 ---@param player PlayerID
 ---@param pos Position
 ---@param snapToTerrain Boolean
-function Entity_Create(ebp,player,pos,snapToTerrain)
+function Entity_Create(ebp, player, pos, snapToTerrain)
 end
 
 ---comment Creates an entity at a given position facing a target location and assigns it to a given player. This function does not spawn the entity so you will need to call Entity_Spawn to see this entity
@@ -3697,7 +3697,7 @@ end
 ---@param pos Position
 ---@param toward Position
 ---@param snapToTerrain Boolean
-function Entity_CreateFacing(ebp,player,pos,toward,snapToTerrain)
+function Entity_CreateFacing(ebp, player, pos, toward, snapToTerrain)
 end
 
 ---comment Cycle through the existing list built for the originally tagged entity
@@ -3717,32 +3717,32 @@ end
 ---comment Forces the cancel construction command to be disabled, meaning you can't cancel construction for this
 ---@param entity EntityID
 ---@param disable Boolean
-function Entity_DisableCancelConstructionCommand(entity,disable)
+function Entity_DisableCancelConstructionCommand(entity, disable)
 end
 
 ---comment Adjusts the entity's burn level by val
 ---@param entity EntityID
 ---@param val Real
 ---@param ignoreMaxDamagePerSecond Boolean
-function Entity_DoBurnDamage(entity,val,ignoreMaxDamagePerSecond)
+function Entity_DoBurnDamage(entity, val, ignoreMaxDamagePerSecond)
 end
 
 ---comment Sets whether an entity pays attention to its surroundings
 ---@param entity EntityID
 ---@param attentive Boolean
-function Entity_EnableAttention(entity,attentive)
+function Entity_EnableAttention(entity, attentive)
 end
 
 ---comment Sets whether an entity can produce anything (including upgrades)
 ---@param entity EntityID
 ---@param enable Boolean
-function Entity_EnableProductionQueue(entity,enable)
+function Entity_EnableProductionQueue(entity, enable)
 end
 
 ---comment Sets whether an strategic point is active
 ---@param entity EntityID
 ---@param enable Boolean
-function Entity_EnableStrategicPoint(entity,enable)
+function Entity_EnableStrategicPoint(entity, enable)
 end
 
 ---comment Returns total entity extension count.
@@ -3752,19 +3752,19 @@ end
 ---comment Returns true if the entity has the specific extension enabled.
 ---@param pEntity EntityID
 ---@param extID ComponentDependencyIndex
-function Entity_ExtensionEnabled(pEntity,extID)
+function Entity_ExtensionEnabled(pEntity, extID)
 end
 
 ---comment Returns true if the specified extension on the entity will update every frame.
 ---@param pEntity EntityID
 ---@param extID ComponentDependencyIndex
-function Entity_ExtensionExecuting(pEntity,extID)
+function Entity_ExtensionExecuting(pEntity, extID)
 end
 
 ---comment Returns a string name of the given extension on the entity.
 ---@param pEntity EntityID
 ---@param extID ComponentDependencyIndex
-function Entity_ExtensionName(pEntity,extID)
+function Entity_ExtensionName(pEntity, extID)
 end
 
 ---comment Force constructs this entity but only if its a building
@@ -3790,7 +3790,7 @@ end
 ---comment Find the entity target. If found, the target squad is added to the sgroup. Entity targets like buildings are ignored.
 ---@param entity EntityID
 ---@param sgroup SGroupID
-function Entity_GetAttackTarget(entity,sgroup)
+function Entity_GetAttackTarget(entity, sgroup)
 end
 
 ---comment Returns the entity targeted by the given entity.
@@ -3826,7 +3826,7 @@ end
 ---@param ebp PropertyBagGroup
 ---@param startPos Position
 ---@param endPos Position
-function Entity_GetFenceEntityCount(ebp,startPos,endPos)
+function Entity_GetFenceEntityCount(ebp, startPos, endPos)
 end
 
 ---comment Returns the number of filled slots for squads in a hold in the HoldExtInfo
@@ -3867,21 +3867,21 @@ end
 ---comment Find the last squad attacker on this entity. If found, the squad is added to the sgroup
 ---@param entity EntityID
 ---@param sgroup SGroupID
-function Entity_GetLastAttacker(entity,sgroup)
+function Entity_GetLastAttacker(entity, sgroup)
 end
 
 ---comment Find the squad attackers on this entity from the last seconds specified. The sgroup is cleared, then any squads found are added to the sgroup. Building attackers are ignored.
 ---@param entity EntityID
 ---@param group SGroupID
 ---@param timeSeconds Real
-function Entity_GetLastAttackers(entity,group,timeSeconds)
+function Entity_GetLastAttackers(entity, group, timeSeconds)
 end
 
 ---comment Find the entity attackers on this entity from the last seconds specified. The sgroup is cleared, then any squads found are added to the sgroup. Building attackers are ignored.
 ---@param entity EntityID
 ---@param group EGroupID
 ---@param timeSeconds Real
-function Entity_GetLastEntityAttackers(entity,group,timeSeconds)
+function Entity_GetLastEntityAttackers(entity, group, timeSeconds)
 end
 
 ---comment Gets the maximum capture crew size from a recrewable entity
@@ -3902,7 +3902,7 @@ end
 ---comment Returns the number of entities connected to an entity via the interaction system.
 ---@param entity EntityID
 ---@param interactionType String
-function Entity_GetNumInteractors(entity,interactionType)
+function Entity_GetNumInteractors(entity, interactionType)
 end
 
 ---comment Get the entity health percentage where it can be set on fire
@@ -3923,13 +3923,13 @@ end
 ---comment Returns the blueprint for a production queue item with index.
 ---@param entity EntityID
 ---@param index Integer
-function Entity_GetProductionQueueItem(entity,index)
+function Entity_GetProductionQueueItem(entity, index)
 end
 
 ---comment Returns the production type (PITEM_Upgrade, PITEM_Spawn, PITEM_SquadUpgrade, PITEM_SquadReinforce, PITEM_PlayerUpgrade) for a production queue item with index.
 ---@param entity EntityID
 ---@param index Integer
-function Entity_GetProductionQueueItemType(entity,index)
+function Entity_GetProductionQueueItemType(entity, index)
 end
 
 ---comment Returns the number of items in the entities production queue.
@@ -3955,7 +3955,7 @@ end
 ---comment Returns the amount of a certain resource that an entity has.
 ---@param entity EntityID
 ---@param resourceType Integer
-function Entity_GetResource(entity,resourceType)
+function Entity_GetResource(entity, resourceType)
 end
 
 ---comment Returns the inner sight height for this entity
@@ -3986,126 +3986,126 @@ end
 ---comment Adds squads held by an entity to an SGroup
 ---@param pEntity EntityID
 ---@param sgroup SGroupID
-function Entity_GetSquadsHeld(pEntity,sgroup)
+function Entity_GetSquadsHeld(pEntity, sgroup)
 end
 
 ---comment Returns a boolean value from the entity's state model corresponding to the given key.
 ---@param entity EntityID
 ---@param key String
-function Entity_GetStateModelBool(entity,key)
+function Entity_GetStateModelBool(entity, key)
 end
 
 ---comment Returns an Entity value from the entity's state model corresponding to the given key.
 ---@param entity EntityID
 ---@param key String
-function Entity_GetStateModelEntityTarget(entity,key)
+function Entity_GetStateModelEntityTarget(entity, key)
 end
 
 ---comment Returns a boolean value from the entity's state model corresponding to the given key and table row index (0 based).
 ---@param entity EntityID
 ---@param key String
 ---@param tableRowIndex Integer
-function Entity_GetStateModelEnumTableBool(entity,key,tableRowIndex)
+function Entity_GetStateModelEnumTableBool(entity, key, tableRowIndex)
 end
 
 ---comment Returns an Entity value from the entity's state model corresponding to the given key and table row index (0 based).
 ---@param entity EntityID
 ---@param key String
 ---@param tableRowIndex Integer
-function Entity_GetStateModelEnumTableEntityTarget(entity,key,tableRowIndex)
+function Entity_GetStateModelEnumTableEntityTarget(entity, key, tableRowIndex)
 end
 
 ---comment Returns a float value from the entity's state model corresponding to the given key and table row index (0 based).
 ---@param entity EntityID
 ---@param key String
 ---@param tableRowIndex Integer
-function Entity_GetStateModelEnumTableFloat(entity,key,tableRowIndex)
+function Entity_GetStateModelEnumTableFloat(entity, key, tableRowIndex)
 end
 
 ---comment Returns an integer value from the entity's state model corresponding to the given key and table row index (0 based).
 ---@param entity EntityID
 ---@param key String
 ---@param tableRowIndex Integer
-function Entity_GetStateModelEnumTableInt(entity,key,tableRowIndex)
+function Entity_GetStateModelEnumTableInt(entity, key, tableRowIndex)
 end
 
 ---comment Returns a Player value from the entity's state model corresponding to the given key and table row index (0 based).
 ---@param entity EntityID
 ---@param key String
 ---@param tableRowIndex Integer
-function Entity_GetStateModelEnumTablePlayerTarget(entity,key,tableRowIndex)
+function Entity_GetStateModelEnumTablePlayerTarget(entity, key, tableRowIndex)
 end
 
 ---comment Returns a Squad value from the entity's state model corresponding to the given key and table row index (0 based).
 ---@param entity EntityID
 ---@param key String
 ---@param tableRowIndex Integer
-function Entity_GetStateModelEnumTableSquadTarget(entity,key,tableRowIndex)
+function Entity_GetStateModelEnumTableSquadTarget(entity, key, tableRowIndex)
 end
 
 ---comment Returns a Vector3f value from the entity's state model corresponding to the given key and table row index (0 based).
 ---@param entity EntityID
 ---@param key String
 ---@param tableRowIndex Integer
-function Entity_GetStateModelEnumTableVector3f(entity,key,tableRowIndex)
+function Entity_GetStateModelEnumTableVector3f(entity, key, tableRowIndex)
 end
 
 ---comment Returns a float value from the entity's state model corresponding to the given key.
 ---@param entity EntityID
 ---@param key String
-function Entity_GetStateModelFloat(entity,key)
+function Entity_GetStateModelFloat(entity, key)
 end
 
 ---comment Returns an integer value from the entity's state model corresponding to the given key.
 ---@param entity EntityID
 ---@param key String
-function Entity_GetStateModelInt(entity,key)
+function Entity_GetStateModelInt(entity, key)
 end
 
 ---comment Returns a Player value from the entity's state model corresponding to the given key.
 ---@param entity EntityID
 ---@param key String
-function Entity_GetStateModelPlayerTarget(entity,key)
+function Entity_GetStateModelPlayerTarget(entity, key)
 end
 
 ---comment Returns a Squad value from the entity's state model corresponding to the given key.
 ---@param entity EntityID
 ---@param key String
-function Entity_GetStateModelSquadTarget(entity,key)
+function Entity_GetStateModelSquadTarget(entity, key)
 end
 
 ---comment Returns a Vector3f value from the entity's state model corresponding to the given key.
 ---@param entity EntityID
 ---@param key String
-function Entity_GetStateModelVector3f(entity,key)
+function Entity_GetStateModelVector3f(entity, key)
 end
 
 ---comment Returns an Entity value from the entity's StateTree EntityTargetingExt with the given type and key.
 ---@param entity Entity&
 ---@param type String
 ---@param key String
-function Entity_GetStateTreeTargeting_EntityTarget(entity,type,key)
+function Entity_GetStateTreeTargeting_EntityTarget(entity, type, key)
 end
 
 ---comment Returns an Player value from the entity's StateTree EntityTargetingExt with the given type and key.
 ---@param entity Entity&
 ---@param type String
 ---@param key String
-function Entity_GetStateTreeTargeting_PlayerTarget(entity,type,key)
+function Entity_GetStateTreeTargeting_PlayerTarget(entity, type, key)
 end
 
 ---comment Returns an Squad value from the entity's StateTree EntityTargetingExt with the given type and key.
 ---@param entity Entity&
 ---@param type String
 ---@param key String
-function Entity_GetStateTreeTargeting_SquadTarget(entity,type,key)
+function Entity_GetStateTreeTargeting_SquadTarget(entity, type, key)
 end
 
 ---comment Returns an Vector3f value from the entity's StateTree EntityTargetingExt with the given type and key.
 ---@param entity Entity&
 ---@param type String
 ---@param key String
-function Entity_GetStateTreeTargeting_Vector3f(entity,type,key)
+function Entity_GetStateTreeTargeting_Vector3f(entity, type, key)
 end
 
 ---comment Returns the number of entities or squads currently securing this strategic point
@@ -4121,7 +4121,7 @@ end
 ---comment Returns a weapon hardpoint  ( 0 indexed )
 ---@param entity EntityID
 ---@param hardPointIndex Integer
-function Entity_GetWeaponBlueprint(entity,hardPointIndex)
+function Entity_GetWeaponBlueprint(entity, hardPointIndex)
 end
 
 ---comment Returns how many hardpoints an entity has
@@ -4136,13 +4136,13 @@ end
 ---comment Tests to see if an entity has an ability
 ---@param entity EntityID
 ---@param ability ScarAbilityPBG
-function Entity_HasAbility(entity,ability)
+function Entity_HasAbility(entity, ability)
 end
 
 ---comment Checks whether an entity is of any of the Blueprints or EntityTypes specified.
 ---@param entity EntityID
 ---@param blueprints EBP/EntityType/Table
-function Entity_HasBlueprint(entity,blueprints)
+function Entity_HasBlueprint(entity, blueprints)
 end
 
 ---comment Returns true if an entity has a production queue.
@@ -4153,19 +4153,19 @@ end
 ---comment Return true if the entity has purchased the specified upgrade.
 ---@param pEntity EntityID
 ---@param upgradePBG ScarUpgradePBG
-function Entity_HasUpgrade(pEntity,upgradePBG)
+function Entity_HasUpgrade(pEntity, upgradePBG)
 end
 
 ---comment Strategic point will be captured instantly by the team of the supplied player
 ---@param entity EntityID
 ---@param player PlayerID
-function Entity_InstantCaptureStrategicPoint(entity,player)
+function Entity_InstantCaptureStrategicPoint(entity, player)
 end
 
 ---comment instantly converts a building into a fieldsupport
 ---@param building EntityID
 ---@param owner PlayerID
-function Entity_InstantConvertBuildingToFieldSupport(building,owner)
+function Entity_InstantConvertBuildingToFieldSupport(building, owner)
 end
 
 ---comment Reverts an occupied building
@@ -4176,7 +4176,7 @@ end
 ---comment True if the ability is active
 ---@param entity EntityID
 ---@param pbg ScarAbilityPBG
-function Entity_IsAbilityActive(entity,pbg)
+function Entity_IsAbilityActive(entity, pbg)
 end
 
 ---comment Returns true if entity is alive and spawned
@@ -4192,7 +4192,7 @@ end
 ---comment Returns true if the entity is attacking within the time
 ---@param entity EntityID
 ---@param time Real
-function Entity_IsAttacking(entity,time)
+function Entity_IsAttacking(entity, time)
 end
 
 ---comment Returns true if the given entity is a building
@@ -4238,7 +4238,7 @@ end
 ---comment True if entity is currently performing the given ability
 ---@param entity EntityID
 ---@param pbg ScarAbilityPBG
-function Entity_IsDoingAbility(entity,pbg)
+function Entity_IsDoingAbility(entity, pbg)
 end
 
 ---comment Returns true if the given blueprint is a building
@@ -4254,13 +4254,13 @@ end
 ---comment Returns true if the given blueprint is of the given type. Types are defined in type_ext/unit_type_list
 ---@param ebp ScarEntityPBG
 ---@param type String
-function Entity_IsEBPOfType(ebp,type)
+function Entity_IsEBPOfType(ebp, type)
 end
 
 ---comment Returns whether a hardpoint is active ( 0 indexed )
 ---@param entity EntityID
 ---@param hardPointIndex Integer
-function Entity_IsHardpointActive(entity,hardPointIndex)
+function Entity_IsHardpointActive(entity, hardPointIndex)
 end
 
 ---comment Check if the entity has a hold on anything
@@ -4301,7 +4301,7 @@ end
 ---comment Determines if this entity is of the given type. Types are defined in type_ext/unit_type_list
 ---@param entity EntityID
 ---@param type String
-function Entity_IsOfType(entity,type)
+function Entity_IsOfType(entity, type)
 end
 
 ---comment Returns if an Entity is currently on walkable wall.
@@ -4327,7 +4327,7 @@ end
 ---comment Returns whether a particular squad blueprint is being produced by a given entity
 ---@param entity EntityID
 ---@param pbg ScarSquadPBG
-function Entity_IsProducingSquad(entity,pbg)
+function Entity_IsProducingSquad(entity, pbg)
 end
 
 ---comment Returns true if an entity has a production queue and if the queue is available
@@ -4363,7 +4363,7 @@ end
 ---comment Returns true if strategic point is captured by the team of the player provided.
 ---@param entity EntityID
 ---@param player PlayerID
-function Entity_IsStrategicPointCapturedBy(entity,player)
+function Entity_IsStrategicPointCapturedBy(entity, player)
 end
 
 ---comment Return true if the entity is a team weapon
@@ -4374,21 +4374,21 @@ end
 ---comment Returns true if the entity is under attack.
 ---@param entity EntityID
 ---@param time Real
-function Entity_IsUnderAttack(entity,time)
+function Entity_IsUnderAttack(entity, time)
 end
 
 ---comment Returns true if the entity is under attack by a certain player
 ---@param entity EntityID
 ---@param pAttackerOwner PlayerID
 ---@param time Real
-function Entity_IsUnderAttackByPlayer(entity,pAttackerOwner,time)
+function Entity_IsUnderAttackByPlayer(entity, pAttackerOwner, time)
 end
 
 ---comment Returns true if the entity was under attack from a certain direction (8 offset types, see ScarUtil.scar)
 ---@param entity EntityID
 ---@param offset Integer
 ---@param timeSeconds Real
-function Entity_IsUnderAttackFromDirection(entity,offset,timeSeconds)
+function Entity_IsUnderAttackFromDirection(entity, offset, timeSeconds)
 end
 
 ---comment Returns true if the entity is under construction.
@@ -4429,7 +4429,7 @@ end
 ---comment get entity pop cost, use CT_Personnel, CT_Vehicle, CT_Medic for captype
 ---@param entity EntityID
 ---@param type CapType
-function Entity_Population(entity,type)
+function Entity_Population(entity, type)
 end
 
 ---comment Precache entity resources and listen for event GE_EntityPrecached that it is done
@@ -4439,14 +4439,14 @@ end
 ---@param resourceContainerCacheName String
 ---@param source String
 ---@param id String
-function Entity_Precache(ebp,skinItemDefinitionID,player,resourceContainerCacheName,source,id)
+function Entity_Precache(ebp, skinItemDefinitionID, player, resourceContainerCacheName, source, id)
 end
 
 ---comment Pushes the provided pbg onto the entity's production queue and returns if it was successfully added. Also need to specify a itemType for the pbg (PITEM_Upgrade, PITEM_Spawn, PITEM_SquadUpgrade, PITEM_SquadReinforce,  PITEM_PlayerUpgrade)
 ---@param entity EntityID
 ---@param itemType ProductionItemType
 ---@param pbg PropertyBagGroup
-function Entity_QueueProductionItemByPBG(entity,itemType,pbg)
+function Entity_QueueProductionItemByPBG(entity, itemType, pbg)
 end
 
 ---comment trigger the RagDoll skeleton driving.
@@ -4457,7 +4457,7 @@ end
 ---comment Removes an ability that was previously added by Entity_AddAbility. You cannot remove static abilities (from AE: ability_ext)
 ---@param entity EntityID
 ---@param ability ScarAbilityPBG
-function Entity_RemoveAbility(entity,ability)
+function Entity_RemoveAbility(entity, ability)
 end
 
 ---comment Removes all booby-traps on this entity
@@ -4473,7 +4473,7 @@ end
 ---comment Removes an upgrade from an entity
 ---@param entity EntityID
 ---@param upgrade ScarUpgradePBG
-function Entity_RemoveUpgrade(entity,upgrade)
+function Entity_RemoveUpgrade(entity, upgrade)
 end
 
 ---comment Returns true if you should call Misc_UpdateSlottedSplinesContainingEGroupAfterBlueprintConversion with an egroup containing this entity after blueprint converting it. Make sure to batch together all your entities when using that function to reduce duplicated work.
@@ -4504,79 +4504,79 @@ end
 ---comment Trigger animation action for an entity. Please only use this for simple animations
 ---@param pEntity EntityID
 ---@param actionName String
-function Entity_SetAnimatorAction(pEntity,actionName)
+function Entity_SetAnimatorAction(pEntity, actionName)
 end
 
 ---comment Set animation action parameter for an entity. Please only use this for simple animations
 ---@param pEntity EntityID
 ---@param actionParameterName String
 ---@param actionParameterValue String
-function Entity_SetAnimatorActionParameter(pEntity,actionParameterName,actionParameterValue)
+function Entity_SetAnimatorActionParameter(pEntity, actionParameterName, actionParameterValue)
 end
 
 ---comment Set animation event for an entity. Please only use this for simple animations
 ---@param pEntity EntityID
 ---@param eventName String
-function Entity_SetAnimatorEvent(pEntity,eventName)
+function Entity_SetAnimatorEvent(pEntity, eventName)
 end
 
 ---comment Set animation state of a state machine for an entity. Please only use this for simple animations
 ---@param pEntity EntityID
 ---@param stateMachineName String
 ---@param stateName String
-function Entity_SetAnimatorState(pEntity,stateMachineName,stateName)
+function Entity_SetAnimatorState(pEntity, stateMachineName, stateName)
 end
 
 ---comment Set animation variable value for an entity. Please only use this for simple animations
 ---@param pEntity EntityID
 ---@param variableName String
 ---@param value Real
-function Entity_SetAnimatorVariable(pEntity,variableName,value)
+function Entity_SetAnimatorVariable(pEntity, variableName, value)
 end
 
 ---comment Sets the entity to be in the background or foreground. By default, all entities are in the foreground
 ---@param pEntity EntityID
 ---@param isInBackground Boolean
-function Entity_SetBackground(pEntity,isInBackground)
+function Entity_SetBackground(pEntity, isInBackground)
 end
 
 ---comment Overrides crushable behavior for an entity
 ---@param entity EntityID
 ---@param crushable Boolean
-function Entity_SetCrushable(entity,crushable)
+function Entity_SetCrushable(entity, crushable)
 end
 
 ---comment Changes the crush mode of a given entity.  Entity must have a crush extension.
 ---@param entity EntityID
 ---@param mode CrushMode
-function Entity_SetCrushMode(entity,mode)
+function Entity_SetCrushMode(entity, mode)
 end
 
 ---comment Fully wires this entity for demolitions, if it's set up to be demolishable. 'player' is the one that owns the demolitions and can detonate them.
 ---@param player PlayerID
 ---@param entity EntityID
 ---@param numcharges Integer
-function Entity_SetDemolitions(player,entity,numcharges)
+function Entity_SetDemolitions(player, entity, numcharges)
 end
 
 ---comment enable or disable the casualtext
 ---@param enable Boolean
 ---@param entity EntityID
-function Entity_SetEnableCasualty(enable,entity)
+function Entity_SetEnableCasualty(enable, entity)
 end
 
 ---comment Enables/disables an extension on the entity.
 ---@param entity EntityID
 ---@param extID String
 ---@param enabled Boolean
-function Entity_SetExtEnabled(entity,extID,enabled)
+function Entity_SetExtEnabled(entity, extID, enabled)
 end
 
 ---comment Sets the heading of the entity.  The position is currently a lua table with three entries (x, y, z)
 ---@param entity EntityID
 ---@param pos Position
 ---@param bInterpolate Boolean
-function Entity_SetHeading(entity,pos,bInterpolate)
+function Entity_SetHeading(entity, pos, bInterpolate)
 end
 
 ---comment Sets the heading of the entity.  The position is currently a lua table with three entries (x, y, z)
@@ -4584,33 +4584,33 @@ end
 ---@param pos Position
 ---@param bSnapToGround Boolean
 ---@param bInterpolate Boolean
-function Entity_SetHeadingGroundSnapOptional(entity,pos,bSnapToGround,bInterpolate)
+function Entity_SetHeadingGroundSnapOptional(entity, pos, bSnapToGround, bInterpolate)
 end
 
 ---comment Set the health of an entity.  healthPercent must be in the range [0.0, 1.0].
 ---@param entity EntityID
 ---@param healthPercent Real
-function Entity_SetHealth(entity,healthPercent)
+function Entity_SetHealth(entity, healthPercent)
 end
 
 ---comment Make an entity invulnerable to physical damage when health is below the minimum health percentage
 ---@param entity EntityID
 ---@param minHealthPercentage Real
 ---@param resetTime Real
-function Entity_SetInvulnerableMinCap(entity,minHealthPercentage,resetTime)
+function Entity_SetInvulnerableMinCap(entity, minHealthPercentage, resetTime)
 end
 
 ---comment Sets the lockCurrentTierVisuals flag in the TierExt so when an entity gets BP converted it doesn't update the visual assets. Must be called before BP conversion
 ---@param entity EntityID
 ---@param lockVisuals Boolean
-function Entity_SetLockCurrentTierVisuals(entity,lockVisuals)
+function Entity_SetLockCurrentTierVisuals(entity, lockVisuals)
 end
 
 ---comment Set the number of blocks the entity will perform per number of attacks
 ---@param entity Entity
 ---@param blocks Integer
 ---@param attacks Integer
-function Entity_SetMeleeBlocksPerAttacks(entity,blocks,attacks)
+function Entity_SetMeleeBlocksPerAttacks(entity, blocks, attacks)
 end
 
 ---comment Sets an object on fire (also works on buildings)
@@ -4621,84 +4621,84 @@ end
 ---comment Changes the owner of the given squad.
 ---@param entity EntityID
 ---@param owner PlayerID
-function Entity_SetPlayerOwner(entity,owner)
+function Entity_SetPlayerOwner(entity, owner)
 end
 
 ---comment Sets the position of the entity.  The position is currently a lua table with three entries (x, y, z)
 ---@param entity EntityID
 ---@param pos Position
-function Entity_SetPosition(entity,pos)
+function Entity_SetPosition(entity, pos)
 end
 
 ---comment If the entity is at the same cell as desiredPosition, try to set the entity position to it. If the cell is next to impass, set it to the center of the cell.
 ---@param entity EntityID
 ---@param desiredPosition Position
-function Entity_SetPositionWithinCell(entity,desiredPosition)
+function Entity_SetPositionWithinCell(entity, desiredPosition)
 end
 
 ---comment Set the number of blocks the entity will perform per number of attacks
 ---@param entity Entity
 ---@param blocks Integer
 ---@param attacks Integer
-function Entity_SetProjectileBlocksPerAttacks(entity,blocks,attacks)
+function Entity_SetProjectileBlocksPerAttacks(entity, blocks, attacks)
 end
 
 ---comment Sets whether or not a projectile can explode.
 ---@param projectile EntityID
 ---@param canExplode Boolean
-function Entity_SetProjectileCanExplode(projectile,canExplode)
+function Entity_SetProjectileCanExplode(projectile, canExplode)
 end
 
 ---comment Set the number of blocks the entity will perform per number of attacks
 ---@param entity Entity
 ---@param blocks Integer
 ---@param attacks Integer
-function Entity_SetRangedBlocksPerAttacks(entity,blocks,attacks)
+function Entity_SetRangedBlocksPerAttacks(entity, blocks, attacks)
 end
 
 ---comment Sets an entity to be recrewable or not when it becomes abandoned
 ---@param entity EntityID
 ---@param capturable Boolean
-function Entity_SetRecrewable(entity,capturable)
+function Entity_SetRecrewable(entity, capturable)
 end
 
 ---comment Set remaining resource amount of the given entity.
 ---@param entity EntityID
 ---@param amount Real
-function Entity_SetRemainingResourceDepositAmount(entity,amount)
+function Entity_SetRemainingResourceDepositAmount(entity, amount)
 end
 
 ---comment Sets a specific amount of a certain resource type for an entity.
 ---@param entity EntityID
 ---@param type Integer
 ---@param amount Real
-function Entity_SetResource(entity,type,amount)
+function Entity_SetResource(entity, type, amount)
 end
 
 ---comment Enables shared team production on a building (teammates can build using THEIR resources)
 ---@param entity EntityID
 ---@param shared Boolean
-function Entity_SetSharedProductionQueue(entity,shared)
+function Entity_SetSharedProductionQueue(entity, shared)
 end
 
 ---comment Show or hide the entity's silhouette when behind other objects
 ---@param entity EntityID
 ---@param show Boolean
-function Entity_SetShowSilhouette(entity,show)
+function Entity_SetShowSilhouette(entity, show)
 end
 
 ---comment Sets a boolean value in the entity's state model corresponding to the given key.
 ---@param entity EntityID
 ---@param key String
 ---@param value Boolean
-function Entity_SetStateModelBool(entity,key,value)
+function Entity_SetStateModelBool(entity, key, value)
 end
 
 ---comment Sets an Entity TargetHandle value in the entity's state model corresponding to the given key.
 ---@param entity EntityID
 ---@param key String
 ---@param value EntityID
-function Entity_SetStateModelEntityTarget(entity,key,value)
+function Entity_SetStateModelEntityTarget(entity, key, value)
 end
 
 ---comment Sets a boolean value in the entity's state model corresponding to the given key and table row index (0 based).
@@ -4706,7 +4706,7 @@ end
 ---@param key String
 ---@param tableRowIndex Integer
 ---@param value Boolean
-function Entity_SetStateModelEnumTableBool(entity,key,tableRowIndex,value)
+function Entity_SetStateModelEnumTableBool(entity, key, tableRowIndex, value)
 end
 
 ---comment Sets an Entity TargetHandle value in the entity's state model corresponding to the given key and table row index (0 based).
@@ -4714,7 +4714,7 @@ end
 ---@param key String
 ---@param tableRowIndex Integer
 ---@param value EntityID
-function Entity_SetStateModelEnumTableEntityTarget(entity,key,tableRowIndex,value)
+function Entity_SetStateModelEnumTableEntityTarget(entity, key, tableRowIndex, value)
 end
 
 ---comment Sets a float value in the entity's state model corresponding to the given key and table row index (0 based).
@@ -4722,7 +4722,7 @@ end
 ---@param key String
 ---@param tableRowIndex Integer
 ---@param value Real
-function Entity_SetStateModelEnumTableFloat(entity,key,tableRowIndex,value)
+function Entity_SetStateModelEnumTableFloat(entity, key, tableRowIndex, value)
 end
 
 ---comment Sets an integer value in the entity's state model corresponding to the given key and table row index (0 based).
@@ -4730,7 +4730,7 @@ end
 ---@param key String
 ---@param tableRowIndex Integer
 ---@param value Integer
-function Entity_SetStateModelEnumTableInt(entity,key,tableRowIndex,value)
+function Entity_SetStateModelEnumTableInt(entity, key, tableRowIndex, value)
 end
 
 ---comment Sets a Player TargetHandle value in the entity's state model corresponding to the given key and table row index (0 based).
@@ -4738,7 +4738,7 @@ end
 ---@param key String
 ---@param tableRowIndex Integer
 ---@param value PlayerID
-function Entity_SetStateModelEnumTablePlayerTarget(entity,key,tableRowIndex,value)
+function Entity_SetStateModelEnumTablePlayerTarget(entity, key, tableRowIndex, value)
 end
 
 ---comment Sets a Squad TargetHandle value in the entity's state model corresponding to the given key and table row index (0 based).
@@ -4746,7 +4746,7 @@ end
 ---@param key String
 ---@param tableRowIndex Integer
 ---@param value SquadID
-function Entity_SetStateModelEnumTableSquadTarget(entity,key,tableRowIndex,value)
+function Entity_SetStateModelEnumTableSquadTarget(entity, key, tableRowIndex, value)
 end
 
 ---comment Sets a Vector3f value in the entity's state model corresponding to the given key and table row index (0 based).
@@ -4754,48 +4754,48 @@ end
 ---@param key String
 ---@param tableRowIndex Integer
 ---@param value Position
-function Entity_SetStateModelEnumTableVector3f(entity,key,tableRowIndex,value)
+function Entity_SetStateModelEnumTableVector3f(entity, key, tableRowIndex, value)
 end
 
 ---comment Sets a float value in the entity's state model corresponding to the given key.
 ---@param entity EntityID
 ---@param key String
 ---@param value Real
-function Entity_SetStateModelFloat(entity,key,value)
+function Entity_SetStateModelFloat(entity, key, value)
 end
 
 ---comment Sets an integer value in the entity's state model corresponding to the given key.
 ---@param entity EntityID
 ---@param key String
 ---@param value Integer
-function Entity_SetStateModelInt(entity,key,value)
+function Entity_SetStateModelInt(entity, key, value)
 end
 
 ---comment Sets a Player TargetHandle value in the entity's state model corresponding to the given key.
 ---@param entity EntityID
 ---@param key String
 ---@param value PlayerID
-function Entity_SetStateModelPlayerTarget(entity,key,value)
+function Entity_SetStateModelPlayerTarget(entity, key, value)
 end
 
 ---comment Sets a Squad TargetHandle value in the entity's state model corresponding to the given key.
 ---@param entity EntityID
 ---@param key String
 ---@param value SquadID
-function Entity_SetStateModelSquadTarget(entity,key,value)
+function Entity_SetStateModelSquadTarget(entity, key, value)
 end
 
 ---comment Sets a Vector3f value in the entity's state model corresponding to the given key.
 ---@param entity EntityID
 ---@param key String
 ---@param value Position
-function Entity_SetStateModelVector3f(entity,key,value)
+function Entity_SetStateModelVector3f(entity, key, value)
 end
 
 ---comment Sets a flag that tells a building to keep burning while invulnerable (for atmosphere).
 ---@param entity EntityID
 ---@param shouldStayBurning Boolean
-function Entity_SetStayBurningWhileInvulnerable(entity,shouldStayBurning)
+function Entity_SetStayBurningWhileInvulnerable(entity, shouldStayBurning)
 end
 
 ---comment Sets a strategic point to neutral (not owned by any team)
@@ -4806,13 +4806,13 @@ end
 ---comment Sets whether a strategic point's reticule is visible
 ---@param entity EntityID
 ---@param visible Boolean
-function Entity_SetStrategicPointReticuleVisible(entity,visible)
+function Entity_SetStrategicPointReticuleVisible(entity, visible)
 end
 
 ---comment Set the allowable methods of targeting this entity
 ---@param entity Entity&
 ---@param type TargetingType
-function Entity_SetTargetingType(entity,type)
+function Entity_SetTargetingType(entity, type)
 end
 
 ---comment Makes an entity neutral
@@ -4823,13 +4823,13 @@ end
 ---comment Shows/hides the entity in the simulation
 ---@param entity EntityID
 ---@param hide Boolean
-function Entity_SimHide(entity,hide)
+function Entity_SimHide(entity, hide)
 end
 
 ---comment Snaps the entity to the grid and ground.
 ---@param entity EntityID
 ---@param interpolate Boolean
-function Entity_SnapToGridAndGround(entity,interpolate)
+function Entity_SnapToGridAndGround(entity, interpolate)
 end
 
 ---comment Spawn the entity at its current position
@@ -4847,14 +4847,14 @@ end
 ---@param pos Position
 ---@param toward Position
 ---@param spawnType String
-function Entity_SpawnToward(entity,pos,toward,spawnType)
+function Entity_SpawnToward(entity, pos, toward, spawnType)
 end
 
 ---comment Abruptly stops an active ability
 ---@param entity EntityID
 ---@param ability ScarAbilityPBG
 ---@param bIsEarlyExit Boolean
-function Entity_StopAbility(entity,ability,bIsEarlyExit)
+function Entity_StopAbility(entity, ability, bIsEarlyExit)
 end
 
 ---comment Puts out the fire on an object (also works on buildings)
@@ -4866,7 +4866,7 @@ end
 ---@param entity EntityID
 ---@param posture Integer
 ---@param duration Real
-function Entity_SuggestPosture(entity,posture,duration)
+function Entity_SuggestPosture(entity, posture, duration)
 end
 
 ---comment Returns whether this entity is set up to have demolitions placed on it
@@ -4882,7 +4882,7 @@ end
 ---comment Hides or shows an entity visually.
 ---@param pEntity EntityID
 ---@param bHide Boolean
-function Entity_VisHide(pEntity,bHide)
+function Entity_VisHide(pEntity, bHide)
 end
 
 ---comment Converts any enum value to a number
@@ -4900,7 +4900,7 @@ end
 ---@param data Table
 ---@param events Table
 ---@param delay Real
-function Event_CreateAND(callback,data,events,delay)
+function Event_CreateAND(callback, data, events, delay)
 end
 
 ---comment Callback given callback function with data, when the certain objects die.
@@ -4910,7 +4910,7 @@ end
 ---@param repeat Boolean
 ---@param requireAllEntitiesDead Boolean
 ---@param data Table
-function Event_Death(callback,group,selection,repeat,requireAllEntitiesDead,data)
+function Event_Death(callback, group, selection, repeat, requireAllEntitiesDead, data)
 end
 
 ---comment Pauses for a given amount of time. This function MUST be called from a CTRL object in NISlet events only!
@@ -4924,7 +4924,7 @@ end
 ---@param encounter SGroupID
 ---@param player PlayerID
 ---@param delay Real
-function Event_EncounterCanSeePlayerSquads(callback,data,encounter,player,delay)
+function Event_EncounterCanSeePlayerSquads(callback, data, encounter, player, delay)
 end
 
 ---comment Callback given callback function with data when target enters range
@@ -4936,7 +4936,7 @@ end
 ---@param range REAL
 ---@param repeat Boolean
 ---@param triggerOnEnter Boolean
-function Event_EnterProximity(callback,data,target,arequireAll,location,range,repeat,triggerOnEnter)
+function Event_EnterProximity(callback, data, target, arequireAll, location, range, repeat, triggerOnEnter)
 end
 
 ---comment Callback given callback function with data when target exits range
@@ -4948,7 +4948,7 @@ end
 ---@param range REAL
 ---@param repeat Boolean
 ---@param triggerOnEnter Boolean
-function Event_ExitProximity(callback,data,target,arequireAll,location,range,repeat,triggerOnEnter)
+function Event_ExitProximity(callback, data, target, arequireAll, location, range, repeat, triggerOnEnter)
 end
 
 ---comment Callback given callback function with data, when the amount of objects matches the requested conditions - Note: Does not count team weapons
@@ -4957,7 +4957,7 @@ end
 ---@param group EGroupID | SGroup
 ---@param amount Integer
 ---@param repeat Boolean
-function Event_GroupCount(callback,data,group,amount,repeat)
+function Event_GroupCount(callback, data, group, amount, repeat)
 end
 
 ---comment Callback given callback function with data, when group is dead(empty).
@@ -4965,7 +4965,7 @@ end
 ---@param data Table
 ---@param group EGroupID | SGroup
 ---@param delay Real
-function Event_GroupIsDeadOrRetreating(callback,data,group,delay)
+function Event_GroupIsDeadOrRetreating(callback, data, group, delay)
 end
 
 ---comment Callback given callback function with data, when the amount of entities left in a group drops below amount.
@@ -4974,7 +4974,7 @@ end
 ---@param group EGroupID | SGroup
 ---@param amount Integer
 ---@param delay Real
-function Event_GroupLeftAlive(callback,data,group,amount,delay)
+function Event_GroupLeftAlive(callback, data, group, amount, delay)
 end
 
 ---comment Returns true if the event is being skipped.
@@ -4986,7 +4986,7 @@ end
 ---@param data Table
 ---@param attackTime Real
 ---@param delay Real
-function Event_IsEngaged(callback,data,attackTime,delay)
+function Event_IsEngaged(callback, data, attackTime, delay)
 end
 
 ---comment Callback given callback function with data, when group is out of combat  in the last attackTime seconds.
@@ -4995,13 +4995,13 @@ end
 ---@param group EGroupID | SGroup
 ---@param attackTime Real
 ---@param delay Real
-function Event_IsOutOfCombat(callback,data,group,attackTime,delay)
+function Event_IsOutOfCombat(callback, data, group, attackTime, delay)
 end
 
 ---comment Callback when a target element is selected.
 ---@param callback Function
 ---@param data Table
-function Event_IsSelected(callback,data)
+function Event_IsSelected(callback, data)
 end
 
 ---comment Callback given callback function with data, when sgroup or egroup are under attack in the last attackTime seconds.
@@ -5012,7 +5012,7 @@ end
 ---@param attackTime Real
 ---@param player PlayerID
 ---@param delay Real
-function Event_IsUnderAttack(callback,data,SGroup,EGroup,attackTime,player,delay)
+function Event_IsUnderAttack(callback, data, SGroup, EGroup, attackTime, player, delay)
 end
 
 ---comment Callback given callback function with data, when the given player can see the element.
@@ -5020,7 +5020,7 @@ end
 ---@param data Table
 ---@param team PlayerID
 ---@param element SGroupID
-function Event_PlayerCanSeeElement(callback,data,team,element)
+function Event_PlayerCanSeeElement(callback, data, team, element)
 end
 
 ---comment Callback given callback function with data when target enters location.
@@ -5030,7 +5030,7 @@ end
 ---@param location Marker
 ---@param range REAL
 ---@param delay Real
-function Event_Proximity(callback,data,target,location,range,delay)
+function Event_Proximity(callback, data, target, location, range, delay)
 end
 
 ---comment Starts a save event the same way as Event_Start, but automatically sets highest priority and promotes the request
@@ -5041,7 +5041,7 @@ end
 ---comment Starts a save event the same way as Event_Save, but with a filename specified.
 ---@param type SaveTriggerType
 ---@param fileName String
-function Event_SaveWithName(type,fileName)
+function Event_SaveWithName(type, fileName)
 end
 
 ---comment Callback given callback function with data, when the amount of members left in a squad matches the requested conditions
@@ -5050,7 +5050,7 @@ end
 ---@param group SGroupID
 ---@param amount Integer
 ---@param repeat Boolean
-function Event_SGroupCountMember(callback,data,group,amount,repeat)
+function Event_SGroupCountMember(callback, data, group, amount, repeat)
 end
 
 ---comment Completes execution of the event immediately (all calls to Wait() are ignored)
@@ -5060,14 +5060,14 @@ end
 ---comment Starts event.  Event will not start until all rules are evaluated for this frame!
 ---@param eventFunction LuaFunction
 ---@param int Integer
-function Event_Start(eventFunction,int)
+function Event_Start(eventFunction, int)
 end
 
 ---comment Starts an event the same way as Event_Start, but calls a user defined function when the event is over
 ---@param eventFunction LuaFunction
 ---@param int Integer
 ---@param onComplete LuaFunction
-function Event_StartEx(eventFunction,int,onComplete)
+function Event_StartEx(eventFunction, int, onComplete)
 end
 
 ---comment Callback given callback function with data when target remains in range (called every interval seconds)
@@ -5079,7 +5079,7 @@ end
 ---@param range REAL
 ---@param repeat Boolean
 ---@param triggerOnEnter Boolean
-function Event_WhileInProximity(callback,data,target,arequireAll,location,range,repeat,triggerOnEnter)
+function Event_WhileInProximity(callback, data, target, arequireAll, location, range, repeat, triggerOnEnter)
 end
 
 ---comment Throws an error to lua and print out the error message
@@ -5101,7 +5101,7 @@ end
 ---@param sgroup SGroupID
 ---@param position Position
 ---@param direction Position
-function Formation_PlaceSquadsInFormation(sgroup,position,direction)
+function Formation_PlaceSquadsInFormation(sgroup, position, direction)
 end
 
 ---comment Calculate formation positions and set the squads' positions to the formation positions, using the formation spot generator provided
@@ -5109,7 +5109,7 @@ end
 ---@param position Position
 ---@param direction Position
 ---@param formationPBGNameShort String
-function Formation_PlaceSquadsInFormationByFormationName(sgroup,position,direction,formationPBGNameShort)
+function Formation_PlaceSquadsInFormationByFormationName(sgroup, position, direction, formationPBGNameShort)
 end
 
 ---comment Toggle blockers info
@@ -5139,7 +5139,7 @@ end
 ---@param pos Position
 ---@param radius Real
 ---@param durationSecs Real
-function FOW_PlayerRevealArea(player,pos,radius,durationSecs)
+function FOW_PlayerRevealArea(player, pos, radius, durationSecs)
 end
 
 ---comment Reveals a SGroup in the Fog of War for a player over a given duration.
@@ -5147,7 +5147,7 @@ end
 ---@param group SGroupID
 ---@param radius Real
 ---@param durationSecs Real
-function FOW_PlayerRevealSGroup(player,group,radius,durationSecs)
+function FOW_PlayerRevealSGroup(player, group, radius, durationSecs)
 end
 
 ---comment Unexplores entire map for one player.
@@ -5163,13 +5163,13 @@ end
 ---comment UnReveals a circular area that was previously revealed for a given player.
 ---@param player PlayerID
 ---@param pos Position
-function FOW_PlayerUnRevealArea(player,pos)
+function FOW_PlayerUnRevealArea(player, pos)
 end
 
 ---comment UnReveal a SGroup previously revealed to a Player
 ---@param player PlayerID
 ---@param group SGroupID
-function FOW_PlayerUnRevealSGroup(player,group)
+function FOW_PlayerUnRevealSGroup(player, group)
 end
 
 ---comment Reveal FOW for all players
@@ -5180,35 +5180,35 @@ end
 ---@param pos Position
 ---@param radius Real
 ---@param durationSecs Real
-function FOW_RevealArea(pos,radius,durationSecs)
+function FOW_RevealArea(pos, radius, durationSecs)
 end
 
 ---comment Reveals an EGroup in the Fog of War for all alive players over a given duration.
 ---@param group EGroupID
 ---@param radius Real
 ---@param durationSecs Real
-function FOW_RevealEGroup(group,radius,durationSecs)
+function FOW_RevealEGroup(group, radius, durationSecs)
 end
 
 ---comment Reveals an entity in the Fog of War for all alive players over a given duration.
 ---@param entity EntityID
 ---@param radius Real
 ---@param durationSecs Real
-function FOW_RevealEntity(entity,radius,durationSecs)
+function FOW_RevealEntity(entity, radius, durationSecs)
 end
 
 ---comment Reveals a SGroup in the Fog of War for all alive players over a given duration.
 ---@param group SGroupID
 ---@param radius Real
 ---@param durationSecs Real
-function FOW_RevealSGroup(group,radius,durationSecs)
+function FOW_RevealSGroup(group, radius, durationSecs)
 end
 
 ---comment Reveals a squad in the Fog of War for all alive players over a given duration.
 ---@param squad SquadID
 ---@param radius Real
 ---@param durationSecs Real
-function FOW_RevealSquad(squad,radius,durationSecs)
+function FOW_RevealSquad(squad, radius, durationSecs)
 end
 
 ---comment Reveals a territory to a player
@@ -5216,7 +5216,7 @@ end
 ---@param sectorID Integer
 ---@param durationSecs Real
 ---@param mustOwn Boolean
-function FOW_RevealTerritory(player,sectorID,durationSecs,mustOwn)
+function FOW_RevealTerritory(player, sectorID, durationSecs, mustOwn)
 end
 
 ---comment Reveal FOW for all players by disabling rendering of FOW without triggering a FOW in the game simulation
@@ -5265,7 +5265,7 @@ end
 ---comment Unreveals a territory sector
 ---@param player PlayerID
 ---@param sectorID Integer
-function FOW_UnRevealTerritory(player,sectorID)
+function FOW_UnRevealTerritory(player, sectorID)
 end
 
 ---comment force the gamma
@@ -5405,14 +5405,14 @@ end
 ---@param sizePbgName String
 ---@param difficulty Integer
 ---@param terrainResult StackVarTable
-function Game_LaunchSPGeneratedMap(biomePbgName,layoutPbgName,sizePbgName,difficulty,terrainResult)
+function Game_LaunchSPGeneratedMap(biomePbgName, layoutPbgName, sizePbgName, difficulty, terrainResult)
 end
 
 ---comment Load data store to disk
 ---@param id String
 ---@param path String
 ---@param binary Boolean
-function Game_LoadDataStore(id,path,binary)
+function Game_LoadDataStore(id, path, binary)
 end
 
 ---comment load this game as a single player match, full path is expected excluding extension
@@ -5428,7 +5428,7 @@ end
 ---comment load this scenario as an single player match
 ---@param scenarioName String
 ---@param difficulty Integer
-function Game_LoadSP(scenarioName,difficulty)
+function Game_LoadSP(scenarioName, difficulty)
 end
 
 ---comment If you are running something that is non-deterministic like a getlocalplayer conditional, you can lock the random to make sure no one down the callstack will throw the game random index out of sync and cause a sync error. REMEMBER TO UNLOCK WHEN YOU ARE DONE
@@ -5465,14 +5465,14 @@ end
 ---comment Loads table data stored at datastore[dataID] into global lua table var named <dataID>. Set clearFromStorage to true to clear data from store.
 ---@param dataID String
 ---@param clearFromStorage Boolean
-function Game_RetrieveTableData(dataID,clearFromStorage)
+function Game_RetrieveTableData(dataID, clearFromStorage)
 end
 
 ---comment Save data store to disk
 ---@param id String
 ---@param path String
 ---@param binary Boolean
-function Game_SaveDataStore(id,path,binary)
+function Game_SaveDataStore(id, path, binary)
 end
 
 ---comment checks if the save game exists in dev folder and is loadable, filename is expected excluding folder and extension
@@ -5486,20 +5486,20 @@ end
 ---@param b Real
 ---@param a Real
 ---@param timeSecs Real
-function Game_ScreenFade(r,g,b,a,timeSecs)
+function Game_ScreenFade(r, g, b, a, timeSecs)
 end
 
 ---comment Updates the status of an in-game achievement or challenge.
 ---@param player PlayerID
 ---@param eventType ChallengeEventType
 ---@param amount Real
-function Game_SendCustomChallengeEvent(player,eventType,amount)
+function Game_SendCustomChallengeEvent(player, eventType, amount)
 end
 
 ---comment sets lock state for stored data at location named by dataID.
 ---@param dataID String
 ---@param lock Boolean
-function Game_SetDataLock(dataID,lock)
+function Game_SetDataLock(dataID, lock)
 end
 
 ---comment Sets the input enabled flag.
@@ -5515,25 +5515,25 @@ end
 ---comment Set the player color for the world visuals from preset colors defined in tuning_simulation\ui_team_colours.
 ---@param player target
 ---@param "Colour_Neutral". or
-function Game_SetPlayerColour(player,"Colour_Neutral".)
+function Game_SetPlayerColour(player, "Colour_Neutral".)
 end
 
 ---comment Set the player color for the world visuals by slot index from preset colors defined in tuning_simulation\ui_player_colours.
 ---@param player target
 ---@param oneBasedPlayerSlotIndex Integer
-function Game_SetPlayerSlotColour(player,oneBasedPlayerSlotIndex)
+function Game_SetPlayerSlotColour(player, oneBasedPlayerSlotIndex)
 end
 
 ---comment Set the player color for the UI from preset colors defined in tuning_simulation\ui_team_colours. Does not affect world visuals.
 ---@param player target
 ---@param "Colour_Neutral". or
-function Game_SetPlayerUIColour(player,"Colour_Neutral".)
+function Game_SetPlayerUIColour(player, "Colour_Neutral".)
 end
 
 ---comment Set the player color for the UI by slot index from preset colors defined in tuning_simulation\ui_player_colours. Does not affect world visuals.
 ---@param player target
 ---@param oneBasedPlayerSlotIndex Integer
-function Game_SetPlayerUISlotColour(player,oneBasedPlayerSlotIndex)
+function Game_SetPlayerUISlotColour(player, oneBasedPlayerSlotIndex)
 end
 
 ---comment set the simulation update rate
@@ -5544,7 +5544,7 @@ end
 ---comment Sets the visibility of the specified game visibility flag.
 ---@param flag VisibilityFlag
 ---@param visible Boolean
-function Game_SetVisibility(flag,visible)
+function Game_SetVisibility(flag, visible)
 end
 
 ---comment Sets the game visibility flag.
@@ -5568,7 +5568,7 @@ end
 ---comment Stores provided table into long-lived data store at location named by dataID.
 ---@param dataID String
 ---@param table RefTable
-function Game_StoreTableData(dataID,table)
+function Game_StoreTableData(dataID, table)
 end
 
 ---comment Shows title text that fades in and out over a specified durations
@@ -5576,13 +5576,13 @@ end
 ---@param fadeIn Real
 ---@param duration Real
 ---@param fadeOut Real
-function Game_TextTitleFade(text,fadeIn,duration,fadeOut)
+function Game_TextTitleFade(text, fadeIn, duration, fadeOut)
 end
 
 ---comment Transitions to another atmosphere. Overwrites current transitions. Uses predefined atmosphere settings (only compatible with EEditor maps).
 ---@param stateName String
 ---@param transitionTimeSec Real
-function Game_TransitionToState(stateName,transitionTimeSec)
+function Game_TransitionToState(stateName, transitionTimeSec)
 end
 
 ---comment unlock the random from a previous lockrandom call only
@@ -5638,7 +5638,7 @@ end
 ---@param actionType Integer
 ---@param iconName String
 ---@param visibleInFOW Boolean
-function HintPoint_AddToEGroup(egroup,priority,visible,function,dataTemplate,hint,arrow,arrowOffset,actionType,iconName,visibleInFOW)
+function HintPoint_AddToEGroup(egroup, priority, visible, function, dataTemplate, hint, arrow, arrowOffset, actionType, iconName, visibleInFOW)
 end
 
 ---comment For internal use only.
@@ -5654,7 +5654,7 @@ end
 ---@param actionType Integer
 ---@param iconName String
 ---@param visibleInFOW Boolean
-function HintPoint_AddToEntity(entity,priority,visible,function,dataTemplate,hint,arrow,arrowOffset,objectiveID,actionType,iconName,visibleInFOW)
+function HintPoint_AddToEntity(entity, priority, visible, function, dataTemplate, hint, arrow, arrowOffset, objectiveID, actionType, iconName, visibleInFOW)
 end
 
 ---comment For internal use only.
@@ -5670,7 +5670,7 @@ end
 ---@param actionType Integer
 ---@param iconName String
 ---@param visibleInFOW Boolean
-function HintPoint_AddToPosition(position,priority,visible,function,dataTemplate,hint,arrow,arrowOffset,objectiveID,actionType,iconName,visibleInFOW)
+function HintPoint_AddToPosition(position, priority, visible, function, dataTemplate, hint, arrow, arrowOffset, objectiveID, actionType, iconName, visibleInFOW)
 end
 
 ---comment Deprecated.
@@ -5685,7 +5685,7 @@ end
 ---@param actionType Integer
 ---@param iconName String
 ---@param visibleInFOW Boolean
-function HintPoint_AddToSGroup(sgroup,priority,visible,function,dataTemplate,hint,arrow,arrowOffset,actionType,iconName,visibleInFOW)
+function HintPoint_AddToSGroup(sgroup, priority, visible, function, dataTemplate, hint, arrow, arrowOffset, actionType, iconName, visibleInFOW)
 end
 
 ---comment For internal use only.
@@ -5701,7 +5701,7 @@ end
 ---@param actionType Integer
 ---@param iconName String
 ---@param visibleInFOW Boolean
-function HintPoint_AddToSquad(squad,priority,visible,function,dataTemplate,hint,arrow,arrowOffset,objectiveID,actionType,iconName,visibleInFOW)
+function HintPoint_AddToSquad(squad, priority, visible, function, dataTemplate, hint, arrow, arrowOffset, objectiveID, actionType, iconName, visibleInFOW)
 end
 
 ---comment Clear the hint point arrow facing value.
@@ -5716,31 +5716,31 @@ end
 ---comment Add a projected offset to the specified hint point.
 ---@param id Integer
 ---@param offset Position
-function HintPoint_SetDisplayOffsetInternal(id,offset)
+function HintPoint_SetDisplayOffsetInternal(id, offset)
 end
 
 ---comment Face the hint point arrow towards this entity.
 ---@param id Integer
 ---@param entity EntityID
-function HintPoint_SetFacingEntity(id,entity)
+function HintPoint_SetFacingEntity(id, entity)
 end
 
 ---comment Face the hint point arrow towards this position.
 ---@param id Integer
 ---@param position Position
-function HintPoint_SetFacingPosition(id,position)
+function HintPoint_SetFacingPosition(id, position)
 end
 
 ---comment Face the hint point arrow towards this squad.
 ---@param id Integer
 ---@param squad SquadID
-function HintPoint_SetFacingSquad(id,squad)
+function HintPoint_SetFacingSquad(id, squad)
 end
 
 ---comment Show or hide the specified hint point.
 ---@param id Integer
 ---@param visible Boolean
-function HintPoint_SetVisibleInternal(id,visible)
+function HintPoint_SetVisibleInternal(id, visible)
 end
 
 ---comment Toggle hold info
@@ -5779,13 +5779,13 @@ end
 ---comment Needs the proper luaConfig id, and looks through that list to add the filter.
 ---@param stateName String
 ---@param filter String
-function LCWatcher_AddFilter(stateName,filter)
+function LCWatcher_AddFilter(stateName, filter)
 end
 
 ---comment Needs the proper luaConfig id, returns true if filter exists.
 ---@param stateName String
 ---@param filter String
-function LCWatcher_FilterExists(stateName,filter)
+function LCWatcher_FilterExists(stateName, filter)
 end
 
 ---comment Returns true if LCWatcher is active.
@@ -5795,7 +5795,7 @@ end
 ---comment Needs the proper luaConfig id, removes filter added by LCWatch_AddFilter.
 ---@param stateName String
 ---@param filter String
-function LCWatcher_RemoveFilter(stateName,filter)
+function LCWatcher_RemoveFilter(stateName, filter)
 end
 
 ---comment Selects a LuaConfig state to watch.  Returns true if state is registered and false if it has not.
@@ -5810,7 +5810,7 @@ end
 ---comment Get the player's equipped elite at the specified index for their currently set race
 ---@param player PlayerID
 ---@param index Integer
-function Loadout_GetEquippedArmyUnitAtIndex(player,index)
+function Loadout_GetEquippedArmyUnitAtIndex(player, index)
 end
 
 ---comment Get the number of elites currently equipped for the player's current race
@@ -5835,25 +5835,25 @@ end
 ---comment Returns a localized string containing the number to the specified number of decimal places.
 ---@param number Real
 ---@param numDecimalPlaces Integer
-function Loc_FormatNumber(number,numDecimalPlaces)
+function Loc_FormatNumber(number, numDecimalPlaces)
 end
 
 ---comment Returns a formatted time string in hours, minutes, and seconds. can omit leading zeroes.
 ---@param secs Real
 ---@param leading_zeroes Boolean
-function Loc_FormatTime_H_M_S(secs,leading_zeroes)
+function Loc_FormatTime_H_M_S(secs, leading_zeroes)
 end
 
 ---comment Returns a formatted time string in minutes and seconds. can omit leading zeroes.
 ---@param secs Real
 ---@param leading_zeroes Boolean
-function Loc_FormatTime_M_S(secs,leading_zeroes)
+function Loc_FormatTime_M_S(secs, leading_zeroes)
 end
 
 ---comment Returns a formatted time string in minutes, seconds, and milliseconds. can omit leading zeroes.
 ---@param secs Real
 ---@param leading_zeroes Boolean
-function Loc_FormatTime_M_S_MS(secs,leading_zeroes)
+function Loc_FormatTime_M_S_MS(secs, leading_zeroes)
 end
 
 ---comment Returns the localized string identified by the specified id.
@@ -5865,7 +5865,7 @@ end
 ---@param player PlayerID
 ---@param egroup EGroupID
 ---@param entityCommand EntityCommandType
-function LocalCommand_Entity(player,egroup,entityCommand)
+function LocalCommand_Entity(player, egroup, entityCommand)
 end
 
 ---comment Send an entity ability command (CMD_Ability) to an entity
@@ -5874,14 +5874,14 @@ end
 ---@param abilityPBG ScarAbilityPBG
 ---@param skipCostAndPrereq Boolean
 ---@param queued Boolean
-function LocalCommand_EntityAbility(player,egroup,abilityPBG,skipCostAndPrereq,queued)
+function LocalCommand_EntityAbility(player, egroup, abilityPBG, skipCostAndPrereq, queued)
 end
 
 ---comment Send a squad command to a entity group with custom data
 ---@param player PlayerID
 ---@param egroup EGroupID
 ---@param squadPbg ScarSquadPBG
-function LocalCommand_EntityBuildSquad(player,egroup,squadPbg)
+function LocalCommand_EntityBuildSquad(player, egroup, squadPbg)
 end
 
 ---comment Send a entity-based command to an entity group.
@@ -5889,7 +5889,7 @@ end
 ---@param egroup EGroupID
 ---@param entityCommand EntityCommandType
 ---@param target EGroupID
-function LocalCommand_EntityEntity(player,egroup,entityCommand,target)
+function LocalCommand_EntityEntity(player, egroup, entityCommand, target)
 end
 
 ---comment Send a squad command to a squad group with custom data
@@ -5898,7 +5898,7 @@ end
 ---@param entityCommand EntityCommandType
 ---@param cmdparam Integer
 ---@param queued Boolean
-function LocalCommand_EntityExt(player,egroup,entityCommand,cmdparam,queued)
+function LocalCommand_EntityExt(player, egroup, entityCommand, cmdparam, queued)
 end
 
 ---comment Send a position command to an entity group.
@@ -5906,7 +5906,7 @@ end
 ---@param egroup EGroupID
 ---@param entityCommand EntityCommandType
 ---@param target Position
-function LocalCommand_EntityPos(player,egroup,entityCommand,target)
+function LocalCommand_EntityPos(player, egroup, entityCommand, target)
 end
 
 ---comment Send a positional ability command (CMD_Ability) to an entity
@@ -5916,7 +5916,7 @@ end
 ---@param abilityPBG ScarAbilityPBG
 ---@param skipCostAndPrereq Boolean
 ---@param queued Boolean
-function LocalCommand_EntityPosAbility(player,egroup,pos,abilityPBG,skipCostAndPrereq,queued)
+function LocalCommand_EntityPosAbility(player, egroup, pos, abilityPBG, skipCostAndPrereq, queued)
 end
 
 ---comment Send a positional/directional ability command (CMD_Ability) to an entity
@@ -5927,7 +5927,7 @@ end
 ---@param abilityPBG ScarAbilityPBG
 ---@param skipCostAndPrereq Boolean
 ---@param queued Boolean
-function LocalCommand_EntityPosDirAbility(player,egroup,pos,dir,abilityPBG,skipCostAndPrereq,queued)
+function LocalCommand_EntityPosDirAbility(player, egroup, pos, dir, abilityPBG, skipCostAndPrereq, queued)
 end
 
 ---comment Send a dual target (position and squad) command to an entity group.
@@ -5936,7 +5936,7 @@ end
 ---@param entityCommand EntityCommandType
 ---@param target Position
 ---@param sgroup SGroupID
-function LocalCommand_EntityPosSquad(player,egroup,entityCommand,target,sgroup)
+function LocalCommand_EntityPosSquad(player, egroup, entityCommand, target, sgroup)
 end
 
 ---comment Send a squad-based command to an entity group.
@@ -5944,7 +5944,7 @@ end
 ---@param egroup EGroupID
 ---@param entityCommand EntityCommandType
 ---@param target SGroupID
-function LocalCommand_EntitySquad(player,egroup,entityCommand,target)
+function LocalCommand_EntitySquad(player, egroup, entityCommand, target)
 end
 
 ---comment Send an entity-targeting ability command (CMD_Ability) to an entity
@@ -5954,7 +5954,7 @@ end
 ---@param abilityPBG ScarAbilityPBG
 ---@param skipCostAndPrereq Boolean
 ---@param queued Boolean
-function LocalCommand_EntityTargetEntityAbility(player,egroup,entityTarget,abilityPBG,skipCostAndPrereq,queued)
+function LocalCommand_EntityTargetEntityAbility(player, egroup, entityTarget, abilityPBG, skipCostAndPrereq, queued)
 end
 
 ---comment Send an squad-targeting ability command (CMD_Ability) to an entity
@@ -5964,7 +5964,7 @@ end
 ---@param abilityPBG ScarAbilityPBG
 ---@param skipCostAndPrereq Boolean
 ---@param queued Boolean
-function LocalCommand_EntityTargetSquadAbility(player,egroup,squadTarget,abilityPBG,skipCostAndPrereq,queued)
+function LocalCommand_EntityTargetSquadAbility(player, egroup, squadTarget, abilityPBG, skipCostAndPrereq, queued)
 end
 
 ---comment Send a squad command to a entity group with custom data
@@ -5973,14 +5973,14 @@ end
 ---@param upgrade ScarUpgradePBG
 ---@param instant Boolean
 ---@param queued Boolean
-function LocalCommand_EntityUpgrade(player,egroup,upgrade,instant,queued)
+function LocalCommand_EntityUpgrade(player, egroup, upgrade, instant, queued)
 end
 
 ---comment Send a player command to a player
 ---@param player PlayerID
 ---@param dest PlayerID
 ---@param playerCommand PlayerCommandType
-function LocalCommand_Player(player,dest,playerCommand)
+function LocalCommand_Player(player, dest, playerCommand)
 end
 
 ---comment Send a player ability command (PCMD_Ability) to a player
@@ -5988,7 +5988,7 @@ end
 ---@param dest PlayerID
 ---@param abilityPBG ScarAbilityPBG
 ---@param skipCostAndPrereq Boolean
-function LocalCommand_PlayerAbility(player,dest,abilityPBG,skipCostAndPrereq)
+function LocalCommand_PlayerAbility(player, dest, abilityPBG, skipCostAndPrereq)
 end
 
 ---comment Send an entity command to a player.
@@ -5996,7 +5996,7 @@ end
 ---@param dest PlayerID
 ---@param playerCommand PlayerCommandType
 ---@param target EGroupID
-function LocalCommand_PlayerEntity(player,dest,playerCommand,target)
+function LocalCommand_PlayerEntity(player, dest, playerCommand, target)
 end
 
 ---comment Send a player command to a player with a custom flag
@@ -6005,7 +6005,7 @@ end
 ---@param playerCommand PlayerCommandType
 ---@param cmdparam Integer
 ---@param queued Boolean
-function LocalCommand_PlayerExt(player,dest,playerCommand,cmdparam,queued)
+function LocalCommand_PlayerExt(player, dest, playerCommand, cmdparam, queued)
 end
 
 ---comment Send a player a command to use a multi-target ability on the given targets.
@@ -6013,7 +6013,7 @@ end
 ---@param targets vector<ConstTargetHandle>
 ---@param abilityPBG ScarAbilityPBG
 ---@param skipCostAndPrereq Boolean
-function LocalCommand_PlayerMultiTargetAbility(caster,targets,abilityPBG,skipCostAndPrereq)
+function LocalCommand_PlayerMultiTargetAbility(caster, targets, abilityPBG, skipCostAndPrereq)
 end
 
 ---comment Place a planned structure
@@ -6023,7 +6023,7 @@ end
 ---@param facingPos Position
 ---@param queued Boolean
 ---@param payOnApply Boolean
-function LocalCommand_PlayerPlaceAndConstructEntitiesPlanned(player,ebp,position,facingPos,queued,payOnApply)
+function LocalCommand_PlayerPlaceAndConstructEntitiesPlanned(player, ebp, position, facingPos, queued, payOnApply)
 end
 
 ---comment Place a planned fence
@@ -6033,7 +6033,7 @@ end
 ---@param posEnd Position
 ---@param queued Boolean
 ---@param payOnApply Boolean
-function LocalCommand_PlayerPlaceAndConstructFencePlanned(player,ebp,posStart,posEnd,queued,payOnApply)
+function LocalCommand_PlayerPlaceAndConstructFencePlanned(player, ebp, posStart, posEnd, queued, payOnApply)
 end
 
 ---comment Place a planned slotted spline
@@ -6043,7 +6043,7 @@ end
 ---@param posEnd Position
 ---@param queued Boolean
 ---@param payOnApply Boolean
-function LocalCommand_PlayerPlaceAndConstructSlottedSplinePlanned(player,ebp,posStart,posEnd,queued,payOnApply)
+function LocalCommand_PlayerPlaceAndConstructSlottedSplinePlanned(player, ebp, posStart, posEnd, queued, payOnApply)
 end
 
 ---comment Send a position command to a player.
@@ -6051,7 +6051,7 @@ end
 ---@param dest PlayerID
 ---@param playerCommand PlayerCommandType
 ---@param pos Position
-function LocalCommand_PlayerPos(player,dest,playerCommand,pos)
+function LocalCommand_PlayerPos(player, dest, playerCommand, pos)
 end
 
 ---comment Send a positional ability command (PCMD_Ability) to a player
@@ -6060,7 +6060,7 @@ end
 ---@param pos Position
 ---@param abilityPBG ScarAbilityPBG
 ---@param skipCostAndPrereq Boolean
-function LocalCommand_PlayerPosAbility(player,dest,pos,abilityPBG,skipCostAndPrereq)
+function LocalCommand_PlayerPosAbility(player, dest, pos, abilityPBG, skipCostAndPrereq)
 end
 
 ---comment Send a positional/directional ability command (PCMD_Ability) to a player
@@ -6070,7 +6070,7 @@ end
 ---@param dir Position
 ---@param abilityPBG ScarAbilityPBG
 ---@param skipCostAndPrereq Boolean
-function LocalCommand_PlayerPosDirAbility(player,dest,pos,dir,abilityPBG,skipCostAndPrereq)
+function LocalCommand_PlayerPosDirAbility(player, dest, pos, dir, abilityPBG, skipCostAndPrereq)
 end
 
 ---comment Send a position command to a player with extra info
@@ -6080,7 +6080,7 @@ end
 ---@param pos Position
 ---@param cmdparam Integer
 ---@param queued Boolean
-function LocalCommand_PlayerPosExt(player,dest,playerCommand,pos,cmdparam,queued)
+function LocalCommand_PlayerPosExt(player, dest, playerCommand, pos, cmdparam, queued)
 end
 
 ---comment Send a player command to itself to order squads in the sgroup to construct the building at specific position and facing
@@ -6090,7 +6090,7 @@ end
 ---@param position Position
 ---@param facingPos Position
 ---@param queued Boolean
-function LocalCommand_PlayerSquadConstructBuilding(player,sgroup,ebp,position,facingPos,queued)
+function LocalCommand_PlayerSquadConstructBuilding(player, sgroup, ebp, position, facingPos, queued)
 end
 
 ---comment Send a player command to itself to order squads in the sgroup to construct the building at specific position and facing
@@ -6100,7 +6100,7 @@ end
 ---@param position Position
 ---@param facingPos Position
 ---@param queued Boolean
-function LocalCommand_PlayerSquadConstructBuildingCheat(player,sgroup,ebp,position,facingPos,queued)
+function LocalCommand_PlayerSquadConstructBuildingCheat(player, sgroup, ebp, position, facingPos, queued)
 end
 
 ---comment Send a player command to itself to order squads in the sgroup to construct fences from posStart to posEnd
@@ -6110,7 +6110,7 @@ end
 ---@param posStart Position
 ---@param posEnd Position
 ---@param queued Boolean
-function LocalCommand_PlayerSquadConstructFence(player,sgroup,ebp,posStart,posEnd,queued)
+function LocalCommand_PlayerSquadConstructFence(player, sgroup, ebp, posStart, posEnd, queued)
 end
 
 ---comment Send a player command to itself to order squads in the sgroup to construct fences from posStart to posEnd
@@ -6120,7 +6120,7 @@ end
 ---@param posStart Position
 ---@param posEnd Position
 ---@param queued Boolean
-function LocalCommand_PlayerSquadConstructFenceCheat(player,sgroup,ebp,posStart,posEnd,queued)
+function LocalCommand_PlayerSquadConstructFenceCheat(player, sgroup, ebp, posStart, posEnd, queued)
 end
 
 ---comment Send a player command to itself to order squads in the sgroup to construct a field ranging from posStart to posEnd
@@ -6130,7 +6130,7 @@ end
 ---@param posStart Position
 ---@param posEnd Position
 ---@param queued Boolean
-function LocalCommand_PlayerSquadConstructField(player,sgroup,ebp,posStart,posEnd,queued)
+function LocalCommand_PlayerSquadConstructField(player, sgroup, ebp, posStart, posEnd, queued)
 end
 
 ---comment Send a player command to itself to order squads in the sgroup to construct a field ranging from posStart to posEnd
@@ -6140,7 +6140,7 @@ end
 ---@param posStart Position
 ---@param posEnd Position
 ---@param queued Boolean
-function LocalCommand_PlayerSquadConstructFieldCheat(player,sgroup,ebp,posStart,posEnd,queued)
+function LocalCommand_PlayerSquadConstructFieldCheat(player, sgroup, ebp, posStart, posEnd, queued)
 end
 
 ---comment Send a command from player to sgroup to build ebp as a slotted spline from posStart to posEnd.
@@ -6150,7 +6150,7 @@ end
 ---@param posStart Position
 ---@param posEnd Position
 ---@param queued Boolean
-function LocalCommand_PlayerSquadConstructSlottedSpline(player,sgroup,ebp,posStart,posEnd,queued)
+function LocalCommand_PlayerSquadConstructSlottedSpline(player, sgroup, ebp, posStart, posEnd, queued)
 end
 
 ---comment Send a command from player to sgroup to build ebp as a slotted spline from posStart to posEnd.
@@ -6160,7 +6160,7 @@ end
 ---@param posStart Position
 ---@param posEnd Position
 ---@param queued Boolean
-function LocalCommand_PlayerSquadConstructSlottedSplineCheat(player,sgroup,ebp,posStart,posEnd,queued)
+function LocalCommand_PlayerSquadConstructSlottedSplineCheat(player, sgroup, ebp, posStart, posEnd, queued)
 end
 
 ---comment Send a command from player to sgroup to build ebp as a slotted spline dependent entity.
@@ -6170,7 +6170,7 @@ end
 ---@param position Position
 ---@param facingPos Position
 ---@param queued Boolean
-function LocalCommand_PlayerSquadConstructSlottedSplineDependent(player,sgroup,ebp,position,facingPos,queued)
+function LocalCommand_PlayerSquadConstructSlottedSplineDependent(player, sgroup, ebp, position, facingPos, queued)
 end
 
 ---comment Send a command from player to sgroup to build ebp as a slotted spline dependent entity.
@@ -6180,7 +6180,7 @@ end
 ---@param position Position
 ---@param facingPos Position
 ---@param queued Boolean
-function LocalCommand_PlayerSquadConstructSlottedSplineDependentCheat(player,sgroup,ebp,position,facingPos,queued)
+function LocalCommand_PlayerSquadConstructSlottedSplineDependentCheat(player, sgroup, ebp, position, facingPos, queued)
 end
 
 ---comment Send a command from player to sgroup to build ebp as a slotted spline replacer entity.
@@ -6190,7 +6190,7 @@ end
 ---@param position Position
 ---@param facingPos Position
 ---@param queued Boolean
-function LocalCommand_PlayerSquadConstructSlottedSplineReplacer(player,sgroup,ebp,position,facingPos,queued)
+function LocalCommand_PlayerSquadConstructSlottedSplineReplacer(player, sgroup, ebp, position, facingPos, queued)
 end
 
 ---comment Send a command from player to sgroup to build ebp as a slotted spline replacer entity.
@@ -6200,7 +6200,7 @@ end
 ---@param position Position
 ---@param facingPos Position
 ---@param queued Boolean
-function LocalCommand_PlayerSquadConstructSlottedSplineReplacerCheat(player,sgroup,ebp,position,facingPos,queued)
+function LocalCommand_PlayerSquadConstructSlottedSplineReplacerCheat(player, sgroup, ebp, position, facingPos, queued)
 end
 
 ---comment Sends an upgrade command to a player
@@ -6208,7 +6208,7 @@ end
 ---@param upgrade ScarUpgradePBG
 ---@param instant Boolean
 ---@param queued Boolean
-function LocalCommand_PlayerUpgrade(player,upgrade,instant,queued)
+function LocalCommand_PlayerUpgrade(player, upgrade, instant, queued)
 end
 
 ---comment Send a squad command to a squad group
@@ -6216,7 +6216,7 @@ end
 ---@param sgroup SGroupID
 ---@param squadCommand SquadCommandType
 ---@param queued Boolean
-function LocalCommand_Squad(player,sgroup,squadCommand,queued)
+function LocalCommand_Squad(player, sgroup, squadCommand, queued)
 end
 
 ---comment Send a ability command (SCMD_Ability) to a squad
@@ -6225,7 +6225,7 @@ end
 ---@param abilityPBG ScarAbilityPBG
 ---@param skipCostAndPrereq Boolean
 ---@param queued Boolean
-function LocalCommand_SquadAbility(player,sgroup,abilityPBG,skipCostAndPrereq,queued)
+function LocalCommand_SquadAbility(player, sgroup, abilityPBG, skipCostAndPrereq, queued)
 end
 
 ---comment Send a position ATTACK MOVE command to a squad group with custom data.
@@ -6236,7 +6236,7 @@ end
 ---@param planName String
 ---@param queued Boolean
 ---@param split Boolean
-function LocalCommand_SquadAttackMovePos(player,sgroup,squadCommand,target,planName,queued,split)
+function LocalCommand_SquadAttackMovePos(player, sgroup, squadCommand, target, planName, queued, split)
 end
 
 ---comment Send an entity command to a squad group.
@@ -6245,7 +6245,7 @@ end
 ---@param squadCommand SquadCommandType
 ---@param target EGroupID
 ---@param queued Boolean
-function LocalCommand_SquadEntity(player,sgroup,squadCommand,target,queued)
+function LocalCommand_SquadEntity(player, sgroup, squadCommand, target, queued)
 end
 
 ---comment Send a entity ability command (SCMD_Ability) to a squad
@@ -6255,7 +6255,7 @@ end
 ---@param abilityPBG ScarAbilityPBG
 ---@param skipCostAndPrereq Boolean
 ---@param queued Boolean
-function LocalCommand_SquadEntityAbility(player,sgroup,target,abilityPBG,skipCostAndPrereq,queued)
+function LocalCommand_SquadEntityAbility(player, sgroup, target, abilityPBG, skipCostAndPrereq, queued)
 end
 
 ---comment Send an entity command ATTACK to a squad group.
@@ -6266,7 +6266,7 @@ end
 ---@param bStationary Boolean
 ---@param planName String
 ---@param queued Boolean
-function LocalCommand_SquadEntityAttack(player,sgroup,target,bCheckFOW,bStationary,planName,queued)
+function LocalCommand_SquadEntityAttack(player, sgroup, target, bCheckFOW, bStationary, planName, queued)
 end
 
 ---comment Send a entity command to a squad group with custom BOOLEAN data
@@ -6276,7 +6276,7 @@ end
 ---@param target EGroupID
 ---@param cmdparam Boolean
 ---@param queued Boolean
-function LocalCommand_SquadEntityBool(player,sgroup,squadCommand,target,cmdparam,queued)
+function LocalCommand_SquadEntityBool(player, sgroup, squadCommand, target, cmdparam, queued)
 end
 
 ---comment Send a entity command to a squad group with custom data
@@ -6286,7 +6286,7 @@ end
 ---@param target EGroupID
 ---@param cmdparam Integer
 ---@param queued Boolean
-function LocalCommand_SquadEntityExt(player,sgroup,squadCommand,target,cmdparam,queued)
+function LocalCommand_SquadEntityExt(player, sgroup, squadCommand, target, cmdparam, queued)
 end
 
 ---comment Send special squad command to a squad group with squad load parameters
@@ -6296,7 +6296,7 @@ end
 ---@param target EGroupID
 ---@param bOverLoad Boolean
 ---@param queued Boolean
-function LocalCommand_SquadEntityLoad(player,sgroup,squadCommand,target,bOverLoad,queued)
+function LocalCommand_SquadEntityLoad(player, sgroup, squadCommand, target, bOverLoad, queued)
 end
 
 ---comment Send a squad command to a squad group with custom data
@@ -6305,7 +6305,7 @@ end
 ---@param squadCommand SquadCommandType
 ---@param cmdparam Integer
 ---@param queued Boolean
-function LocalCommand_SquadExt(player,sgroup,squadCommand,cmdparam,queued)
+function LocalCommand_SquadExt(player, sgroup, squadCommand, cmdparam, queued)
 end
 
 ---comment Send a move to position command for a squad group.
@@ -6316,7 +6316,7 @@ end
 ---@param reverseMove Boolean
 ---@param split Boolean
 ---@param acceptableProximity Real
-function LocalCommand_SquadMovePos(player,sgroup,target,queued,reverseMove,split,acceptableProximity)
+function LocalCommand_SquadMovePos(player, sgroup, target, queued, reverseMove, split, acceptableProximity)
 end
 
 ---comment Send a move-facing command to a squad group
@@ -6328,7 +6328,7 @@ end
 ---@param reverseMove Boolean
 ---@param split Boolean
 ---@param acceptableProximity Real
-function LocalCommand_SquadMovePosFacing(player,sgroup,target,facing,queued,reverseMove,split,acceptableProximity)
+function LocalCommand_SquadMovePosFacing(player, sgroup, target, facing, queued, reverseMove, split, acceptableProximity)
 end
 
 ---comment Send a squad a command to use a multi-target ability on the given targets.
@@ -6337,7 +6337,7 @@ end
 ---@param abilityPBG ScarAbilityPBG
 ---@param skipCostAndPrereq Boolean
 ---@param queued Boolean
-function LocalCommand_SquadMultiTargetAbility(caster,targets,abilityPBG,skipCostAndPrereq,queued)
+function LocalCommand_SquadMultiTargetAbility(caster, targets, abilityPBG, skipCostAndPrereq, queued)
 end
 
 ---comment Send a squad patrol command (SCMD_Patrol) to a squad
@@ -6351,7 +6351,7 @@ end
 ---@param pauseTime Real
 ---@param bMoveForward Boolean
 ---@param queued Boolean
-function LocalCommand_SquadPath(pPlayer,pSGroup,pathName,pathIndex,bFromClosest,loopType,bAttackMove,pauseTime,bMoveForward,queued)
+function LocalCommand_SquadPath(pPlayer, pSGroup, pathName, pathIndex, bFromClosest, loopType, bAttackMove, pauseTime, bMoveForward, queued)
 end
 
 ---comment Send a position command to a squad group.
@@ -6360,7 +6360,7 @@ end
 ---@param squadCommand SquadCommandType
 ---@param target Position
 ---@param queued Boolean
-function LocalCommand_SquadPos(player,sgroup,squadCommand,target,queued)
+function LocalCommand_SquadPos(player, sgroup, squadCommand, target, queued)
 end
 
 ---comment Send a positional ability command (SCMD_Ability) to a squad
@@ -6370,7 +6370,7 @@ end
 ---@param abilityPBG ScarAbilityPBG
 ---@param skipCostAndPrereq Boolean
 ---@param queued Boolean
-function LocalCommand_SquadPosAbility(player,sgroup,pos,abilityPBG,skipCostAndPrereq,queued)
+function LocalCommand_SquadPosAbility(player, sgroup, pos, abilityPBG, skipCostAndPrereq, queued)
 end
 
 ---comment Send a position command to a squad group with custom data
@@ -6380,7 +6380,7 @@ end
 ---@param target Position
 ---@param cmdparam Integer
 ---@param queued Boolean
-function LocalCommand_SquadPosExt(player,sgroup,squadCommand,target,cmdparam,queued)
+function LocalCommand_SquadPosExt(player, sgroup, squadCommand, target, cmdparam, queued)
 end
 
 ---comment Send an position command ATTACK to a squad group.
@@ -6391,7 +6391,7 @@ end
 ---@param bStationary Boolean
 ---@param planName String
 ---@param queued Boolean
-function LocalCommand_SquadPositionAttack(player,sgroup,target,bCheckFOW,bStationary,planName,queued)
+function LocalCommand_SquadPositionAttack(player, sgroup, target, bCheckFOW, bStationary, planName, queued)
 end
 
 ---comment Send a retreat position command to a squad group.
@@ -6400,7 +6400,7 @@ end
 ---@param target Position
 ---@param queued Boolean
 ---@param allowNonInteractiveStages Boolean
-function LocalCommand_SquadRetreatPos(player,sgroup,target,queued,allowNonInteractiveStages)
+function LocalCommand_SquadRetreatPos(player, sgroup, target, queued, allowNonInteractiveStages)
 end
 
 ---comment Send a set CombatStance command to the squads
@@ -6408,7 +6408,7 @@ end
 ---@param sgroup SGroupID
 ---@param stanceType StanceType
 ---@param queued Boolean
-function LocalCommand_SquadSetCombatStance(player,sgroup,stanceType,queued)
+function LocalCommand_SquadSetCombatStance(player, sgroup, stanceType, queued)
 end
 
 ---comment Send a set Weapon Preference command to the squads
@@ -6416,7 +6416,7 @@ end
 ---@param sgroup SGroupID
 ---@param weaponPreference WeaponPreference
 ---@param queued Boolean
-function LocalCommand_SquadSetWeaponPreference(player,sgroup,weaponPreference,queued)
+function LocalCommand_SquadSetWeaponPreference(player, sgroup, weaponPreference, queued)
 end
 
 ---comment Send an squad-based command to a squad group.
@@ -6425,7 +6425,7 @@ end
 ---@param squadCommand SquadCommandType
 ---@param target SGroupID
 ---@param queued Boolean
-function LocalCommand_SquadSquad(player,sgroup,squadCommand,target,queued)
+function LocalCommand_SquadSquad(player, sgroup, squadCommand, target, queued)
 end
 
 ---comment Send a squad ability command (SCMD_Ability) to a squad
@@ -6435,7 +6435,7 @@ end
 ---@param abilityPBG ScarAbilityPBG
 ---@param skipCostAndPrereq Boolean
 ---@param queued Boolean
-function LocalCommand_SquadSquadAbility(player,sgroup,target,abilityPBG,skipCostAndPrereq,queued)
+function LocalCommand_SquadSquadAbility(player, sgroup, target, abilityPBG, skipCostAndPrereq, queued)
 end
 
 ---comment Send an squad-based command to a squad group.
@@ -6446,7 +6446,7 @@ end
 ---@param bStationary Boolean
 ---@param planName String
 ---@param queued Boolean
-function LocalCommand_SquadSquadAttack(player,sgroup,target,bCheckFOW,bStationary,planName,queued)
+function LocalCommand_SquadSquadAttack(player, sgroup, target, bCheckFOW, bStationary, planName, queued)
 end
 
 ---comment Send a squad command to a squad group with custom data
@@ -6456,7 +6456,7 @@ end
 ---@param target SGroupID
 ---@param cmdparam Integer
 ---@param queued Boolean
-function LocalCommand_SquadSquadExt(player,sgroup,squadCommand,target,cmdparam,queued)
+function LocalCommand_SquadSquadExt(player, sgroup, squadCommand, target, cmdparam, queued)
 end
 
 ---comment Send special squad command to a squad group with squad load parameters
@@ -6466,7 +6466,7 @@ end
 ---@param target SGroupID
 ---@param bOverLoad Boolean
 ---@param queued Boolean
-function LocalCommand_SquadSquadLoad(player,sgroup,squadCommand,target,bOverLoad,queued)
+function LocalCommand_SquadSquadLoad(player, sgroup, squadCommand, target, bOverLoad, queued)
 end
 
 ---comment Sends an upgrade command to a squad group.
@@ -6475,7 +6475,7 @@ end
 ---@param upgrade ScarUpgradePBG
 ---@param instant Boolean
 ---@param queued Boolean
-function LocalCommand_SquadUpgrade(player,sgroup,upgrade,instant,queued)
+function LocalCommand_SquadUpgrade(player, sgroup, upgrade, instant, queued)
 end
 
 ---comment Run simulation and presentation in lockstep, with simulation ticked every frame (useful for debugging sync errors)
@@ -6485,7 +6485,7 @@ end
 ---comment Print text to specified file
 ---@param file String
 ---@param txt String
-function LogPrintTo(file,txt)
+function LogPrintTo(file, txt)
 end
 
 ---comment Clear the map icon facing value.
@@ -6501,7 +6501,7 @@ end
 ---@param green Integer
 ---@param blue Integer
 ---@param alpha Integer
-function MapIcon_CreateEntity(entity,icon,scale,red,green,blue,alpha)
+function MapIcon_CreateEntity(entity, icon, scale, red, green, blue, alpha)
 end
 
 ---comment Create a map icon targetting a position.
@@ -6512,7 +6512,7 @@ end
 ---@param green Integer
 ---@param blue Integer
 ---@param alpha Integer
-function MapIcon_CreatePosition(position,icon,scale,red,green,blue,alpha)
+function MapIcon_CreatePosition(position, icon, scale, red, green, blue, alpha)
 end
 
 ---comment Create a map icon targetting a squad.
@@ -6523,7 +6523,7 @@ end
 ---@param green Integer
 ---@param blue Integer
 ---@param alpha Integer
-function MapIcon_CreateSquad(squad,icon,scale,red,green,blue,alpha)
+function MapIcon_CreateSquad(squad, icon, scale, red, green, blue, alpha)
 end
 
 ---comment Remove a map icon.
@@ -6538,19 +6538,19 @@ end
 ---comment Face the map icon towards this entity.
 ---@param id Integer
 ---@param entity EntityID
-function MapIcon_SetFacingEntity(id,entity)
+function MapIcon_SetFacingEntity(id, entity)
 end
 
 ---comment Face the map icon towards this position.
 ---@param id Integer
 ---@param position Position
-function MapIcon_SetFacingPosition(id,position)
+function MapIcon_SetFacingPosition(id, position)
 end
 
 ---comment Face the map icon towards this squad.
 ---@param id Integer
 ---@param squad SquadID
-function MapIcon_SetFacingSquad(id,squad)
+function MapIcon_SetFacingSquad(id, squad)
 end
 
 ---comment Returns a newly created marker with the given attributes [direction] is expecting a direction vector and not a position relative to [pos]
@@ -6559,14 +6559,14 @@ end
 ---@param pos Position
 ---@param direction Position
 ---@param radius Real
-function Marker_Create(name,type,pos,direction,radius)
+function Marker_Create(name, type, pos, direction, radius)
 end
 
 ---comment Finds a marker in an entity, creates a SCAR marker there and returns the new marker's name.
 ---@param entity EntityID
 ---@param internalMarker String
 ---@param newMarker String
-function Marker_CreateMarkerFromEntityMarker(entity,internalMarker,newMarker)
+function Marker_CreateMarkerFromEntityMarker(entity, internalMarker, newMarker)
 end
 
 ---comment Delete this marker, only recommended for dynamically created markers
@@ -6577,25 +6577,25 @@ end
 ---comment Returns true if a generic number attribute exists for the marker type.
 ---@param marker MarkerID
 ---@param name String
-function Marker_DoesNumberAttributeExist(marker,name)
+function Marker_DoesNumberAttributeExist(marker, name)
 end
 
 ---comment Returns true if a generic string attribute exists for the marker type.
 ---@param marker MarkerID
 ---@param name String
-function Marker_DoesStringAttributeExist(marker,name)
+function Marker_DoesStringAttributeExist(marker, name)
 end
 
 ---comment Returns true if marker exists. If you don't care about the type, pass in an empty string ( "" )
 ---@param name String
 ---@param type String
-function Marker_Exists(name,type)
+function Marker_Exists(name, type)
 end
 
 ---comment Returns a ScarMarker from the Scenario Editor. If you don't care about the type, pass in an empty string ( "" )
 ---@param name String
 ---@param type String
-function Marker_FromName(name,type)
+function Marker_FromName(name, type)
 end
 
 ---comment Returns a vector for the marker direction
@@ -6611,7 +6611,7 @@ end
 ---comment Returns a generic number attribute defined in a marker.
 ---@param marker MarkerID
 ---@param name String
-function Marker_GetNumberAttribute(marker,name)
+function Marker_GetNumberAttribute(marker, name)
 end
 
 ---comment Returns the position of a given marker.
@@ -6623,7 +6623,7 @@ end
 ---@param marker MarkerID
 ---@param defaultWidth Real
 ---@param defaultHeight Real
-function Marker_GetProximityDimensionsOrDefault(marker,defaultWidth,defaultHeight)
+function Marker_GetProximityDimensionsOrDefault(marker, defaultWidth, defaultHeight)
 end
 
 ---comment Returns the proximity radius of a given marker.  If non circular, default value is returned This value gets set in the Scenario Editor.
@@ -6634,13 +6634,13 @@ end
 ---comment Returns the proximity radius of a given marker.  If non circular, default value is returned This value gets set in the Scenario Editor.
 ---@param marker MarkerID
 ---@param defaultValue Real
-function Marker_GetProximityRadiusOrDefault(marker,defaultValue)
+function Marker_GetProximityRadiusOrDefault(marker, defaultValue)
 end
 
 ---comment Returns a generic string attribute defined in a marker.
 ---@param marker MarkerID
 ---@param name String
-function Marker_GetStringAttribute(marker,name)
+function Marker_GetStringAttribute(marker, name)
 end
 
 ---comment Returns the typename of a given marker. This is the typename from the Scenario Editor (name displayed when placing markers)
@@ -6656,13 +6656,13 @@ end
 ---comment Returns true if the given position is in the markers proximity radius or proximity rectangle (depending on the type).
 ---@param marker MarkerID
 ---@param pos Position
-function Marker_InProximity(marker,pos)
+function Marker_InProximity(marker, pos)
 end
 
 ---comment Set the proximity shape of a marker to a circle with size radius
 ---@param marker MarkerID
 ---@param radius Real
-function Marker_SetProximityCircle(marker,radius)
+function Marker_SetProximityCircle(marker, radius)
 end
 
 ---comment Set the proximity shape of a marker to point marker (no proximity)
@@ -6674,13 +6674,13 @@ end
 ---@param marker MarkerID
 ---@param width Real
 ---@param height Real
-function Marker_SetProximityRectangle(marker,width,height)
+function Marker_SetProximityRectangle(marker, width, height)
 end
 
 ---comment Start an Action at the given position.  Returns the id so the Action can be stopped using Marker_StopActionById.
 ---@param name String
 ---@param pos Position
-function Marker_StartActionAt(name,pos)
+function Marker_StartActionAt(name, pos)
 end
 
 ---comment Stop an Action by id.  Marker_StartActionAt returns an id that can be used here.
@@ -6691,7 +6691,7 @@ end
 ---comment Returns the number of ScarMarkers with the given name If you don't care about the type, pass in an empty string ( "" )
 ---@param name String
 ---@param type String
-function MarkerCountFromName(name,type)
+function MarkerCountFromName(name, type)
 end
 
 ---comment Write the OS map of allocated memory to the log folder
@@ -6751,13 +6751,13 @@ end
 ---@param group EGroupID
 ---@param entityIDsEncoded String
 ---@param includeSquads Boolean
-function Misc_AddEntitiesToGroup(group,entityIDsEncoded,includeSquads)
+function Misc_AddEntitiesToGroup(group, entityIDsEncoded, includeSquads)
 end
 
 ---comment Add another circle in which commands are restricted to.
 ---@param position Position
 ---@param radius Real
-function Misc_AddRestrictCommandsCircle(position,radius)
+function Misc_AddRestrictCommandsCircle(position, radius)
 end
 
 ---comment Add another marker in which commands are restricted to.
@@ -6768,13 +6768,13 @@ end
 ---comment Add another AABB in which commands are restricted to.
 ---@param minPosition Position
 ---@param maxPosition Position
-function Misc_AddRestrictCommandsOBB(minPosition,maxPosition)
+function Misc_AddRestrictCommandsOBB(minPosition, maxPosition)
 end
 
 ---comment Appends the provided SquadIDs to the SGroup
 ---@param group SGroupID
 ---@param entityIDsEncoded String
-function Misc_AddSquadsToGroup(group,entityIDsEncoded)
+function Misc_AddSquadsToGroup(group, entityIDsEncoded)
 end
 
 ---comment Let AI take over local player
@@ -6784,7 +6784,7 @@ end
 ---comment Appends given string to a file expects to receive a filename with an alias conserves existing file content \return Number returned is # bytes successfully written
 ---@param filename String
 ---@param text String
-function Misc_AppendToFile(filename,text)
+function Misc_AppendToFile(filename, text)
 end
 
 ---comment Returns the enabled/disabled state of the right-click command input.  (not deterministic)
@@ -6824,14 +6824,14 @@ end
 ---@param pos Position
 ---@param weaponPBG ScarWeaponPBG
 ---@param penetrated Boolean
-function Misc_DoWeaponHitEffectOnEntity(entity,pos,weaponPBG,penetrated)
+function Misc_DoWeaponHitEffectOnEntity(entity, pos, weaponPBG, penetrated)
 end
 
 ---comment Do weapon hit effect on the ground
 ---@param pos Position
 ---@param weaponPBG ScarWeaponPBG
 ---@param penetrated Boolean
-function Misc_DoWeaponHitEffectOnPosition(pos,weaponPBG,penetrated)
+function Misc_DoWeaponHitEffectOnPosition(pos, weaponPBG, penetrated)
 end
 
 ---comment Turn on or off the performance test monitoring
@@ -6843,7 +6843,7 @@ end
 ---@param group EGroupID
 ---@param squad SquadID
 ---@param searchRange Real
-function Misc_FindDepositsCloseToSquad(group,squad,searchRange)
+function Misc_FindDepositsCloseToSquad(group, squad, searchRange)
 end
 
 ---comment Finds resource deposits of given type within the specified range of a position, that can be collected by the provided gathererEBP
@@ -6851,7 +6851,7 @@ end
 ---@param gathererEBP EBP
 ---@param position Position
 ---@param searchRange Number
-function Misc_FindDepositsOfTypeCloseToPosition(resourceType,gathererEBP,position,searchRange)
+function Misc_FindDepositsOfTypeCloseToPosition(resourceType, gathererEBP, position, searchRange)
 end
 
 ---comment Returns the string argument for a command line option. ex: for "-init test.lua" it would return "test.lua"
@@ -6863,7 +6863,7 @@ end
 ---@param groupIndex Integer
 ---@param squads SGroupID
 ---@param nonSquadEntities EGroupID
-function Misc_GetControlGroupContents(groupIndex,squads,nonSquadEntities)
+function Misc_GetControlGroupContents(groupIndex, squads, nonSquadEntities)
 end
 
 ---comment Return the entity generating the district containing the given position. Use with Misc_DoesPositionHaveAssociatedDistrict
@@ -6895,7 +6895,7 @@ end
 ---@param cameraPadding Real
 ---@param FOWPlayer PlayerID
 ---@param debugDisplay Boolean
-function Misc_GetHiddenPositionOnPath(checkType,origin,destination,ebpID,stepDistance,cameraPadding,FOWPlayer,debugDisplay)
+function Misc_GetHiddenPositionOnPath(checkType, origin, destination, ebpID, stepDistance, cameraPadding, FOWPlayer, debugDisplay)
 end
 
 ---comment Returns the world position of the mouse on the terrain (not deterministic)
@@ -6913,13 +6913,13 @@ end
 ---comment Clears a given group and adds the current full selection (or subselection if true) to the group.
 ---@param group EGroupID
 ---@param subselection Boolean
-function Misc_GetSelectedEntities(group,subselection)
+function Misc_GetSelectedEntities(group, subselection)
 end
 
 ---comment Clears a given group and adds the current full selection (or subselection if true) to the group.
 ---@param group SGroupID
 ---@param subselection Boolean
-function Misc_GetSelectedSquads(group,subselection)
+function Misc_GetSelectedSquads(group, subselection)
 end
 
 ---comment Returns the default simulation rate.
@@ -6947,7 +6947,7 @@ end
 ---comment Check if the squad is on screen currently (not deterministic)
 ---@param entity EntityID
 ---@param percent Real
-function Misc_IsEntityOnScreen(entity,percent)
+function Misc_IsEntityOnScreen(entity, percent)
 end
 
 ---comment Returns true if the specified entity is currently selected.
@@ -6966,7 +6966,7 @@ end
 ---comment Check if position is on screen, (1 being the entire screen, 0.5 being 50% of the screen from the center point)
 ---@param pos Position
 ---@param percent Real
-function Misc_IsPosOnScreen(pos,percent)
+function Misc_IsPosOnScreen(pos, percent)
 end
 
 ---comment Returns the enabled/disabled state of the selection input.  (not deterministic)
@@ -6976,7 +6976,7 @@ end
 ---comment Check if the entity is on screen currently (not deterministic)
 ---@param squad SquadID
 ---@param percent Real
-function Misc_IsSquadOnScreen(squad,percent)
+function Misc_IsSquadOnScreen(squad, percent)
 end
 
 ---comment Returns true if the specified squad is currently selected.
@@ -6987,13 +6987,13 @@ end
 ---comment Assumes 'data:' as root; Returns a table containing the names of files matching the supplied path.
 ---@param pathQuery String
 ---@param recursiveFind Boolean
-function Misc_QueryDataDirectory(pathQuery,recursiveFind)
+function Misc_QueryDataDirectory(pathQuery, recursiveFind)
 end
 
 ---comment Returns a table containing the names of files matching the supplied path.
 ---@param pathQuery String
 ---@param recursiveFind Boolean
-function Misc_QueryDirectory(pathQuery,recursiveFind)
+function Misc_QueryDirectory(pathQuery, recursiveFind)
 end
 
 ---comment Reads the file as string expects to receive a filename with an alias \return file content OR empty string if the file can not be read
@@ -7032,7 +7032,7 @@ end
 ---comment Set the full selection to the specified entity.
 ---@param squad SquadID
 ---@param selected Boolean
-function Misc_SelectSquad(squad,selected)
+function Misc_SelectSquad(squad, selected)
 end
 
 ---comment Sets the current autotest being used.  Used to set default text in the crash reports
@@ -7053,13 +7053,13 @@ end
 ---comment Makes an entity belong to a specific control group. If it already belongs to another control group, it's removed from that one before being added to the new one.
 ---@param entity EntityID
 ---@param groupIndex Integer
-function Misc_SetEntityControlGroup(entity,groupIndex)
+function Misc_SetEntityControlGroup(entity, groupIndex)
 end
 
 ---comment Disable/enable selectability of the specified entity.
 ---@param entity EntityID
 ---@param selectable Boolean
-function Misc_SetEntitySelectable(entity,selectable)
+function Misc_SetEntitySelectable(entity, selectable)
 end
 
 ---comment Enables/disables selection input.
@@ -7075,13 +7075,13 @@ end
 ---comment Makes a squad belong to a specific control group. If it already belongs to another control group, it's removed from that one before being added to the new one.
 ---@param squad SquadID
 ---@param groupIndex Integer
-function Misc_SetSquadControlGroup(squad,groupIndex)
+function Misc_SetSquadControlGroup(squad, groupIndex)
 end
 
 ---comment Disable/enable selectability of the specified squad.
 ---@param squad SquadID
 ---@param selectable Boolean
-function Misc_SetSquadSelectable(squad,selectable)
+function Misc_SetSquadSelectable(squad, selectable)
 end
 
 ---comment Updates the slotted spline system to handle the fact that the entities in the given EGroup have done a blueprint conversion. This must be called after converting slotted spline entities from script.
@@ -7092,28 +7092,28 @@ end
 ---comment Writes the given string to a file expects to receive a filename with an alias overwrites any existing file content \return Number returned is # bytes successfully written
 ---@param filename String
 ---@param text String
-function Misc_WriteFile(filename,text)
+function Misc_WriteFile(filename, text)
 end
 
 ---comment Applies an entity modifier to an entity. Use a duration of 0 for an indefinite modifier.
 ---@param modifier ScarModifier
 ---@param entity EntityID
 ---@param durationSeconds Real
-function Modifier_ApplyToEntity(modifier,entity,durationSeconds)
+function Modifier_ApplyToEntity(modifier, entity, durationSeconds)
 end
 
 ---comment Applies a player modifier to a player. Use a duration of 0 for an indefinite modifier.
 ---@param modifier ScarModifier
 ---@param player PlayerID
 ---@param durationSeconds Real
-function Modifier_ApplyToPlayer(modifier,player,durationSeconds)
+function Modifier_ApplyToPlayer(modifier, player, durationSeconds)
 end
 
 ---comment Applies a squad modifier to a squad. Use a duration of 0 for an indefinite modifier.
 ---@param modifier ScarModifier
 ---@param squad SquadID
 ---@param durationSeconds Real
-function Modifier_ApplyToSquad(modifier,squad,durationSeconds)
+function Modifier_ApplyToSquad(modifier, squad, durationSeconds)
 end
 
 ---comment Returns a modifier that you can apply to stuff.
@@ -7123,14 +7123,14 @@ end
 ---@param exclusive Boolean
 ---@param value Real
 ---@param v StackVar
-function Modifier_Create(applicationType,modtype,usageType,exclusive,value,v)
+function Modifier_Create(applicationType, modtype, usageType, exclusive, value, v)
 end
 
 ---comment Checks whether the modifier is enabled (requires an Entity and an Entity enable/disable modifier)
 ---@param pEntity EntityID
 ---@param modtype String
 ---@param bEnabledByDefault Boolean
-function Modifier_IsEnabled(pEntity,modtype,bEnabledByDefault)
+function Modifier_IsEnabled(pEntity, modtype, bEnabledByDefault)
 end
 
 ---comment Start capturing a movie, optionally downscaling to low resolution.
@@ -7160,7 +7160,7 @@ end
 ---@param type ObjectiveType
 ---@param parentID Integer
 ---@param telemetryTitle String
-function Obj_Create(player,title,desc,icon,dataTemplate,faction,type,parentID,telemetryTitle)
+function Obj_Create(player, title, desc, icon, dataTemplate, faction, type, parentID, telemetryTitle)
 end
 
 ---comment Delete the objective with the specified ID
@@ -7222,56 +7222,56 @@ end
 ---@param green Integer
 ---@param blue Integer
 ---@param alpha Integer
-function Obj_SetColour(objectiveID,red,green,blue,alpha)
+function Obj_SetColour(objectiveID, red, green, blue, alpha)
 end
 
 ---comment Set the count of the counter on the objective.
 ---@param objectiveID Integer
 ---@param count Integer
-function Obj_SetCounterCount(objectiveID,count)
+function Obj_SetCounterCount(objectiveID, count)
 end
 
 ---comment Set the maximum count of the counter on the objective.
 ---@param objectiveID Integer
 ---@param max Integer
-function Obj_SetCounterMax(objectiveID,max)
+function Obj_SetCounterMax(objectiveID, max)
 end
 
 ---comment Set the number of seconds on an objective with a timer. Only used to inform the UI.
 ---@param objectiveID Integer
 ---@param timerSeconds Real
-function Obj_SetCounterTimerSeconds(objectiveID,timerSeconds)
+function Obj_SetCounterTimerSeconds(objectiveID, timerSeconds)
 end
 
 ---comment Set the counter type of an objective.
 ---@param objectiveID Integer
 ---@param counterType Integer
-function Obj_SetCounterType(objectiveID,counterType)
+function Obj_SetCounterType(objectiveID, counterType)
 end
 
 ---comment Set description text localization ID for the objective
 ---@param objectiveID Integer
 ---@param desc String
-function Obj_SetDescription(objectiveID,desc)
+function Obj_SetDescription(objectiveID, desc)
 end
 
 ---comment Set icon path for the objective
 ---@param objectiveID Integer
 ---@param icon String
-function Obj_SetIcon(objectiveID,icon)
+function Obj_SetIcon(objectiveID, icon)
 end
 
 ---comment Set callback functions for the objective.  (not deterministic)
 ---@param id Integer
 ---@param fnType ObjectiveFn
 ---@param f LuaFunction
-function Obj_SetObjectiveFunction(id,fnType,f)
+function Obj_SetObjectiveFunction(id, fnType, f)
 end
 
 ---comment Set objective progress bar value
 ---@param objectiveID Integer
 ---@param progress Real
-function Obj_SetProgress(objectiveID,progress)
+function Obj_SetProgress(objectiveID, progress)
 end
 
 ---comment Make the objective progress bar blink or stop blinking.
@@ -7282,37 +7282,37 @@ end
 ---comment Set objective progress bar visibility
 ---@param objectiveID Integer
 ---@param visible Boolean
-function Obj_SetProgressVisible(objectiveID,visible)
+function Obj_SetProgressVisible(objectiveID, visible)
 end
 
 ---comment Set objective state ( OS_Off, OS_Incomplete, OS_Complete, OS_Failed )
 ---@param objectiveID Integer
 ---@param state State
-function Obj_SetState(objectiveID,state)
+function Obj_SetState(objectiveID, state)
 end
 
 ---comment Set title text localization ID for the objective
 ---@param objectiveID Integer
 ---@param title String
-function Obj_SetTitle(objectiveID,title)
+function Obj_SetTitle(objectiveID, title)
 end
 
 ---comment Set objective visibility
 ---@param objectiveID Integer
 ---@param visible Boolean
-function Obj_SetVisible(objectiveID,visible)
+function Obj_SetVisible(objectiveID, visible)
 end
 
 ---comment Show the objective progress panel with a progress bar - call repeatedly to update progress.  Value should be normalized between [0 - 1].
 ---@param title String
 ---@param progress Real
-function Obj_ShowProgress(title,progress)
+function Obj_ShowProgress(title, progress)
 end
 
 ---comment Show the objective progress panel with a progress bar - call repeatedly to update progress.  Value should be normalized between [0 - 1].  Appears in center of screen.
 ---@param title String
 ---@param progress Real
-function Obj_ShowProgress2(title,progress)
+function Obj_ShowProgress2(title, progress)
 end
 
 ---comment Show the specified objective progress panel with a progress bar - call repeatedly to update progress. Value should be normalized between [0 - 1].  If critical, progress bar will pulse.
@@ -7320,7 +7320,7 @@ end
 ---@param title String
 ---@param progress Real
 ---@param critical Boolean
-function Obj_ShowProgressEx(progressBarIndex,title,progress,critical)
+function Obj_ShowProgressEx(progressBarIndex, title, progress, critical)
 end
 
 ---comment Show the objective progress panel with a timer icon - call repeatedly to update progress.  Value should be in seconds.
@@ -7348,13 +7348,13 @@ end
 ---comment Add pathfinding cell to draw cell list
 ---@param x Integer
 ---@param y Integer
-function Path_ShowCell(x,y)
+function Path_ShowCell(x, y)
 end
 
 ---comment Add pathfinding precise cell to draw cell list
 ---@param x Integer
 ---@param y Integer
-function Path_ShowPreciseCell(x,y)
+function Path_ShowPreciseCell(x, y)
 end
 
 ---comment Toggle pathfinding collision circles
@@ -7404,54 +7404,54 @@ end
 ---comment Add an ability to a player
 ---@param player Player&
 ---@param pAbilityPBG ScarAbilityPBG
-function Player_AddAbility(player,pAbilityPBG)
+function Player_AddAbility(player, pAbilityPBG)
 end
 
 ---comment Specifies a marker where an ability cannot be used. This only applies to abilities where you use the cursor to pick a location in the world (like a location to paradrop at).
 ---@param player Player&
 ---@param abilityPBG ScarAbilityPBG
 ---@param marker MarkerID
-function Player_AddAbilityLockoutZone(player,abilityPBG,marker)
+function Player_AddAbilityLockoutZone(player, abilityPBG, marker)
 end
 
 ---comment Gives the player new command points to spent on
 ---@param player Player&
 ---@param points Real
-function Player_AddUnspentCommandPoints(player,points)
+function Player_AddUnspentCommandPoints(player, points)
 end
 
 ---comment Tests if the player can currently use an ability on target entity
 ---@param player PlayerID
 ---@param abilityPBG ScarAbilityPBG
 ---@param targetEntity EntityID
-function Player_CanCastAbilityOnEntity(player,abilityPBG,targetEntity)
+function Player_CanCastAbilityOnEntity(player, abilityPBG, targetEntity)
 end
 
 ---comment Tests if the player can currently use an ability on target player
 ---@param player PlayerID
 ---@param abilityPBG ScarAbilityPBG
 ---@param targetPlayer PlayerID
-function Player_CanCastAbilityOnPlayer(player,abilityPBG,targetPlayer)
+function Player_CanCastAbilityOnPlayer(player, abilityPBG, targetPlayer)
 end
 
 ---comment Tests if the player can currently use an ability on target position
 ---@param player PlayerID
 ---@param abilityPBG ScarAbilityPBG
 ---@param targetPosition Position
-function Player_CanCastAbilityOnPosition(player,abilityPBG,targetPosition)
+function Player_CanCastAbilityOnPosition(player, abilityPBG, targetPosition)
 end
 
 ---comment Tests if the player can currently use an ability on target squad
 ---@param player PlayerID
 ---@param abilityPBG ScarAbilityPBG
 ---@param targetSquad SquadID
-function Player_CanCastAbilityOnSquad(player,abilityPBG,targetSquad)
+function Player_CanCastAbilityOnSquad(player, abilityPBG, targetSquad)
 end
 
 ---comment Tests if the player is able to construct a given blueprint
 ---@param player PlayerID
 ---@param pbg PropertyBagGroup
-function Player_CanConstruct(player,pbg)
+function Player_CanConstruct(player, pbg)
 end
 
 ---comment Check if a player of specified group can place an entity at the specified position and facing angle.
@@ -7460,26 +7460,26 @@ end
 ---@param ebp ScarEntityPBG
 ---@param position Position
 ---@param facing Position
-function Player_CanPlaceStructureOnPosition(player,sgroup,ebp,position,facing)
+function Player_CanPlaceStructureOnPosition(player, sgroup, ebp, position, facing)
 end
 
 ---comment Returns true if a player can see a given entity (revealed in FOW)
 ---@param player PlayerID
 ---@param entity EntityID
-function Player_CanSeeEntity(player,entity)
+function Player_CanSeeEntity(player, entity)
 end
 
 ---comment Returns true if a player can see a given position.
 ---@param player PlayerID
 ---@param pos Position
-function Player_CanSeePosition(player,pos)
+function Player_CanSeePosition(player, pos)
 end
 
 ---comment Returns true if a player can see ALL or ANY units in a given squad (revealed in FOW)
 ---@param player PlayerID
 ---@param squad SquadID
 ---@param all Boolean
-function Player_CanSeeSquad(player,squad,all)
+function Player_CanSeeSquad(player, squad, all)
 end
 
 ---comment Clears item, command and construction menu availabilities for the player.
@@ -7496,19 +7496,19 @@ end
 ---@param player Player&
 ---@param key String
 ---@param tableRowIndex Integer
-function Player_ClearStateModelEnumTableTarget(player,key,tableRowIndex)
+function Player_ClearStateModelEnumTableTarget(player, key, tableRowIndex)
 end
 
 ---comment Clears a TargetHandle value in the Player's state model corresponding to the given key.
 ---@param player Player&
 ---@param key String
-function Player_ClearStateModelTarget(player,key)
+function Player_ClearStateModelTarget(player, key)
 end
 
 ---comment Finish upgrade for a player
 ---@param pPlayer Player&
 ---@param pUpgradePBG ScarUpgradePBG
-function Player_CompleteUpgrade(pPlayer,pUpgradePBG)
+function Player_CompleteUpgrade(pPlayer, pUpgradePBG)
 end
 
 ---comment Searches the player list in the world and returns the id of the first enemy player
@@ -7529,7 +7529,7 @@ end
 ---comment Returns the modified cost of the given ability including all modifications added by the given player
 ---@param pPlayer PlayerID
 ---@param pbg PropertyBagGroup
-function Player_GetAbilityBPCost(pPlayer,pbg)
+function Player_GetAbilityBPCost(pPlayer, pbg)
 end
 
 ---comment Returns the type of the given player if it is an AI.
@@ -7545,13 +7545,13 @@ end
 ---comment Use capType CT_Personnel to get current squad cap, CT_Vehicle to get current vehicle cap, CT_Medic to get current medic cap
 ---@param player Player&
 ---@param capType CapType
-function Player_GetCurrentPopulation(player,capType)
+function Player_GetCurrentPopulation(player, capType)
 end
 
 ---comment Get current popcap. Use capType CT_Personnel to get current squad cap or CT_VehicleCap to get current vehicle cap.
 ---@param player Player&
 ---@param capType CapType
-function Player_GetCurrentPopulationCap(player,capType)
+function Player_GetCurrentPopulationCap(player, capType)
 end
 
 ---comment Returns the players UI name.
@@ -7567,13 +7567,13 @@ end
 ---comment Gets all the player's current entities and loads them into the specified egroup.
 ---@param player Player&
 ---@param group EGroupID
-function Player_GetEntitiesEGroup(player,group)
+function Player_GetEntitiesEGroup(player, group)
 end
 
 ---comment Returns the modified cost of the given entity including all modifications added by the given player
 ---@param player PlayerID
 ---@param pbg PropertyBagGroup
-function Player_GetEntityBPCost(player,pbg)
+function Player_GetEntityBPCost(player, pbg)
 end
 
 ---comment Returns the number of entities a player currently owns
@@ -7584,13 +7584,13 @@ end
 ---comment Returns the number of entities of a certain unit type
 ---@param player Player&
 ---@param unitTypeString String
-function Player_GetEntityCountByUnitType(player,unitTypeString)
+function Player_GetEntityCountByUnitType(player, unitTypeString)
 end
 
 ---comment Returns the name of an entity a player currently owns
 ---@param player Player&
 ---@param index Integer
-function Player_GetEntityName(player,index)
+function Player_GetEntityName(player, index)
 end
 
 ---comment Returns the id of the player
@@ -7601,19 +7601,19 @@ end
 ---comment Get maximum popcap. Use capType CT_Personnel to get max squad cap or CT_VehicleCap to get max vehicle cap.
 ---@param player Player&
 ---@param capType CapType
-function Player_GetMaxPopulationCap(player,capType)
+function Player_GetMaxPopulationCap(player, capType)
 end
 
 ---comment Get maximum popcap including any overrides. Use capType CT_Personnel to get max squad cap or CT_VehicleCap to get max vehicle cap. If there are no overrides, the default max pop cap is returned.
 ---@param player Player&
 ---@param capType CapType
-function Player_GetMaxPopulationCapOverride(player,capType)
+function Player_GetMaxPopulationCapOverride(player, capType)
 end
 
 ---comment Returns the number of squads currently gathering resources of a given type
 ---@param player Player&
 ---@param type Integer
-function Player_GetNumGatheringSquads(player,type)
+function Player_GetNumGatheringSquads(player, type)
 end
 
 ---comment Returns the number of strategic points (not objectives) this player owns
@@ -7639,19 +7639,19 @@ end
 ---comment DEPRECATED, use Player_ObserveRelationship instead.
 ---@param player1 PlayerID
 ---@param player2 PlayerID
-function Player_GetRelationship(player1,player2)
+function Player_GetRelationship(player1, player2)
 end
 
 ---comment Returns the amount of resources a given player has.
 ---@param player Player&
 ---@param type Integer
-function Player_GetResource(player,type)
+function Player_GetResource(player, type)
 end
 
 ---comment Returns the amount of resources a given player is getting per second.
 ---@param player Player&
 ---@param type Integer
-function Player_GetResourceRate(player,type)
+function Player_GetResourceRate(player, type)
 end
 
 ---comment Returns the list of all the resources a given player has.
@@ -7667,7 +7667,7 @@ end
 ---comment Returns the modified cost of the given unit including all modifications added by the given player
 ---@param pPlayer PlayerID
 ---@param pbg PropertyBagGroup
-function Player_GetSquadBPCost(pPlayer,pbg)
+function Player_GetSquadBPCost(pPlayer, pbg)
 end
 
 ---comment Returns the number of squads a player currently owns
@@ -7693,98 +7693,98 @@ end
 ---comment Returns a boolean value from the Player's state model corresponding to the given key.
 ---@param player Player&
 ---@param key String
-function Player_GetStateModelBool(player,key)
+function Player_GetStateModelBool(player, key)
 end
 
 ---comment Returns an Entity value from the Player's state model corresponding to the given key.
 ---@param player Player&
 ---@param key String
-function Player_GetStateModelEntityTarget(player,key)
+function Player_GetStateModelEntityTarget(player, key)
 end
 
 ---comment Returns a boolean value from the player's state model corresponding to the given key and table row index (0 based).
 ---@param player Player&
 ---@param key String
 ---@param tableRowIndex Integer
-function Player_GetStateModelEnumTableBool(player,key,tableRowIndex)
+function Player_GetStateModelEnumTableBool(player, key, tableRowIndex)
 end
 
 ---comment Returns an Entity value from the player's state model corresponding to the given key and table row index (0 based).
 ---@param player Player&
 ---@param key String
 ---@param tableRowIndex Integer
-function Player_GetStateModelEnumTableEntityTarget(player,key,tableRowIndex)
+function Player_GetStateModelEnumTableEntityTarget(player, key, tableRowIndex)
 end
 
 ---comment Returns a float value from the player's state model corresponding to the given key and table row index (0 based).
 ---@param player Player&
 ---@param key String
 ---@param tableRowIndex Integer
-function Player_GetStateModelEnumTableFloat(player,key,tableRowIndex)
+function Player_GetStateModelEnumTableFloat(player, key, tableRowIndex)
 end
 
 ---comment Returns an integer value from the player's state model corresponding to the given key and table row index (0 based).
 ---@param player Player&
 ---@param key String
 ---@param tableRowIndex Integer
-function Player_GetStateModelEnumTableInt(player,key,tableRowIndex)
+function Player_GetStateModelEnumTableInt(player, key, tableRowIndex)
 end
 
 ---comment Returns a Player value from the player's state model corresponding to the given key and table row index (0 based).
 ---@param player Player&
 ---@param key String
 ---@param tableRowIndex Integer
-function Player_GetStateModelEnumTablePlayerTarget(player,key,tableRowIndex)
+function Player_GetStateModelEnumTablePlayerTarget(player, key, tableRowIndex)
 end
 
 ---comment Returns a Squad value from the player's state model corresponding to the given key and table row index (0 based).
 ---@param player Player&
 ---@param key String
 ---@param tableRowIndex Integer
-function Player_GetStateModelEnumTableSquadTarget(player,key,tableRowIndex)
+function Player_GetStateModelEnumTableSquadTarget(player, key, tableRowIndex)
 end
 
 ---comment Returns a Vector3f value from the player's state model corresponding to the given key and table row index (0 based).
 ---@param player Player&
 ---@param key String
 ---@param tableRowIndex Integer
-function Player_GetStateModelEnumTableVector3f(player,key,tableRowIndex)
+function Player_GetStateModelEnumTableVector3f(player, key, tableRowIndex)
 end
 
 ---comment Returns a float value from the Player's state model corresponding to the given key.
 ---@param player Player&
 ---@param key String
-function Player_GetStateModelFloat(player,key)
+function Player_GetStateModelFloat(player, key)
 end
 
 ---comment Returns an integer value from the Player's state model corresponding to the given key.
 ---@param player Player&
 ---@param key String
-function Player_GetStateModelInt(player,key)
+function Player_GetStateModelInt(player, key)
 end
 
 ---comment Returns a Player value from the Player's state model corresponding to the given key.
 ---@param player Player&
 ---@param key String
-function Player_GetStateModelPlayerTarget(player,key)
+function Player_GetStateModelPlayerTarget(player, key)
 end
 
 ---comment Returns a Squad value from the Player's state model corresponding to the given key.
 ---@param player Player&
 ---@param key String
-function Player_GetStateModelSquadTarget(player,key)
+function Player_GetStateModelSquadTarget(player, key)
 end
 
 ---comment Returns a Vector3f value from the Player's state model corresponding to the given key.
 ---@param player Player&
 ---@param key String
-function Player_GetStateModelVector3f(player,key)
+function Player_GetStateModelVector3f(player, key)
 end
 
 ---comment Returns a value (-1.0 to 1.0) of how close a point is to being controlled by the team of the player provided
 ---@param player PlayerID
 ---@param strategicPoint EntityID
-function Player_GetStrategicPointCaptureProgress(player,strategicPoint)
+function Player_GetStrategicPointCaptureProgress(player, strategicPoint)
 end
 
 ---comment Get the team a player is on
@@ -7809,39 +7809,39 @@ end
 ---comment Returns the cost of an upgrade.
 ---@param player PlayerID
 ---@param upgradePBG ScarUpgradePBG
-function Player_GetUpgradeBPCost(player,upgradePBG)
+function Player_GetUpgradeBPCost(player, upgradePBG)
 end
 
 ---comment Returns the cost of an upgrade in a specific resource.
 ---@param player PlayerID
 ---@param upgradePBG ScarUpgradePBG
 ---@param type Integer
-function Player_GetUpgradeBPCostByResource(player,upgradePBG,type)
+function Player_GetUpgradeBPCostByResource(player, upgradePBG, type)
 end
 
 ---comment Set the gifted resource amount for a given player A positive resource amount means the player receives the resources A negative resource amount means the player sends the resources Ignores income cap and resource sharing.
 ---@param player Player&
 ---@param type Integer
 ---@param amount Real
-function Player_GiftResource(player,type,amount)
+function Player_GiftResource(player, type, amount)
 end
 
 ---comment Tests to see if a player has an ability
 ---@param player Player&
 ---@param pAbilityPBG ScarAbilityPBG
-function Player_HasAbility(player,pAbilityPBG)
+function Player_HasAbility(player, pAbilityPBG)
 end
 
 ---comment Returns true if the given player has units that are able to capture in the capturable area of the given strategic point
 ---@param player PlayerID
 ---@param strategicPoint EntityID
-function Player_HasCapturingSquadNearStrategicPoint(player,strategicPoint)
+function Player_HasCapturingSquadNearStrategicPoint(player, strategicPoint)
 end
 
 ---comment Tests to see if the player has any entities with the specified PBG
 ---@param player Player&
 ---@param entity ScarEntityPBG
-function Player_HasEntity(player,entity)
+function Player_HasEntity(player, entity)
 end
 
 ---comment Returns whether a player has a map entry position
@@ -7852,13 +7852,13 @@ end
 ---comment Return true if the squad has purchased the specified upgrade.
 ---@param pPlayer PlayerID
 ---@param upgradePBG ScarUpgradePBG
-function Player_HasUpgrade(pPlayer,upgradePBG)
+function Player_HasUpgrade(pPlayer, upgradePBG)
 end
 
 ---comment Returns true or false, depending on whether the passed in player ability is active on the player
 ---@param player Player&
 ---@param abilityPBG ScarAbilityPBG
-function Player_IsAbilityActive(player,abilityPBG)
+function Player_IsAbilityActive(player, abilityPBG)
 end
 
 ---comment Returns true if player is still alive and false if player is dead.  Will error if playerIdx is an invalid index.
@@ -7884,26 +7884,26 @@ end
 ---comment Returns the number of upgrades that this player has.
 ---@param player Player&
 ---@param upgradePBG ScarUpgradePBG
-function Player_NumUpgradeComplete(player,upgradePBG)
+function Player_NumUpgradeComplete(player, upgradePBG)
 end
 
 ---comment Get the relationship that observer has to target.
 ---@param observer PlayerID
 ---@param target PlayerID
-function Player_ObserveRelationship(observer,target)
+function Player_ObserveRelationship(observer, target)
 end
 
 ---comment Get the reputation that observer has to target.
 ---@param observer PlayerID
 ---@param target PlayerID
-function Player_ObserveReputation(observer,target)
+function Player_ObserveReputation(observer, target)
 end
 
 ---comment Removes a marker that was previously a lockout zone.
 ---@param player Player&
 ---@param abilityPBG ScarAbilityPBG
 ---@param marker MarkerID
-function Player_RemoveAbilityLockoutZone(player,abilityPBG,marker)
+function Player_RemoveAbilityLockoutZone(player, abilityPBG, marker)
 end
 
 ---comment Removes all upgrade from a player
@@ -7914,59 +7914,59 @@ end
 ---comment Removes an upgrade from a player
 ---@param player Player&
 ---@param upgrade ScarUpgradePBG
-function Player_RemoveUpgrade(player,upgrade)
+function Player_RemoveUpgrade(player, upgrade)
 end
 
 ---comment Reset the cooldown of an ability on every unit a player has, and the player itself.
 ---@param player Player&
 ---@param ability ScarAbilityPBG
-function Player_ResetAbilityCooldowns(player,ability)
+function Player_ResetAbilityCooldowns(player, ability)
 end
 
 ---comment Reset the resource amount for a given player to zero.
 ---@param player Player&
 ---@param type Integer
-function Player_ResetResource(player,type)
+function Player_ResetResource(player, type)
 end
 
 ---comment Sets availability of ALL entity, squad and player commands.
 ---@param player Player&
 ---@param availability Availability
 ---@param reason String
-function Player_SetAllCommandAvailabilityInternal(player,availability,reason)
+function Player_SetAllCommandAvailabilityInternal(player, availability, reason)
 end
 
 ---comment Set default squad mood mode which can be overrided by squad level mood mode settings
 ---@param player Player&
 ---@param mood SquadCombatBehaviourMoodMode
-function Player_SetDefaultSquadMoodMode(player,mood)
+function Player_SetDefaultSquadMoodMode(player, mood)
 end
 
 ---comment Sets a pop cap override that ignores any modifiers.
 ---@param player Player&
 ---@param personnel Real
-function Player_SetPopCapOverride(player,personnel)
+function Player_SetPopCapOverride(player, personnel)
 end
 
 ---comment Set the relationship that observer has to target. If the relationship does not match the current reputation, the reputation will be changed to match it.
 ---@param observer PlayerID
 ---@param target PlayerID
 ---@param relationship Relation
-function Player_SetRelationship(observer,target,relationship)
+function Player_SetRelationship(observer, target, relationship)
 end
 
 ---comment Set the reputation that observer has to target. If the reputation does not match the current relationship, the relationship will be changed to match it.
 ---@param observer PlayerID
 ---@param target PlayerID
 ---@param reputation BaseType
-function Player_SetReputation(observer,target,reputation)
+function Player_SetReputation(observer, target, reputation)
 end
 
 ---comment Set the resource amount for a given player.  Ignores income cap and resource sharing.
 ---@param player Player&
 ---@param type Integer
 ---@param amt Real
-function Player_SetResource(player,type,amt)
+function Player_SetResource(player, type, amt)
 end
 
 ---comment Set the resource amount for a given player.  Ignores income cap and resource sharing.
@@ -7974,27 +7974,27 @@ end
 ---@param type Integer
 ---@param amt Real
 ---@param reason AddResourceReason
-function Player_SetResourceInternal(player,type,amt,reason)
+function Player_SetResourceInternal(player, type, amt, reason)
 end
 
 ---comment Set all the resource amount for a given player.  Ignores income cap and resource sharing.
 ---@param player Player&
 ---@param resourceAmount ResourceAmount
-function Player_SetResources(player,resourceAmount)
+function Player_SetResources(player, resourceAmount)
 end
 
 ---comment Sets a boolean value in the Player's state model corresponding to the given key.
 ---@param player Player&
 ---@param key String
 ---@param value Boolean
-function Player_SetStateModelBool(player,key,value)
+function Player_SetStateModelBool(player, key, value)
 end
 
 ---comment Sets an Entity TargetHandle value in the Player's state model corresponding to the given key.
 ---@param player Player&
 ---@param key String
 ---@param value EntityID
-function Player_SetStateModelEntityTarget(player,key,value)
+function Player_SetStateModelEntityTarget(player, key, value)
 end
 
 ---comment Sets a boolean value in the player's state model corresponding to the given key and table row index (0 based).
@@ -8002,7 +8002,7 @@ end
 ---@param key String
 ---@param tableRowIndex Integer
 ---@param value Boolean
-function Player_SetStateModelEnumTableBool(player,key,tableRowIndex,value)
+function Player_SetStateModelEnumTableBool(player, key, tableRowIndex, value)
 end
 
 ---comment Sets an Entity TargetHandle value in the player's state model corresponding to the given key and table row index (0 based).
@@ -8010,7 +8010,7 @@ end
 ---@param key String
 ---@param tableRowIndex Integer
 ---@param value EntityID
-function Player_SetStateModelEnumTableEntityTarget(player,key,tableRowIndex,value)
+function Player_SetStateModelEnumTableEntityTarget(player, key, tableRowIndex, value)
 end
 
 ---comment Sets a float value in the player's state model corresponding to the given key and table row index (0 based).
@@ -8018,7 +8018,7 @@ end
 ---@param key String
 ---@param tableRowIndex Integer
 ---@param value Real
-function Player_SetStateModelEnumTableFloat(player,key,tableRowIndex,value)
+function Player_SetStateModelEnumTableFloat(player, key, tableRowIndex, value)
 end
 
 ---comment Sets an integer value in the player's state model corresponding to the given key and table row index (0 based).
@@ -8026,7 +8026,7 @@ end
 ---@param key String
 ---@param tableRowIndex Integer
 ---@param value Integer
-function Player_SetStateModelEnumTableInt(player,key,tableRowIndex,value)
+function Player_SetStateModelEnumTableInt(player, key, tableRowIndex, value)
 end
 
 ---comment Sets a Player TargetHandle value in the player's state model corresponding to the given key and table row index (0 based).
@@ -8034,7 +8034,7 @@ end
 ---@param key String
 ---@param tableRowIndex Integer
 ---@param value PlayerID
-function Player_SetStateModelEnumTablePlayerTarget(player,key,tableRowIndex,value)
+function Player_SetStateModelEnumTablePlayerTarget(player, key, tableRowIndex, value)
 end
 
 ---comment Sets a Squad TargetHandle value in the player's state model corresponding to the given key and table row index (0 based).
@@ -8042,7 +8042,7 @@ end
 ---@param key String
 ---@param tableRowIndex Integer
 ---@param value SquadID
-function Player_SetStateModelEnumTableSquadTarget(player,key,tableRowIndex,value)
+function Player_SetStateModelEnumTableSquadTarget(player, key, tableRowIndex, value)
 end
 
 ---comment Sets a Vector3f value in the player's state model corresponding to the given key and table row index (0 based).
@@ -8050,49 +8050,49 @@ end
 ---@param key String
 ---@param tableRowIndex Integer
 ---@param value Position
-function Player_SetStateModelEnumTableVector3f(player,key,tableRowIndex,value)
+function Player_SetStateModelEnumTableVector3f(player, key, tableRowIndex, value)
 end
 
 ---comment Sets a float value in the Player's state model corresponding to the given key.
 ---@param player Player&
 ---@param key String
 ---@param value Real
-function Player_SetStateModelFloat(player,key,value)
+function Player_SetStateModelFloat(player, key, value)
 end
 
 ---comment Sets an integer value in the Player's state model corresponding to the given key.
 ---@param player Player&
 ---@param key String
 ---@param value Integer
-function Player_SetStateModelInt(player,key,value)
+function Player_SetStateModelInt(player, key, value)
 end
 
 ---comment Sets a Player TargetHandle value in the Player's state model corresponding to the given key.
 ---@param player Player&
 ---@param key String
 ---@param value PlayerID
-function Player_SetStateModelPlayerTarget(player,key,value)
+function Player_SetStateModelPlayerTarget(player, key, value)
 end
 
 ---comment Sets a Squad TargetHandle value in the Player's state model corresponding to the given key.
 ---@param player Player&
 ---@param key String
 ---@param value SquadID
-function Player_SetStateModelSquadTarget(player,key,value)
+function Player_SetStateModelSquadTarget(player, key, value)
 end
 
 ---comment Sets a Vector3f value in the Player's state model corresponding to the given key.
 ---@param player Player&
 ---@param key String
 ---@param value Position
-function Player_SetStateModelVector3f(player,key,value)
+function Player_SetStateModelVector3f(player, key, value)
 end
 
 ---comment Abruptly stops an active ability
 ---@param player PlayerID
 ---@param ability ScarAbilityPBG
 ---@param bIsEarlyExit Boolean
-function Player_StopAbility(player,ability,bIsEarlyExit)
+function Player_StopAbility(player, ability, bIsEarlyExit)
 end
 
 ---comment Clears the config changed callback
@@ -8165,7 +8165,7 @@ end
 ---comment Create a cache to load resources into giving its name and number of resources to hold
 ---@param cacheName String
 ---@param cacheSize Integer
-function ResourceContainer_CreateCache(cacheName,cacheSize)
+function ResourceContainer_CreateCache(cacheName, cacheSize)
 end
 
 ---comment Log resource references to log. Only for debug purposes, not in RTM.
@@ -8212,7 +8212,7 @@ end
 ---comment Returns whether the squad blueprint is of specified race
 ---@param pbgShortname String
 ---@param race ScarRacePBG
-function SBP_IsOfRace(pbgShortname,race)
+function SBP_IsOfRace(pbgShortname, race)
 end
 
 ---comment Register an init function with the scar system.
@@ -8291,7 +8291,7 @@ end
 ---@param sgroup SGroupID
 ---@param spawnedOnly Boolean
 ---@param idealSquadRadius Real
-function separated(not,smallvector<SGroup,sgroup,spawnedOnly,idealSquadRadius)
+function separated(not, smallvector<SGroup, sgroup, spawnedOnly, idealSquadRadius)
 end
 
 ---comment Set the simulation rate
@@ -8316,44 +8316,44 @@ end
 ---comment Set the UI name of a given player.
 ---@param player PlayerID
 ---@param name String
-function Setup_SetPlayerName(player,name)
+function Setup_SetPlayerName(player, name)
 end
 
 ---comment Set the race for a given player.  Use World_GetRaceBlueprint() to get the race id from the ME name.
 ---@param player PlayerID
 ---@param racePBG ScarRacePBG
-function Setup_SetPlayerRace(player,racePBG)
+function Setup_SetPlayerRace(player, racePBG)
 end
 
 ---comment Set the starting position of a given player.
 ---@param player PlayerID
 ---@param pos Position
-function Setup_SetPlayerStartingPosition(player,pos)
+function Setup_SetPlayerStartingPosition(player, pos)
 end
 
 ---comment Put a player in a team. Use TEAM_NEUTRAL as the team_id to set the player as neutral
 ---@param p PlayerID
 ---@param team_id Integer
-function Setup_SetPlayerTeam(p,team_id)
+function Setup_SetPlayerTeam(p, team_id)
 end
 
 ---comment Adds an squadron to the end of a group if the group doesn't already have it.
 ---@param group SGroupID
 ---@param squadron SquadID
-function SGroup_Add(group,squadron)
+function SGroup_Add(group, squadron)
 end
 
 ---comment Same as EGroup_AddGroup.  Note: You cannot mix squad groups and entity groups.
 ---@param group SGroupID
 ---@param grouptoadd SGroupID
-function SGroup_AddGroup(group,grouptoadd)
+function SGroup_AddGroup(group, grouptoadd)
 end
 
 ---comment Try group the given list of squads into clusters and returns the average distance between these clusters.  Returns -1 if any error occurs.
 ---@param sgroup SGroupID
 ---@param spawnedOnly Boolean
 ---@param numClusters Integer
-function SGroup_CalculateClusterSeparation(sgroup,spawnedOnly,numClusters)
+function SGroup_CalculateClusterSeparation(sgroup, spawnedOnly, numClusters)
 end
 
 ---comment Removes all entities from a group.
@@ -8369,21 +8369,21 @@ end
 ---comment Returns true if the contents of the two groups are equal. Order of the entities does not matter.
 ---@param group1 SGroupID
 ---@param group2 SGroupID
-function SGroup_Compare(group1,group2)
+function SGroup_Compare(group1, group2)
 end
 
 ---comment Returns true if SGroup1 contains ANY or ALL of SGroup2
 ---@param group1 SGroupID
 ---@param group2 SGroupID
 ---@param all Boolean
-function SGroup_ContainsSGroup(group1,group2,all)
+function SGroup_ContainsSGroup(group1, group2, all)
 end
 
 ---comment Returns true if SGroup contains a particular SquadID
 ---@param group SGroupID
 ---@param SquadID Integer
 ---@param includeDespawned Boolean
-function SGroup_ContainsSquad(group,SquadID,includeDespawned)
+function SGroup_ContainsSquad(group, SquadID, includeDespawned)
 end
 
 ---comment Returns the total number of spawned and despawned squads in a group.
@@ -8394,7 +8394,7 @@ end
 ---comment Returns the number of squads within an Sgroup that match an alliance with the player passed in
 ---@param group SGroupID
 ---@param player PlayerID
-function SGroup_CountAlliedSquads(group,player)
+function SGroup_CountAlliedSquads(group, player)
 end
 
 ---comment Returns the number of despawned squads in a group.
@@ -8405,7 +8405,7 @@ end
 ---comment Returns the number of squads within an Sgroup that match an alliance with the player passed in
 ---@param group SGroupID
 ---@param player PlayerID
-function SGroup_CountEnemySquads(group,player)
+function SGroup_CountEnemySquads(group, player)
 end
 
 ---comment Returns the number of spawned squads in a group.
@@ -8436,20 +8436,20 @@ end
 ---comment Works like Squad_FacePosition.  All Squads will face the same direction, with the squad the closest to the center determining the direction.
 ---@param sgroup SGroupID
 ---@param pos Position
-function SGroup_FacePosition(sgroup,pos)
+function SGroup_FacePosition(sgroup, pos)
 end
 
 ---comment Call a lua function for each item in a group. Function will recieve (groupid, itemindex, itemid) and should return true to break or false to continue.
 ---@param sgroup SGroupID
 ---@param f StackVarFunction
-function SGroup_ForEach(sgroup,f)
+function SGroup_ForEach(sgroup, f)
 end
 
 ---comment Call a lua function for each item in a group. Function will receive (groupid, itemindex, itemid) and should return a bool.
 ---@param sgroup SGroupID
 ---@param all Boolean
 ---@param f StackVarFunction
-function SGroup_ForEachAllOrAny(sgroup,all,f)
+function SGroup_ForEachAllOrAny(sgroup, all, f)
 end
 
 ---comment Same as SGroup_ForEachAllOrAny except you have a choice to iterate over spawned squads, despawned squads, or both.
@@ -8458,7 +8458,7 @@ end
 ---@param f StackVarFunction
 ---@param spawned Boolean
 ---@param despawned Boolean
-function SGroup_ForEachAllOrAnyEx(sgroup,all,f,spawned,despawned)
+function SGroup_ForEachAllOrAnyEx(sgroup, all, f, spawned, despawned)
 end
 
 ---comment Same as SGroup_ForEach except you have a choice to iterate over spawned squads, despawned squads, or both.
@@ -8466,7 +8466,7 @@ end
 ---@param f StackVarFunction
 ---@param spawned Boolean
 ---@param despawned Boolean
-function SGroup_ForEachEx(sgroup,f,spawned,despawned)
+function SGroup_ForEachEx(sgroup, f, spawned, despawned)
 end
 
 ---comment Find an squadron group with a given name.
@@ -8477,7 +8477,7 @@ end
 ---comment Returns the despawned squad at a certain position in the group.
 ---@param group SGroupID
 ---@param int Integer
-function SGroup_GetDeSpawnedSquadAt(group,int)
+function SGroup_GetDeSpawnedSquadAt(group, int)
 end
 
 ---comment Returns the name of a given squad group.
@@ -8493,19 +8493,19 @@ end
 ---comment Returns the spawned squad at a certain position in the group.
 ---@param group SGroupID
 ---@param int Integer
-function SGroup_GetSpawnedSquadAt(group,int)
+function SGroup_GetSpawnedSquadAt(group, int)
 end
 
 ---comment Returns the squad at a certain position in the group.
 ---@param group SGroupID
 ---@param int Integer
-function SGroup_GetSquadAt(group,int)
+function SGroup_GetSquadAt(group, int)
 end
 
 ---comment Same as EGroup_Intersection. Note: You cannot mix squad groups and entity groups.
 ---@param group SGroupID
 ---@param grouptointersect SGroupID
-function SGroup_Intersection(group,grouptointersect)
+function SGroup_Intersection(group, grouptointersect)
 end
 
 ---comment Check to see if an sgroup still exists without needing the name.
@@ -8516,20 +8516,20 @@ end
 ---comment Removes an squadron from a group.
 ---@param group SGroupID
 ---@param squadron SquadID
-function SGroup_Remove(group,squadron)
+function SGroup_Remove(group, squadron)
 end
 
 ---comment Works like SGroup_FacePosition except with no interpolation.  All Squads will face the same direction, with the squad the closest to the center determining the direction.
 ---@param sgroup SGroupID
 ---@param pos Position
-function SGroup_SnapFacePosition(sgroup,pos)
+function SGroup_SnapFacePosition(sgroup, pos)
 end
 
 ---comment Suggests a posture to an SGroup, lasting the passed duration
 ---@param sgroup SGroupID
 ---@param posture Integer
 ---@param duration Real
-function SGroup_SuggestPosture(sgroup,posture,duration)
+function SGroup_SuggestPosture(sgroup, posture, duration)
 end
 
 ---comment Disable collecting and displaying render stats
@@ -8683,7 +8683,7 @@ end
 ---comment Force set the combat intensity to be at least combatIntensity for a duration.
 ---@param combatIntensity Real
 ---@param durationSeconds Real
-function Sound_ForceSetMinimumMusicCombatIntensity(combatIntensity,durationSeconds)
+function Sound_ForceSetMinimumMusicCombatIntensity(combatIntensity, durationSeconds)
 end
 
 ---comment for the cheat menu
@@ -8707,26 +8707,26 @@ end
 ---comment Plays a 3D sound on the entity. Returns a handle to the sound event.
 ---@param eventName String
 ---@param actor EntityID
-function Sound_Play3D(eventName,actor)
+function Sound_Play3D(eventName, actor)
 end
 
 ---comment Play a speech event based on the local player's race.
 ---@param eventName String
 ---@param eventArgs Integer
-function Sound_PlaySpeech(eventName,eventArgs)
+function Sound_PlaySpeech(eventName, eventArgs)
 end
 
 ---comment Play a speech event based on a player's race.
 ---@param player PlayerID
 ---@param eventName String
 ---@param eventArgs Integer
-function Sound_PlaySpeechForPlayer(player,eventName,eventArgs)
+function Sound_PlaySpeechForPlayer(player, eventName, eventArgs)
 end
 
 ---comment Posts an event on an already playing sound. Returns a handle to the new sound event.
 ---@param eventName String
 ---@param handle Integer
-function Sound_PostEvent(eventName,handle)
+function Sound_PostEvent(eventName, handle)
 end
 
 ---comment tells the music system if it should be trying to enter/stay in the playing music state
@@ -8747,7 +8747,7 @@ end
 ---comment Set the target combat intensity to at least the value of value combatIntensity for a duration.
 ---@param combatIntensity Real
 ---@param durationSeconds Real
-function Sound_SetMinimumMusicCombatIntensity(combatIntensity,durationSeconds)
+function Sound_SetMinimumMusicCombatIntensity(combatIntensity, durationSeconds)
 end
 
 ---comment sets the scaling multiplier for the music intensity value
@@ -8782,7 +8782,7 @@ end
 ---@param a Integer
 ---@param mirrorX Boolean
 ---@param mirrorZ Boolean
-function Splat_Create(splatName,position,xScale,zScale,rotationDegrees,r,g,b,a,mirrorX,mirrorZ)
+function Splat_Create(splatName, position, xScale, zScale, rotationDegrees, r, g, b, a, mirrorX, mirrorZ)
 end
 
 ---comment Destroy a splat by unique id
@@ -8797,13 +8797,13 @@ end
 ---comment Allows the squad to use this ability
 ---@param squad SquadID
 ---@param ability ScarAbilityPBG
-function Squad_AddAbility(squad,ability)
+function Squad_AddAbility(squad, ability)
 end
 
 ---comment Add resources of all types to the specified squad by the specified amount, specifically to the SquadResourceExt.
 ---@param squad SquadID
 ---@param amount Real
-function Squad_AddAllResources(squad,amount)
+function Squad_AddAllResources(squad, amount)
 end
 
 ---comment Add to the list of slot items to drop when this squad is wiped out
@@ -8811,13 +8811,13 @@ end
 ---@param pbg ScarSlotItemPBG
 ---@param dropChance Real
 ---@param exclusive Boolean
-function Squad_AddSlotItemToDropOnDeath(squad,pbg,dropChance,exclusive)
+function Squad_AddSlotItemToDropOnDeath(squad, pbg, dropChance, exclusive)
 end
 
 ---comment Advance ability cooldown
 ---@param squad SquadID
 ---@param tickAmount Integer
-function Squad_AdjustAbilityCooldown(squad,tickAmount)
+function Squad_AdjustAbilityCooldown(squad, tickAmount)
 end
 
 ---comment Check if squad can attack target
@@ -8825,46 +8825,46 @@ end
 ---@param target EntityID
 ---@param checkFOW Boolean
 ---@param checkVis Boolean
-function Squad_CanAttackEntity(attacker,target,checkFOW,checkVis)
+function Squad_CanAttackEntity(attacker, target, checkFOW, checkVis)
 end
 
 ---comment Returns true if squad can capture stategic point
 ---@param squad SquadID
 ---@param entity EntityID
-function Squad_CanCaptureStrategicPoint(squad,entity)
+function Squad_CanCaptureStrategicPoint(squad, entity)
 end
 
 ---comment True if the squad can capture the entity sync weapon
 ---@param pSquad SquadID
 ---@param pEntity EntityID
-function Squad_CanCaptureTeamWeapon(pSquad,pEntity)
+function Squad_CanCaptureTeamWeapon(pSquad, pEntity)
 end
 
 ---comment Test whether a squad can be ordered to do this ability on the target squad
 ---@param castingSquad SquadID
 ---@param abilityPBG ScarAbilityPBG
 ---@param targetEntity EntityID
-function Squad_CanCastAbilityOnEntity(castingSquad,abilityPBG,targetEntity)
+function Squad_CanCastAbilityOnEntity(castingSquad, abilityPBG, targetEntity)
 end
 
 ---comment Test whether a squad can be ordered to do this ability on the target squad
 ---@param castingSquad SquadID
 ---@param abilityPBG ScarAbilityPBG
 ---@param targetPos Position
-function Squad_CanCastAbilityOnPosition(castingSquad,abilityPBG,targetPos)
+function Squad_CanCastAbilityOnPosition(castingSquad, abilityPBG, targetPos)
 end
 
 ---comment Test whether a squad can be ordered to do this ability on the target squad
 ---@param castingSquad SquadID
 ---@param abilityPBG ScarAbilityPBG
 ---@param targetSquad SquadID
-function Squad_CanCastAbilityOnSquad(castingSquad,abilityPBG,targetSquad)
+function Squad_CanCastAbilityOnSquad(castingSquad, abilityPBG, targetSquad)
 end
 
 ---comment Cancels an item in a production queue.  Index 0 is the currently producing item.
 ---@param squad SquadID
 ---@param index Integer
-function Squad_CancelProductionQueueItem(squad,index)
+function Squad_CancelProductionQueueItem(squad, index)
 end
 
 ---comment Checks whether a squad can hold any squad
@@ -8882,45 +8882,45 @@ end
 ---@param loadthis SquadID
 ---@param assumeEmpty Boolean
 ---@param assumeVisible Boolean
-function Squad_CanLoadSquad(squad,loadthis,assumeEmpty,assumeVisible)
+function Squad_CanLoadSquad(squad, loadthis, assumeEmpty, assumeVisible)
 end
 
 ---comment True if the squad can pickup the entity slot item
 ---@param pSquad SquadID
 ---@param pEntity EntityID
-function Squad_CanPickupSlotItem(pSquad,pEntity)
+function Squad_CanPickupSlotItem(pSquad, pEntity)
 end
 
 ---comment True if the squad can recrew the entity
 ---@param pSquad SquadID
 ---@param pEntity EntityID
-function Squad_CanRecrew(pSquad,pEntity)
+function Squad_CanRecrew(pSquad, pEntity)
 end
 
 ---comment Returns true if the distance between a target entity and the source squad is less than it squad's sight distance.  There is no LOS or FOW check.
 ---@param squad SquadID
 ---@param entity EntityID
-function Squad_CanSeeEntity(squad,entity)
+function Squad_CanSeeEntity(squad, entity)
 end
 
 ---comment Returns true if the distance between a target squad and the source squad is less than it squad's sight distance.  There is no LOS or FOW check.
 ---@param squad SquadID
 ---@param target SquadID
-function Squad_CanSeeSquad(squad,target)
+function Squad_CanSeeSquad(squad, target)
 end
 
 ---comment Check if a squad can target and attack a given entity.
 ---@param squad Squad&
 ---@param target Entity&
 ---@param checkFOW Boolean
-function Squad_CanTargetEntity(squad,target,checkFOW)
+function Squad_CanTargetEntity(squad, target, checkFOW)
 end
 
 ---comment Check if a squad can target and attack at least one entity in the given target squad.
 ---@param squad Squad&
 ---@param target Squad&
 ---@param checkFOW Boolean
-function Squad_CanTargetSquad(squad,target,checkFOW)
+function Squad_CanTargetSquad(squad, target, checkFOW)
 end
 
 ---comment Clears any previous posture suggestions made to a squad
@@ -8932,19 +8932,19 @@ end
 ---@param squad SquadID
 ---@param key String
 ---@param tableRowIndex Integer
-function Squad_ClearStateModelEnumTableTarget(squad,key,tableRowIndex)
+function Squad_ClearStateModelEnumTableTarget(squad, key, tableRowIndex)
 end
 
 ---comment Clears a TargetHandle value in the squad's state model corresponding to the given key.
 ---@param squad SquadID
 ---@param key String
-function Squad_ClearStateModelTarget(squad,key)
+function Squad_ClearStateModelTarget(squad, key)
 end
 
 ---comment Instantly adds an upgrade to a given squad
 ---@param pSquad SquadID
 ---@param upgradePBG ScarUpgradePBG
-function Squad_CompleteUpgrade(pSquad,upgradePBG)
+function Squad_CompleteUpgrade(pSquad, upgradePBG)
 end
 
 ---comment Returns the number of units currently in a squad (spawned AND despawned!!)
@@ -8958,7 +8958,7 @@ end
 ---@param loadoutCount Integer
 ---@param pos Position
 ---@param toward Position
-function Squad_CreateAndSpawnToward(sbp,player,loadoutCount,pos,toward)
+function Squad_CreateAndSpawnToward(sbp, player, loadoutCount, pos, toward)
 end
 
 ---comment Despawn the entire squad at its current position.
@@ -8974,13 +8974,13 @@ end
 ---comment Sets whether a squad can produce anything (including upgrades)
 ---@param squad SquadID
 ---@param enable Boolean
-function Squad_EnableProductionQueue(squad,enable)
+function Squad_EnableProductionQueue(squad, enable)
 end
 
 ---comment Enables or disables the surprise feature on thie given squad
 ---@param squad SquadID
 ---@param enable Boolean
-function Squad_EnableSurprise(squad,enable)
+function Squad_EnableSurprise(squad, enable)
 end
 
 ---comment Returns total squad extension count.
@@ -8990,32 +8990,32 @@ end
 ---comment Returns true if the squad has the specific extension enabled.
 ---@param pSquad SquadID
 ---@param extID ComponentDependencyIndex
-function Squad_ExtensionEnabled(pSquad,extID)
+function Squad_ExtensionEnabled(pSquad, extID)
 end
 
 ---comment Returns a string name of the given extension on the squad.
 ---@param pSquad SquadID
 ---@param extID ComponentDependencyIndex
-function Squad_ExtensionName(pSquad,extID)
+function Squad_ExtensionName(pSquad, extID)
 end
 
 ---comment Set the rotation of all units in a squad to face the position.
 ---@param squad SquadID
 ---@param pos Position
-function Squad_FacePosition(squad,pos)
+function Squad_FacePosition(squad, pos)
 end
 
 ---comment Get 2 squads to face each other. This function works on spawned squads only.
 ---@param squad1 SquadID
 ---@param squad2 SquadID
-function Squad_FaceSquad(squad1,squad2)
+function Squad_FaceSquad(squad1, squad2)
 end
 
 ---comment Tries to find cover within a certain radius of a position. If no cover is found, it returns the position used for the search.
 ---@param squad SquadID
 ---@param pos Position
 ---@param coverSearchRadius Real
-function Squad_FindCover(squad,pos,coverSearchRadius)
+function Squad_FindCover(squad, pos, coverSearchRadius)
 end
 
 ---comment Tries to find cover within a certain radius of a position, traveling a max distance to get there, and possibly comparing against current position's cover. If no cover is found, it returns the position used for the search.
@@ -9024,7 +9024,7 @@ end
 ---@param coverSearchRadius Real
 ---@param maxPathDistanceFromGoal Real
 ---@param compareToCurrentCover Boolean
-function Squad_FindCoverCompareCurrent(squad,pos,coverSearchRadius,maxPathDistanceFromGoal,compareToCurrentCover)
+function Squad_FindCoverCompareCurrent(squad, pos, coverSearchRadius, maxPathDistanceFromGoal, compareToCurrentCover)
 end
 
 ---comment Get a squad from a mission editor ID.
@@ -9040,7 +9040,7 @@ end
 ---comment Find the squad member current or forced targets. The sgroup is cleared, and any attack target squads found are added to the sgroup. Entity targets like buildings are ignored.
 ---@param squad SquadID
 ---@param sgroup SGroupID
-function Squad_GetAttackTargets(squad,sgroup)
+function Squad_GetAttackTargets(squad, sgroup)
 end
 
 ---comment Returns the squad blueprint of the squad (from the attribute editor)
@@ -9081,13 +9081,13 @@ end
 ---comment Returns how much of an original squad's health is left, accounting for deaths (ex: a squad of 3 riflemen would be at 50% health, since they started with 6 members) Note: This is the same percentage that the UI uses.
 ---@param squad SquadID
 ---@param bIncludeBonuses Boolean
-function Squad_GetHealthPercentage(squad,bIncludeBonuses)
+function Squad_GetHealthPercentage(squad, bIncludeBonuses)
 end
 
 ---comment Returns how much of the squad's health is left as a percentage.
 ---@param squad SquadID
 ---@param includeBonuses Boolean
-function Squad_GetHealthPercentageWithShields(squad,includeBonuses)
+function Squad_GetHealthPercentageWithShields(squad, includeBonuses)
 end
 
 ---comment Get which building (entity) is the squad garrisoned
@@ -9123,20 +9123,20 @@ end
 ---comment Find the last squad attacker on this squad. If found, the squad is added to the sgroup
 ---@param squad SquadID
 ---@param sgroup SGroupID
-function Squad_GetLastAttacker(squad,sgroup)
+function Squad_GetLastAttacker(squad, sgroup)
 end
 
 ---comment Find the squad attackers on this squad from the last seconds specified. The sgroup is cleared, then any squads found are added to the sgroup. Building attackers are ignored.
 ---@param squad SquadID
 ---@param group SGroupID
 ---@param timeSeconds Real
-function Squad_GetLastAttackers(squad,group,timeSeconds)
+function Squad_GetLastAttackers(squad, group, timeSeconds)
 end
 
 ---comment Find the last entity attacker on this squad. If found, the entity added to egroup
 ---@param squad SquadID
 ---@param egroup EGroupID
-function Squad_GetLastEntityAttacker(squad,egroup)
+function Squad_GetLastEntityAttacker(squad, egroup)
 end
 
 ---comment Returns the max number of units allowed in the squad
@@ -9157,7 +9157,7 @@ end
 ---comment Get the number of slot items with the same ID that the squad has
 ---@param squad SquadID
 ---@param pbg ScarSlotItemPBG
-function Squad_GetNumSlotItem(squad,pbg)
+function Squad_GetNumSlotItem(squad, pbg)
 end
 
 ---comment Returns the Player owner of the given squad. Squad MUST NOT be owned by the world.
@@ -9178,13 +9178,13 @@ end
 ---comment Returns the blueprint for a production queue item with index.
 ---@param squad SquadID
 ---@param index Integer
-function Squad_GetProductionQueueItem(squad,index)
+function Squad_GetProductionQueueItem(squad, index)
 end
 
 ---comment Returns the production type (PITEM_Upgrade, PITEM_Spawn, PITEM_SquadUpgrade, PITEM_SquadReinforce, PITEM_PlayerUpgrade) for a production queue item with index.
 ---@param squad SquadID
 ---@param index Integer
-function Squad_GetProductionQueueItemType(squad,index)
+function Squad_GetProductionQueueItemType(squad, index)
 end
 
 ---comment Returns the number of items in the squad's production queue.
@@ -9205,7 +9205,7 @@ end
 ---comment Returns the ID of the slot item. Use Squad_GetSlotItemCount to determine how many slot items the squad has. The first index is 1
 ---@param squad SquadID
 ---@param index Integer
-function Squad_GetSlotItemAt(squad,index)
+function Squad_GetSlotItemAt(squad, index)
 end
 
 ---comment Returns how many slot items this squad has
@@ -9221,98 +9221,98 @@ end
 ---comment Clear the sgroup, then add all squads held by 'squad' to it
 ---@param squad SquadID
 ---@param sgroup SGroupID
-function Squad_GetSquadsHeld(squad,sgroup)
+function Squad_GetSquadsHeld(squad, sgroup)
 end
 
 ---comment Returns a boolean value from the squad's state model corresponding to the given key.
 ---@param squad SquadID
 ---@param key String
-function Squad_GetStateModelBool(squad,key)
+function Squad_GetStateModelBool(squad, key)
 end
 
 ---comment Returns an Entity value from the squad's state model corresponding to the given key.
 ---@param squad SquadID
 ---@param key String
-function Squad_GetStateModelEntityTarget(squad,key)
+function Squad_GetStateModelEntityTarget(squad, key)
 end
 
 ---comment Returns a boolean value from the squad's state model corresponding to the given key and table row index (0 based).
 ---@param squad SquadID
 ---@param key String
 ---@param tableRowIndex Integer
-function Squad_GetStateModelEnumTableBool(squad,key,tableRowIndex)
+function Squad_GetStateModelEnumTableBool(squad, key, tableRowIndex)
 end
 
 ---comment Returns an Entity value from the squad's state model corresponding to the given key and table row index (0 based).
 ---@param squad SquadID
 ---@param key String
 ---@param tableRowIndex Integer
-function Squad_GetStateModelEnumTableEntityTarget(squad,key,tableRowIndex)
+function Squad_GetStateModelEnumTableEntityTarget(squad, key, tableRowIndex)
 end
 
 ---comment Returns a float value from the squad's state model corresponding to the given key and table row index (0 based).
 ---@param squad SquadID
 ---@param key String
 ---@param tableRowIndex Integer
-function Squad_GetStateModelEnumTableFloat(squad,key,tableRowIndex)
+function Squad_GetStateModelEnumTableFloat(squad, key, tableRowIndex)
 end
 
 ---comment Returns an integer value from the squad's state model corresponding to the given key and table row index (0 based).
 ---@param squad SquadID
 ---@param key String
 ---@param tableRowIndex Integer
-function Squad_GetStateModelEnumTableInt(squad,key,tableRowIndex)
+function Squad_GetStateModelEnumTableInt(squad, key, tableRowIndex)
 end
 
 ---comment Returns a Player value from the squad's state model corresponding to the given key and table row index (0 based).
 ---@param squad SquadID
 ---@param key String
 ---@param tableRowIndex Integer
-function Squad_GetStateModelEnumTablePlayerTarget(squad,key,tableRowIndex)
+function Squad_GetStateModelEnumTablePlayerTarget(squad, key, tableRowIndex)
 end
 
 ---comment Returns a Squad value from the squad's state model corresponding to the given key and table row index (0 based).
 ---@param squad SquadID
 ---@param key String
 ---@param tableRowIndex Integer
-function Squad_GetStateModelEnumTableSquadTarget(squad,key,tableRowIndex)
+function Squad_GetStateModelEnumTableSquadTarget(squad, key, tableRowIndex)
 end
 
 ---comment Returns a Vector3f value from the squad's state model corresponding to the given key and table row index (0 based).
 ---@param squad SquadID
 ---@param key String
 ---@param tableRowIndex Integer
-function Squad_GetStateModelEnumTableVector3f(squad,key,tableRowIndex)
+function Squad_GetStateModelEnumTableVector3f(squad, key, tableRowIndex)
 end
 
 ---comment Returns a float value from the squad's state model corresponding to the given key.
 ---@param squad SquadID
 ---@param key String
-function Squad_GetStateModelFloat(squad,key)
+function Squad_GetStateModelFloat(squad, key)
 end
 
 ---comment Returns an integer value from the squad's state model corresponding to the given key.
 ---@param squad SquadID
 ---@param key String
-function Squad_GetStateModelInt(squad,key)
+function Squad_GetStateModelInt(squad, key)
 end
 
 ---comment Returns a Player value from the squad's state model corresponding to the given key.
 ---@param squad SquadID
 ---@param key String
-function Squad_GetStateModelPlayerTarget(squad,key)
+function Squad_GetStateModelPlayerTarget(squad, key)
 end
 
 ---comment Returns a Squad value from the squad's state model corresponding to the given key.
 ---@param squad SquadID
 ---@param key String
-function Squad_GetStateModelSquadTarget(squad,key)
+function Squad_GetStateModelSquadTarget(squad, key)
 end
 
 ---comment Returns a Vector3f value from the squad's state model corresponding to the given key.
 ---@param squad SquadID
 ---@param key String
-function Squad_GetStateModelVector3f(squad,key)
+function Squad_GetStateModelVector3f(squad, key)
 end
 
 ---comment Check current squad suppresion level. Return value from 0 to 1
@@ -9338,13 +9338,13 @@ end
 ---comment Gives a slot item to the squad. Can fail due to not enough slots left
 ---@param squad SquadID
 ---@param pbg ScarSlotItemPBG
-function Squad_GiveSlotItem(squad,pbg)
+function Squad_GiveSlotItem(squad, pbg)
 end
 
 ---comment Tests to see if a squad has an ability
 ---@param squad SquadID
 ---@param ability ScarAbilityPBG
-function Squad_HasAbility(squad,ability)
+function Squad_HasAbility(squad, ability)
 end
 
 ---comment Returns true if the squad has an accepted command that it will try to perform next
@@ -9371,7 +9371,7 @@ end
 ---@param targetSquad SquadID
 ---@param interactionTypeName String
 ---@param minAttachedCount Integer
-function Squad_HasEntityWithNInteractors(targetSquad,interactionTypeName,minAttachedCount)
+function Squad_HasEntityWithNInteractors(targetSquad, interactionTypeName, minAttachedCount)
 end
 
 ---comment Returns true if the given squad has a heavy weapon (non moving setup weapon)
@@ -9402,7 +9402,7 @@ end
 ---comment Return true if the squad has purchased the specified upgrade.
 ---@param squad SquadID
 ---@param pbg ScarUpgradePBG
-function Squad_HasUpgrade(squad,pbg)
+function Squad_HasUpgrade(squad, pbg)
 end
 
 ---comment Returns true if the given squad has a vehicle in it (includes team weapons)
@@ -9413,7 +9413,7 @@ end
 ---comment Returns true if the given squad has at least one Entity who has the specified weapon hardpoint.
 ---@param pSquad SquadID
 ---@param hardPointName String
-function Squad_HasWeaponHardpoint(pSquad,hardPointName)
+function Squad_HasWeaponHardpoint(pSquad, hardPointName)
 end
 
 ---comment Increase current squad veterancy
@@ -9421,14 +9421,14 @@ end
 ---@param veterancy Real
 ---@param silent Boolean
 ---@param applyModifiers Boolean
-function Squad_IncreaseVeterancy(squad,veterancy,silent,applyModifiers)
+function Squad_IncreaseVeterancy(squad, veterancy, silent, applyModifiers)
 end
 
 ---comment Increase current squad veterancy rank
 ---@param squad SquadID
 ---@param numranks Integer
 ---@param silent Boolean
-function Squad_IncreaseVeterancyRank(squad,numranks,silent)
+function Squad_IncreaseVeterancyRank(squad, numranks, silent)
 end
 
 ---comment Stops current squads activity and instant setup the team weapon if they have one
@@ -9439,7 +9439,7 @@ end
 ---comment True if the ability is active
 ---@param squad SquadID
 ---@param pbg ScarAbilityPBG
-function Squad_IsAbilityActive_CS(squad,pbg)
+function Squad_IsAbilityActive_CS(squad, pbg)
 end
 
 ---comment Check if the squad is alive
@@ -9450,7 +9450,7 @@ end
 ---comment Returns true if any unit in the squad is attacking within the time
 ---@param squad SquadID
 ---@param time Real
-function Squad_IsAttacking(squad,time)
+function Squad_IsAttacking(squad, time)
 end
 
 ---comment Returns true if the squad is currently attack-moving.
@@ -9476,7 +9476,7 @@ end
 ---comment True if squad is currently performing the given ability
 ---@param squad SquadID
 ---@param pbg ScarAbilityPBG
-function Squad_IsDoingAbility(squad,pbg)
+function Squad_IsDoingAbility(squad, pbg)
 end
 
 ---comment Returns whether the passed in squad is female
@@ -9487,7 +9487,7 @@ end
 ---comment Returns if squad contains an entity that is performing a specific unit role
 ---@param targetSquad SquadID
 ---@param type Integer
-function Squad_IsGatheringResourceType(targetSquad,type)
+function Squad_IsGatheringResourceType(targetSquad, type)
 end
 
 ---comment Check if the squad has a hold on anything (use this on vehicles)
@@ -9543,19 +9543,19 @@ end
 ---comment Determines if this squad is of the given type. Types are defined in squad_type_ext/squad_type_list
 ---@param squad SquadID
 ---@param type String
-function Squad_IsOfType(squad,type)
+function Squad_IsOfType(squad, type)
 end
 
 ---comment Returns true if any entity of a squad (all=false) or the whole (all=true) squad is on walkable wall.
 ---@param squad SquadID
 ---@param all Boolean
-function Squad_IsOnWalkableWall(squad,all)
+function Squad_IsOnWalkableWall(squad, all)
 end
 
 ---comment Returns true if the given squad is owned by the given player
 ---@param squad SquadID
 ---@param player PlayerID
-function Squad_IsOwnedByPlayer(squad,player)
+function Squad_IsOwnedByPlayer(squad, player)
 end
 
 ---comment True if squad is currently pinned
@@ -9581,7 +9581,7 @@ end
 ---comment Returns true if the given blueprint is of the given type. Types are defined in squad_type_ext/squad_type_list
 ---@param sbp ScarSquadPBG
 ---@param type String
-function Squad_IsSBPOfType(sbp,type)
+function Squad_IsSBPOfType(sbp, type)
 end
 
 ---comment Returns true if the squad is currently placing charges.
@@ -9607,27 +9607,27 @@ end
 ---comment Returns true if any unit in the squad is under attack within the time
 ---@param squad SquadID
 ---@param time Real
-function Squad_IsUnderAttack(squad,time)
+function Squad_IsUnderAttack(squad, time)
 end
 
 ---comment Returns true if squad is under attack by enemy from a particular player
 ---@param squad SquadID
 ---@param pAttackerOwner PlayerID
 ---@param time Real
-function Squad_IsUnderAttackByPlayer(squad,pAttackerOwner,time)
+function Squad_IsUnderAttackByPlayer(squad, pAttackerOwner, time)
 end
 
 ---comment Returns true if the squad was under attack from a certain direction (8 offset types, see ScarUtil.scar)
 ---@param squad SquadID
 ---@param offset Integer
 ---@param timeSeconds Real
-function Squad_IsUnderAttackFromDirection(squad,offset,timeSeconds)
+function Squad_IsUnderAttackFromDirection(squad, offset, timeSeconds)
 end
 
 ---comment Returns true if the squad is currently upgrading something specific.
 ---@param squad SquadID
 ---@param upgrade ScarUpgradePBG
-function Squad_IsUpgrading(squad,upgrade)
+function Squad_IsUpgrading(squad, upgrade)
 end
 
 ---comment Returns true if the squad is currently upgrading anything.
@@ -9648,13 +9648,13 @@ end
 ---comment Returns the number of upgrades that this squad has.
 ---@param squad SquadID
 ---@param upgradePBG ScarUpgradePBG
-function Squad_NumUpgradeComplete(squad,upgradePBG)
+function Squad_NumUpgradeComplete(squad, upgradePBG)
 end
 
 ---comment get squad pop cost, use CT_Personnel, CT_Vehicle, CT_Medic for captype
 ---@param squad SquadID
 ---@param type CapType
-function Squad_Population(squad,type)
+function Squad_Population(squad, type)
 end
 
 ---comment Precache squad resources and listen for event GE_EntityPrecached that it is done
@@ -9664,87 +9664,87 @@ end
 ---@param resourceContainerCacheName String
 ---@param source String
 ---@param id String
-function Squad_Precache(sbp,skinItemDefinitionID,player,resourceContainerCacheName,source,id)
+function Squad_Precache(sbp, skinItemDefinitionID, player, resourceContainerCacheName, source, id)
 end
 
 ---comment Removes an ability that was previously added by Squad_AddAbility. You cannot remove static abilities (from AE: squad_ability_ext)
 ---@param squad SquadID
 ---@param ability ScarAbilityPBG
-function Squad_RemoveAbility(squad,ability)
+function Squad_RemoveAbility(squad, ability)
 end
 
 ---comment Removes a slot item from the squad.
 ---@param squad SquadID
 ---@param index Integer
 ---@param bInstantWeaponChange Boolean
-function Squad_RemoveSlotItemAt(squad,index,bInstantWeaponChange)
+function Squad_RemoveSlotItemAt(squad, index, bInstantWeaponChange)
 end
 
 ---comment Removes a boolean value in the squad's state model list corresponding to the given key.
 ---@param squad SquadID
 ---@param key String
 ---@param value Boolean
-function Squad_RemoveStateModelListBool(squad,key,value)
+function Squad_RemoveStateModelListBool(squad, key, value)
 end
 
 ---comment Removes an Entity TargetHandle value in the squad's state model list corresponding to the given key.
 ---@param squad SquadID
 ---@param key String
 ---@param value EntityID
-function Squad_RemoveStateModelListEntityTarget(squad,key,value)
+function Squad_RemoveStateModelListEntityTarget(squad, key, value)
 end
 
 ---comment Removes a float value in the squad's state model list corresponding to the given key.
 ---@param squad SquadID
 ---@param key String
 ---@param value Real
-function Squad_RemoveStateModelListFloat(squad,key,value)
+function Squad_RemoveStateModelListFloat(squad, key, value)
 end
 
 ---comment Removes an integer value in the squad's state model list corresponding to the given key.
 ---@param squad SquadID
 ---@param key String
 ---@param value Integer
-function Squad_RemoveStateModelListInt(squad,key,value)
+function Squad_RemoveStateModelListInt(squad, key, value)
 end
 
 ---comment Removes a Player TargetHandle value in the squad's state model list corresponding to the given key.
 ---@param squad SquadID
 ---@param key String
 ---@param value PlayerID
-function Squad_RemoveStateModelListPlayerTarget(squad,key,value)
+function Squad_RemoveStateModelListPlayerTarget(squad, key, value)
 end
 
 ---comment Removes a Squad TargetHandle value in the squad's state model list corresponding to the given key.
 ---@param squad SquadID
 ---@param key String
 ---@param value SquadID
-function Squad_RemoveStateModelListSquadTarget(squad,key,value)
+function Squad_RemoveStateModelListSquadTarget(squad, key, value)
 end
 
 ---comment Removes a Vector3f value in the squad's state model list corresponding to the given key.
 ---@param squad SquadID
 ---@param key String
 ---@param value Position
-function Squad_RemoveStateModelListVector3f(squad,key,value)
+function Squad_RemoveStateModelListVector3f(squad, key, value)
 end
 
 ---comment Removes an upgrade from a squad
 ---@param squad SquadID
 ---@param upgrade ScarUpgradePBG
-function Squad_RemoveUpgrade(squad,upgrade)
+function Squad_RemoveUpgrade(squad, upgrade)
 end
 
 ---comment Give squad action points
 ---@param squad SquadID
 ---@param actionPoint Real
-function Squad_RewardActionPoints(squad,actionPoint)
+function Squad_RewardActionPoints(squad, actionPoint)
 end
 
 ---comment ZERO-BASED get of entity blueprints out of squad blueprint
 ---@param sbp ScarSquadPBG
 ---@param index Integer
-function Squad_SBPEntityAt(sbp,index)
+function Squad_SBPEntityAt(sbp, index)
 end
 
 ---comment Returns the max number of units allowed in the squad blueprint
@@ -9755,99 +9755,99 @@ end
 ---comment Sets the squad to be in the background or foreground. By default, all squads are in the foreground
 ---@param pSquad SquadID
 ---@param isInBackground Boolean
-function Squad_SetBackground(pSquad,isInBackground)
+function Squad_SetBackground(pSquad, isInBackground)
 end
 
 ---comment Enables or disables the squad's UI extension (which controls all UI elements related to the squad)
 ---@param pSquad SquadID
 ---@param extID String
 ---@param enabled Boolean
-function Squad_SetExtEnabled(pSquad,extID,enabled)
+function Squad_SetExtEnabled(pSquad, extID, enabled)
 end
 
 ---comment Set the health of all units in a squad.  Health must be in range [0.0, 1.0]
 ---@param squad SquadID
 ---@param healthPercent Real
-function Squad_SetHealth(squad,healthPercent)
+function Squad_SetHealth(squad, healthPercent)
 end
 
 ---comment Make a squad invulnerable to physical damage when number of members drop to or below specified count.
 ---@param squad SquadID
 ---@param invEntityCount Integer
 ---@param resetTime Real
-function Squad_SetInvulnerableEntityCount(squad,invEntityCount,resetTime)
+function Squad_SetInvulnerableEntityCount(squad, invEntityCount, resetTime)
 end
 
 ---comment Make a squad invulnerable to physical damage.
 ---@param squad SquadID
 ---@param minHealthPercentage Real
 ---@param resetTime Real
-function Squad_SetInvulnerableMinCap(squad,minHealthPercentage,resetTime)
+function Squad_SetInvulnerableMinCap(squad, minHealthPercentage, resetTime)
 end
 
 ---comment Set soldier mood mode.
 ---@param squad SquadID
 ---@param mood SquadCombatBehaviourMoodMode
-function Squad_SetMoodMode(squad,mood)
+function Squad_SetMoodMode(squad, mood)
 end
 
 ---comment Sets the squad's move type
 ---@param squad SquadID
 ---@param movetypePBG ScarMoveTypePBG
-function Squad_SetMoveType(squad,movetypePBG)
+function Squad_SetMoveType(squad, movetypePBG)
 end
 
 ---comment Changes the owner of the given squad.
 ---@param squad SquadID
 ---@param owner PlayerID
-function Squad_SetPlayerOwner(squad,owner)
+function Squad_SetPlayerOwner(squad, owner)
 end
 
 ---comment Moves the squad to a new position and snaps squad members onto grid cell centres.
 ---@param squad SquadID
 ---@param pos Position
 ---@param positionFacingToward Position
-function Squad_SetPosition(squad,pos,positionFacingToward)
+function Squad_SetPosition(squad, pos, positionFacingToward)
 end
 
 ---comment Moves the squad to an arbitrary new 3D position.
 ---@param squad SquadID
 ---@param pos Position
 ---@param toward Position
-function Squad_SetPosition3D(squad,pos,toward)
+function Squad_SetPosition3D(squad, pos, toward)
 end
 
 ---comment Set entity inside the squad to be recrewable or not when it becomes abandoned
 ---@param squad SquadID
 ---@param capturable Boolean
-function Squad_SetRecrewable(squad,capturable)
+function Squad_SetRecrewable(squad, capturable)
 end
 
 ---comment This function uses squad resources rather than entity resources. For awarding resources to units, it's best to use Entity_AddResource instead (located in luaentity.cpp).
 ---@param squad SquadID
 ---@param resourceType Integer
 ---@param newAmount Real
-function Squad_SetResource(squad,resourceType,newAmount)
+function Squad_SetResource(squad, resourceType, newAmount)
 end
 
 ---comment Enables shared team production on a building (teammates can build using THEIR resources)
 ---@param squad SquadID
 ---@param shared Boolean
-function Squad_SetSharedProductionQueue(squad,shared)
+function Squad_SetSharedProductionQueue(squad, shared)
 end
 
 ---comment Sets a boolean value in the squad's state model corresponding to the given key.
 ---@param squad SquadID
 ---@param key String
 ---@param value Boolean
-function Squad_SetStateModelBool(squad,key,value)
+function Squad_SetStateModelBool(squad, key, value)
 end
 
 ---comment Sets an Entity TargetHandle value in the squad's state model corresponding to the given key.
 ---@param squad SquadID
 ---@param key String
 ---@param value EntityID
-function Squad_SetStateModelEntityTarget(squad,key,value)
+function Squad_SetStateModelEntityTarget(squad, key, value)
 end
 
 ---comment Sets a boolean value in the squad's state model corresponding to the given key and table row index (0 based).
@@ -9855,7 +9855,7 @@ end
 ---@param key String
 ---@param tableRowIndex Integer
 ---@param value Boolean
-function Squad_SetStateModelEnumTableBool(squad,key,tableRowIndex,value)
+function Squad_SetStateModelEnumTableBool(squad, key, tableRowIndex, value)
 end
 
 ---comment Sets an Entity TargetHandle value in the squad's state model corresponding to the given key and table row index (0 based).
@@ -9863,7 +9863,7 @@ end
 ---@param key String
 ---@param tableRowIndex Integer
 ---@param value EntityID
-function Squad_SetStateModelEnumTableEntityTarget(squad,key,tableRowIndex,value)
+function Squad_SetStateModelEnumTableEntityTarget(squad, key, tableRowIndex, value)
 end
 
 ---comment Sets a float value in the squad's state model corresponding to the given key and table row index (0 based).
@@ -9871,7 +9871,7 @@ end
 ---@param key String
 ---@param tableRowIndex Integer
 ---@param value Real
-function Squad_SetStateModelEnumTableFloat(squad,key,tableRowIndex,value)
+function Squad_SetStateModelEnumTableFloat(squad, key, tableRowIndex, value)
 end
 
 ---comment Sets an integer value in the squad's state model corresponding to the given key and table row index (0 based).
@@ -9879,7 +9879,7 @@ end
 ---@param key String
 ---@param tableRowIndex Integer
 ---@param value Integer
-function Squad_SetStateModelEnumTableInt(squad,key,tableRowIndex,value)
+function Squad_SetStateModelEnumTableInt(squad, key, tableRowIndex, value)
 end
 
 ---comment Sets a Player TargetHandle value in the squad's state model corresponding to the given key and table row index (0 based).
@@ -9887,7 +9887,7 @@ end
 ---@param key String
 ---@param tableRowIndex Integer
 ---@param value PlayerID
-function Squad_SetStateModelEnumTablePlayerTarget(squad,key,tableRowIndex,value)
+function Squad_SetStateModelEnumTablePlayerTarget(squad, key, tableRowIndex, value)
 end
 
 ---comment Sets a Squad TargetHandle value in the squad's state model corresponding to the given key and table row index (0 based).
@@ -9895,7 +9895,7 @@ end
 ---@param key String
 ---@param tableRowIndex Integer
 ---@param value SquadID
-function Squad_SetStateModelEnumTableSquadTarget(squad,key,tableRowIndex,value)
+function Squad_SetStateModelEnumTableSquadTarget(squad, key, tableRowIndex, value)
 end
 
 ---comment Sets a Vector3f value in the squad's state model corresponding to the given key and table row index (0 based).
@@ -9903,21 +9903,21 @@ end
 ---@param key String
 ---@param tableRowIndex Integer
 ---@param value Position
-function Squad_SetStateModelEnumTableVector3f(squad,key,tableRowIndex,value)
+function Squad_SetStateModelEnumTableVector3f(squad, key, tableRowIndex, value)
 end
 
 ---comment Sets a float value in the squad's state model corresponding to the given key.
 ---@param squad SquadID
 ---@param key String
 ---@param value Real
-function Squad_SetStateModelFloat(squad,key,value)
+function Squad_SetStateModelFloat(squad, key, value)
 end
 
 ---comment Sets an integer value in the squad's state model corresponding to the given key.
 ---@param squad SquadID
 ---@param key String
 ---@param value Integer
-function Squad_SetStateModelInt(squad,key,value)
+function Squad_SetStateModelInt(squad, key, value)
 end
 
 ---comment Sets a boolean value in the squad's state model list corresponding to the given key.
@@ -9925,7 +9925,7 @@ end
 ---@param key String
 ---@param value Boolean
 ---@param allowDuplicates Boolean
-function Squad_SetStateModelListBool(squad,key,value,allowDuplicates)
+function Squad_SetStateModelListBool(squad, key, value, allowDuplicates)
 end
 
 ---comment Sets an Entity TargetHandle value in the squad's state model list corresponding to the given key.
@@ -9933,7 +9933,7 @@ end
 ---@param key String
 ---@param value EntityID
 ---@param allowDuplicates Boolean
-function Squad_SetStateModelListEntityTarget(squad,key,value,allowDuplicates)
+function Squad_SetStateModelListEntityTarget(squad, key, value, allowDuplicates)
 end
 
 ---comment Sets a float value in the squad's state model list corresponding to the given key.
@@ -9941,7 +9941,7 @@ end
 ---@param key String
 ---@param value Real
 ---@param allowDuplicates Boolean
-function Squad_SetStateModelListFloat(squad,key,value,allowDuplicates)
+function Squad_SetStateModelListFloat(squad, key, value, allowDuplicates)
 end
 
 ---comment Sets an integer value in the squad's state model list corresponding to the given key.
@@ -9949,7 +9949,7 @@ end
 ---@param key String
 ---@param value Integer
 ---@param allowDuplicates Boolean
-function Squad_SetStateModelListInt(squad,key,value,allowDuplicates)
+function Squad_SetStateModelListInt(squad, key, value, allowDuplicates)
 end
 
 ---comment Sets a Player TargetHandle value in the squad's state model list corresponding to the given key.
@@ -9957,7 +9957,7 @@ end
 ---@param key String
 ---@param value PlayerID
 ---@param allowDuplicates Boolean
-function Squad_SetStateModelListPlayerTarget(squad,key,value,allowDuplicates)
+function Squad_SetStateModelListPlayerTarget(squad, key, value, allowDuplicates)
 end
 
 ---comment Sets a Squad TargetHandle value in the squad's state model list corresponding to the given key.
@@ -9965,7 +9965,7 @@ end
 ---@param key String
 ---@param value SquadID
 ---@param allowDuplicates Boolean
-function Squad_SetStateModelListSquadTarget(squad,key,value,allowDuplicates)
+function Squad_SetStateModelListSquadTarget(squad, key, value, allowDuplicates)
 end
 
 ---comment Sets a Vector3f value in the squad's state model list corresponding to the given key.
@@ -9973,40 +9973,40 @@ end
 ---@param key String
 ---@param value Position
 ---@param allowDuplicates Boolean
-function Squad_SetStateModelListVector3f(squad,key,value,allowDuplicates)
+function Squad_SetStateModelListVector3f(squad, key, value, allowDuplicates)
 end
 
 ---comment Sets a Player TargetHandle value in the squad's state model corresponding to the given key.
 ---@param squad SquadID
 ---@param key String
 ---@param value PlayerID
-function Squad_SetStateModelPlayerTarget(squad,key,value)
+function Squad_SetStateModelPlayerTarget(squad, key, value)
 end
 
 ---comment Sets a Squad TargetHandle value in the squad's state model corresponding to the given key.
 ---@param squad SquadID
 ---@param key String
 ---@param value SquadID
-function Squad_SetStateModelSquadTarget(squad,key,value)
+function Squad_SetStateModelSquadTarget(squad, key, value)
 end
 
 ---comment Sets a Vector3f value in the squad's state model corresponding to the given key.
 ---@param squad SquadID
 ---@param key String
 ---@param value Position
-function Squad_SetStateModelVector3f(squad,key,value)
+function Squad_SetStateModelVector3f(squad, key, value)
 end
 
 ---comment Set current squad suppression level. Suppression value range from 0 to 1
 ---@param squad SquadID
 ---@param percentage Real
-function Squad_SetSuppression(squad,percentage)
+function Squad_SetSuppression(squad, percentage)
 end
 
 ---comment Turn on/off display of the unit portrait veterancy stars
 ---@param squad SquadID
 ---@param visible Boolean
-function Squad_SetVeterancyDisplayVisibility(squad,visible)
+function Squad_SetVeterancyDisplayVisibility(squad, visible)
 end
 
 ---comment Makes a squad neutral
@@ -10018,7 +10018,7 @@ end
 ---@param squad SquadID
 ---@param pos Position
 ---@param spawnType String
-function Squad_Spawn(squad,pos,spawnType)
+function Squad_Spawn(squad, pos, spawnType)
 end
 
 ---comment Spawn the entire squad at a given position
@@ -10026,60 +10026,60 @@ end
 ---@param pos Position
 ---@param toward Position
 ---@param spawnType String
-function Squad_SpawnToward(squad,pos,toward,spawnType)
+function Squad_SpawnToward(squad, pos, toward, spawnType)
 end
 
 ---comment Split the squad into 2. The new squad size is specified by the number passed in
 ---@param squad SquadID
 ---@param int Integer
-function Squad_Split(squad,int)
+function Squad_Split(squad, int)
 end
 
 ---comment Abruptly stops an active ability
 ---@param squad SquadID
 ---@param ability ScarAbilityPBG
 ---@param bIsEarlyExit Boolean
-function Squad_StopAbility(squad,ability,bIsEarlyExit)
+function Squad_StopAbility(squad, ability, bIsEarlyExit)
 end
 
 ---comment Suggests a posture to a squad, lasting the passed duration
 ---@param squad SquadID
 ---@param posture Integer
 ---@param duration Real
-function Squad_SuggestPosture(squad,posture,duration)
+function Squad_SuggestPosture(squad, posture, duration)
 end
 
 ---comment Returns the closest free position to the target position for the squad
 ---@param squad SquadID
 ---@param targetPosition Position
-function Squad_TryFindClosestFreePosition(squad,targetPosition)
+function Squad_TryFindClosestFreePosition(squad, targetPosition)
 end
 
 ---comment iterates through an sgroup, returns count with AIStatsSquad
 ---@param sgroup SGroupID
 ---@param player PlayerID
-function SquadGroup_CountSpawnedAndStatsInitialized(sgroup,player)
+function SquadGroup_CountSpawnedAndStatsInitialized(sgroup, player)
 end
 
 ---comment Run a global state tree on an entity
 ---@param keepAlive Boolean
 ---@param openingBranchName String
 ---@param entity EntityID
-function StateTree_QueueGlobalStateTreeEntity(keepAlive,openingBranchName,entity)
+function StateTree_QueueGlobalStateTreeEntity(keepAlive, openingBranchName, entity)
 end
 
 ---comment Run a global state tree on a player
 ---@param keepAlive Boolean
 ---@param openingBranchName String
 ---@param player PlayerID
-function StateTree_QueueGlobalStateTreePlayer(keepAlive,openingBranchName,player)
+function StateTree_QueueGlobalStateTreePlayer(keepAlive, openingBranchName, player)
 end
 
 ---comment Run a global state tree on a squad
 ---@param keepAlive Boolean
 ---@param openingBranchName String
 ---@param squad SquadID
-function StateTree_QueueGlobalStateTreeSquad(keepAlive,openingBranchName,squad)
+function StateTree_QueueGlobalStateTreeSquad(keepAlive, openingBranchName, squad)
 end
 
 ---comment Save the statgraph output to a file
@@ -10112,7 +10112,7 @@ end
 ---@param audioCtrlEvent String
 ---@param squad SquadID
 ---@param is3D Boolean
-function Subtitle_PlaySpeechForSquadFromLocString(briefingActorPBG,loc,disableIconSubtitle,audioCtrlEvent,squad,is3D)
+function Subtitle_PlaySpeechForSquadFromLocString(briefingActorPBG, loc, disableIconSubtitle, audioCtrlEvent, squad, is3D)
 end
 
 ---comment Plays a global speech with subtitle and actor icon in the overlay
@@ -10122,7 +10122,7 @@ end
 ---@param audioCtrlEvent String
 ---@param squad SquadID
 ---@param is3D Boolean
-function Subtitle_PlaySpeechInternal(briefingActorPBG,loc,disableIconSubtitle,audioCtrlEvent,squad,is3D)
+function Subtitle_PlaySpeechInternal(briefingActorPBG, loc, disableIconSubtitle, audioCtrlEvent, squad, is3D)
 end
 
 ---comment Removes "sticky" state from currently playing speech (if any)
@@ -10139,7 +10139,7 @@ end
 ---@param dest PlayerID
 ---@param abilityPBG ScarAbilityPBG
 ---@param skipCostAndPrereq Boolean
-function SynchronizedCommand_PlayerAbility(player,dest,abilityPBG,skipCostAndPrereq)
+function SynchronizedCommand_PlayerAbility(player, dest, abilityPBG, skipCostAndPrereq)
 end
 
 ---comment Send a positional ability command (PCMD_Ability) to a player
@@ -10148,7 +10148,7 @@ end
 ---@param pos Position
 ---@param abilityPBG ScarAbilityPBG
 ---@param skipCostAndPrereq Boolean
-function SynchronizedCommand_PlayerPosAbility(player,dest,pos,abilityPBG,skipCostAndPrereq)
+function SynchronizedCommand_PlayerPosAbility(player, dest, pos, abilityPBG, skipCostAndPrereq)
 end
 
 ---comment Send a positional/directional ability command (PCMD_Ability) to a player
@@ -10158,7 +10158,7 @@ end
 ---@param dir Position
 ---@param abilityPBG ScarAbilityPBG
 ---@param skipCostAndPrereq Boolean
-function SynchronizedCommand_PlayerPosDirAbility(player,dest,pos,dir,abilityPBG,skipCostAndPrereq)
+function SynchronizedCommand_PlayerPosDirAbility(player, dest, pos, dir, abilityPBG, skipCostAndPrereq)
 end
 
 ---comment Returns true if the taskbar is visible. (not deterministic)
@@ -10173,7 +10173,7 @@ end
 ---comment Returns the relationship between 2 teams.
 ---@param team1 Integer
 ---@param team2 Integer
-function Team_GetRelationship(team1,team2)
+function Team_GetRelationship(team1, team2)
 end
 
 ---comment Create a splat on the terrain
@@ -10181,7 +10181,7 @@ end
 ---@param xpos Real
 ---@param zpos Real
 ---@param scale Real
-function Terrain_CreateSplat(_name,xpos,zpos,scale)
+function Terrain_CreateSplat(_name, xpos, zpos, scale)
 end
 
 ---comment Draw a grid on the terrain with tunable increment
@@ -10224,7 +10224,7 @@ end
 ---comment Display metadata layer on terrain. Replaces previously displayed terrain highlight
 ---@param metadataLayerName String
 ---@param opacity Real
-function TerrainHighlight_Show(metadataLayerName,opacity)
+function TerrainHighlight_Show(metadataLayerName, opacity)
 end
 
 ---comment Returns true if the Territory contains the given SectorID.
@@ -10274,7 +10274,7 @@ end
 ---comment Add a timer to be triggered every 'freqInSec'. the timer will then run the passed-in command
 ---@param command String
 ---@param freqInSec Real
-function TimerAdd(command,freqInSec)
+function TimerAdd(command, freqInSec)
 end
 
 ---comment Add a timer to be triggered every frame the timer will then run the passed-in command
@@ -10285,7 +10285,7 @@ end
 ---comment Add a timer to be triggered once after 'freqInSec' has elapsed. the timer will then run the passed-in command
 ---@param command String
 ---@param timeInSec Real
-function TimerAddOnce(command,timeInSec)
+function TimerAddOnce(command, timeInSec)
 end
 
 ---comment Remove specified timer
@@ -10312,27 +10312,27 @@ end
 ---@param typeName String
 ---@param childName String
 ---@param propertyTable StackVarTable
-function UI_AddChild(elementName,typeName,childName,propertyTable)
+function UI_AddChild(elementName, typeName, childName, propertyTable)
 end
 
 ---comment Adds a command binding for groupName.bindingName to global function callbackName.
 ---@param groupName String
 ---@param bindingName String
 ---@param callbackName String
-function UI_AddCommandBinding(groupName,bindingName,callbackName)
+function UI_AddCommandBinding(groupName, bindingName, callbackName)
 end
 
 ---comment Adds the event handler on elementName for event eventName to global function callbackName(elementName, eventName).
 ---@param elementName String
 ---@param eventName String
 ---@param callbackName String
-function UI_AddEventHandler(elementName,eventName,callbackName)
+function UI_AddEventHandler(elementName, eventName, callbackName)
 end
 
 ---comment Add text to elementName.
 ---@param elementName String
 ---@param text String
-function UI_AddText(elementName,text)
+function UI_AddText(elementName, text)
 end
 
 ---comment Toggle off all territory lines. Each call to UI_AllTerritoryHide must be matched by a call to UI_AllTerritoryShow
@@ -10419,7 +10419,7 @@ end
 ---@param player PlayerID
 ---@param entity EntityID
 ---@param message String
-function UI_CreateEntityKickerMessage(player,entity,message)
+function UI_CreateEntityKickerMessage(player, entity, message)
 end
 
 ---comment Creates a custom event cue. The Lua function callback passed in takes an ID as an argument which can be used to clear the event cue with UI_ClearEventCueFromID.
@@ -10438,7 +10438,7 @@ end
 ---@param alpha Integer
 ---@param visibility EventCueVisibility
 ---@param function LuaFunction
-function UI_CreateEventCueClickable(customEventType,lifetime,repeatCount,repeatTime,title,description,dataTemplate,iconPath,soundPath,red,green,blue,alpha,visibility,function)
+function UI_CreateEventCueClickable(customEventType, lifetime, repeatCount, repeatTime, title, description, dataTemplate, iconPath, soundPath, red, green, blue, alpha, visibility, function)
 end
 
 ---comment Creates a named event cue. Returns the ID associated to the created event cue item. This ID can be used to clear the event cue item with UI_ClearEventCueFromID. The Lua function callback passed in takes an ID as an argument which can be used to clear the event cue with UI_ClearEventCueFromID.
@@ -10455,7 +10455,7 @@ end
 ---@param alpha Integer
 ---@param visibility EventCueVisibility
 ---@param function LuaFunction
-function UI_CreateEventCueClickableByType(eventType,lifetime,title,description,dataTemplate,iconPath,soundPath,red,green,blue,alpha,visibility,function)
+function UI_CreateEventCueClickableByType(eventType, lifetime, title, description, dataTemplate, iconPath, soundPath, red, green, blue, alpha, visibility, function)
 end
 
 ---comment Creates a custom event cue. The Lua function callback passed in takes an ID as an argument which can be used to clear the event cue with UI_ClearEventCueFromID. Enables optional parameter that allows the event to only tick its duration whilst it is at the front of the stack to ensure it will always be visible in the high-priority stack.
@@ -10474,7 +10474,7 @@ end
 ---@param alpha Integer
 ---@param visibility EventCueVisibility
 ---@param function LuaFunction
-function UI_CreateEventCueClickableCanQueue(customEventType,lifetime,repeatCount,repeatTime,title,description,dataTemplate,iconPath,soundPath,red,green,blue,alpha,visibility,function)
+function UI_CreateEventCueClickableCanQueue(customEventType, lifetime, repeatCount, repeatTime, title, description, dataTemplate, iconPath, soundPath, red, green, blue, alpha, visibility, function)
 end
 
 ---comment Create a blips on a ScarMarker from a sender. sender is used for retrieving player information like team color
@@ -10482,7 +10482,7 @@ end
 ---@param marker MarkerID
 ---@param lifeTime Real
 ---@param dataTemplate String
-function UI_CreateMinimapBlipOnMarkerFrom(sender,marker,lifeTime,dataTemplate)
+function UI_CreateMinimapBlipOnMarkerFrom(sender, marker, lifeTime, dataTemplate)
 end
 
 ---comment Create a blips on a position from a sender. sender is used for retrieving player information like team color
@@ -10490,21 +10490,21 @@ end
 ---@param position Position
 ---@param lifeTime Real
 ---@param dataTemplate String
-function UI_CreateMinimapBlipOnPosFrom(sender,position,lifeTime,dataTemplate)
+function UI_CreateMinimapBlipOnPosFrom(sender, position, lifeTime, dataTemplate)
 end
 
 ---comment Create a custom kicker message on the entity and display to the player, rgb values are 0-255.
 ---@param player PlayerID
 ---@param position Position
 ---@param message String
-function UI_CreatePositionKickerMessage(player,position,message)
+function UI_CreatePositionKickerMessage(player, position, message)
 end
 
 ---comment Create a custom kicker message on the entity and display to the player, rgb values are 0-255.
 ---@param player PlayerID
 ---@param squad SquadID
 ---@param message String
-function UI_CreateSquadKickerMessage(player,squad,message)
+function UI_CreateSquadKickerMessage(player, squad, message)
 end
 
 ---comment Create a position tag.
@@ -10528,49 +10528,49 @@ end
 ---comment Enable or disable entity decorator. The default is decorator enabled.
 ---@param entity EntityID
 ---@param enabled Boolean
-function UI_EnableEntityDecorator(entity,enabled)
+function UI_EnableEntityDecorator(entity, enabled)
 end
 
 ---comment Enable or disable entity minimap indicator. The default is enabled.
 ---@param entity EntityID
 ---@param enabled Boolean
-function UI_EnableEntityMinimapIndicator(entity,enabled)
+function UI_EnableEntityMinimapIndicator(entity, enabled)
 end
 
 ---comment Enable or disable entity selection visuals. The default is visuals enabled.
 ---@param entity EntityID
 ---@param enabled Boolean
-function UI_EnableEntitySelectionVisuals(entity,enabled)
+function UI_EnableEntitySelectionVisuals(entity, enabled)
 end
 
 ---comment Enables or disables event cues.
 ---@param gameEventType GameEventID
 ---@param enable Boolean
-function UI_EnableGameEventCueType(gameEventType,enable)
+function UI_EnableGameEventCueType(gameEventType, enable)
 end
 
 ---comment Enables or disables resource kickers.
 ---@param resourceType ResourceType
 ---@param enable Boolean
-function UI_EnableResourceTypeKicker(resourceType,enable)
+function UI_EnableResourceTypeKicker(resourceType, enable)
 end
 
 ---comment Enable or disable the squad decorator. The default is decorator enabled.
 ---@param squad SquadID
 ---@param enabled Boolean
-function UI_EnableSquadDecorator(squad,enabled)
+function UI_EnableSquadDecorator(squad, enabled)
 end
 
 ---comment Enable or disable squad minimap indicator. The default is enabled.
 ---@param squad SquadID
 ---@param enabled Boolean
-function UI_EnableSquadMinimapIndicator(squad,enabled)
+function UI_EnableSquadMinimapIndicator(squad, enabled)
 end
 
 ---comment Enables or disables event cues.
 ---@param uiEventType UIEventType
 ---@param enable Boolean
-function UI_EnableUIEventCueType(uiEventType,enable)
+function UI_EnableUIEventCueType(uiEventType, enable)
 end
 
 ---comment Triggers an event cue to start its fadeout animation. The animation is determined in XAML.
@@ -10581,37 +10581,37 @@ end
 ---comment Flash an ability command button.  Pass the return value to UI_StopFlashing to stop flashing the button.
 ---@param ability ScarAbilityPBG
 ---@param stopOnClick Boolean
-function UI_FlashAbilityButton(ability,stopOnClick)
+function UI_FlashAbilityButton(ability, stopOnClick)
 end
 
 ---comment Flash a construction item command button.  Pass the return value to UI_StopFlashing to stop flashing the button.
 ---@param ebp ScarEntityPBG
 ---@param stopOnClick Boolean
-function UI_FlashConstructionButton(ebp,stopOnClick)
+function UI_FlashConstructionButton(ebp, stopOnClick)
 end
 
 ---comment Flashes the entity using attributes from [tuning][ui]
 ---@param entity EntityID
 ---@param actionOnName String
-function UI_FlashEntity(entity,actionOnName)
+function UI_FlashEntity(entity, actionOnName)
 end
 
 ---comment Flash an entity order command button.  Pass the return value to UI_StopFlashing to stop flashing the button.
 ---@param command EntityCommandType
 ---@param stopOnClick Boolean
-function UI_FlashEntityCommandButton(command,stopOnClick)
+function UI_FlashEntityCommandButton(command, stopOnClick)
 end
 
 ---comment Flash an event cue item.  Pass the return value to UI_StopFlashing to stop flashing the button.
 ---@param eventCueID Integer
 ---@param stopOnClick Boolean
-function UI_FlashEventCue(eventCueID,stopOnClick)
+function UI_FlashEventCue(eventCueID, stopOnClick)
 end
 
 ---comment Flash a menu command button.  Pass the return value to UI_StopFlashing to stop flashing the button.
 ---@param menuName String
 ---@param stopOnClick Boolean
-function UI_FlashMenu(menuName,stopOnClick)
+function UI_FlashMenu(menuName, stopOnClick)
 end
 
 ---comment Flash an objective counter.  Pass the return value to UI_StopFlashing to stop flashing the button.
@@ -10622,38 +10622,38 @@ end
 ---comment Flash an objective.  Pass the return value to UI_StopFlashing to stop flashing the button.
 ---@param objectiveID Integer
 ---@param stopOnClick Boolean
-function UI_FlashObjectiveIcon(objectiveID,stopOnClick)
+function UI_FlashObjectiveIcon(objectiveID, stopOnClick)
 end
 
 ---comment Flash a production building button.  Pass the return value to UI_StopFlashing to stop flashing the button.
 ---@param type String
 ---@param stopOnClick Boolean
-function UI_FlashProductionBuildingButton(type,stopOnClick)
+function UI_FlashProductionBuildingButton(type, stopOnClick)
 end
 
 ---comment Flash a production item command button.  Pass the return value to UI_StopFlashing to stop flashing the button.
 ---@param type ProductionItemType
 ---@param pbg PropertyBagGroup
 ---@param stopOnClick Boolean
-function UI_FlashProductionButton(type,pbg,stopOnClick)
+function UI_FlashProductionButton(type, pbg, stopOnClick)
 end
 
 ---comment Flash a squad order command button.  Pass the return value to UI_StopFlashing to stop flashing the button.
 ---@param command SquadCommandType
 ---@param stopOnClick Boolean
-function UI_FlashSquadCommandButton(command,stopOnClick)
+function UI_FlashSquadCommandButton(command, stopOnClick)
 end
 
 ---comment Flash a button on the USS for this entity.  Pass the return value to UI_StopFlashing to stop flashing the button.
 ---@param entity EntityID
 ---@param stopOnClick Boolean
-function UI_FlashUSSEntityButton(entity,stopOnClick)
+function UI_FlashUSSEntityButton(entity, stopOnClick)
 end
 
 ---comment Flash a button on the USS for this squad.  Pass the return value to UI_StopFlashing to stop flashing the button.
 ---@param squad SquadID
 ---@param stopOnClick Boolean
-function UI_FlashUSSSquadButton(squad,stopOnClick)
+function UI_FlashUSSSquadButton(squad, stopOnClick)
 end
 
 ---comment Returns the icon name for a given ability
@@ -10694,13 +10694,13 @@ end
 ---comment Turn on squad highlight UI feature for the specified duration.
 ---@param squad SquadID
 ---@param duration Real
-function UI_HighlightSquad(squad,duration)
+function UI_HighlightSquad(squad, duration)
 end
 
 ---comment Check if content is loaded for a specific layer
 ---@param layer FrontEnd_Layer
 ---@param contentPath String
-function UI_IsLayerContentLoaded(layer,contentPath)
+function UI_IsLayerContentLoaded(layer, contentPath)
 end
 
 ---comment Check if Salisbury Minimap focus mode is active (expanded Minimap with pings available to the controller)
@@ -10731,7 +10731,7 @@ end
 ---@param duration Real
 ---@param aspectRatio Real
 ---@param persistent Boolean
-function UI_LetterboxFade(r,g,b,a,duration,aspectRatio,persistent)
+function UI_LetterboxFade(r, g, b, a, duration, aspectRatio, persistent)
 end
 
 ---comment If the message box is activated, close it.  The callback will receive the button parameter given.
@@ -10749,19 +10749,19 @@ end
 ---@param tooltip String
 ---@param icon String
 ---@param isEnabled Boolean
-function UI_MessageBoxSetButton(dialogResult,text,tooltip,icon,isEnabled)
+function UI_MessageBoxSetButton(dialogResult, text, tooltip, icon, isEnabled)
 end
 
 ---comment Set the title and message body of the dialog.
 ---@param title String
 ---@param message String
-function UI_MessageBoxSetText(title,message)
+function UI_MessageBoxSetText(title, message)
 end
 
 ---comment Create a reticule
 ---@param reticulePbg ScarReticulePBG
 ---@param radius Real
-function UI_ModalVisual_CreateReticule(reticulePbg,radius)
+function UI_ModalVisual_CreateReticule(reticulePbg, radius)
 end
 
 ---comment Destroy a modal visual
@@ -10774,7 +10774,7 @@ end
 ---@param featureText String
 ---@param featureIcon String
 ---@param duration Real
-function UI_NewHUDFeature(newHUDFeature,featureText,featureIcon,duration)
+function UI_NewHUDFeature(newHUDFeature, featureText, featureIcon, duration)
 end
 
 ---comment Toggle off terrain out of bounds lines. Each call to UI_OutOfBoundsLinesHide must be matched by a call to UI_OutOfBoundsLinesShow
@@ -10788,7 +10788,7 @@ end
 ---comment Will select the correct locID based on the preferred input mode.
 ---@param kbmID Integer
 ---@param gamepadID Integer
-function UI_PickIDForInputMode(kbmID,gamepadID)
+function UI_PickIDForInputMode(kbmID, gamepadID)
 end
 
 ---comment Remove elementName from its parent.
@@ -10799,14 +10799,14 @@ end
 ---comment Removes a command binding for groupName.bindingName.
 ---@param groupName String
 ---@param bindingName String
-function UI_RemoveCommandBinding(groupName,bindingName)
+function UI_RemoveCommandBinding(groupName, bindingName)
 end
 
 ---comment Removes the event handler on elementName for event eventName to global function callbackName(elementName, eventName).
 ---@param elementName String
 ---@param eventName String
 ---@param callbackName String
-function UI_RemoveEventHandler(elementName,eventName,callbackName)
+function UI_RemoveEventHandler(elementName, eventName, callbackName)
 end
 
 ---comment Only allow buildings to be placed inside a marker.
@@ -10821,7 +10821,7 @@ end
 ---@param a Real
 ---@param duration Real
 ---@param persistent Boolean
-function UI_ScreenFade(r,g,b,a,duration,persistent)
+function UI_ScreenFade(r, g, b, a, duration, persistent)
 end
 
 ---comment Toggle off sector lines. Each call to UI_SectorsHide must be matched by a call to UI_SectorsShow
@@ -10855,7 +10855,7 @@ end
 ---comment Converts table to a data context for bindings of elementName.
 ---@param elementName String
 ---@param table StackVarTable
-function UI_SetDataContext(elementName,table)
+function UI_SetDataContext(elementName, table)
 end
 
 ---comment Enables or disables all decorators
@@ -10871,13 +10871,13 @@ end
 ---comment Converts table to a data context exposed through entity models.
 ---@param entity EntityID
 ---@param table StackVarTable
-function UI_SetEntityDataContext(entity,table)
+function UI_SetEntityDataContext(entity, table)
 end
 
 ---comment Explicitly set the decorator a squad should use.
 ---@param entity EntityID
 ---@param decorator String
-function UI_SetEntityDecorator(entity,decorator)
+function UI_SetEntityDecorator(entity, decorator)
 end
 
 ---comment Sets the game to show the entity ghost in a spotted state
@@ -10913,20 +10913,20 @@ end
 ---comment Converts table to a data context exposed through player models.
 ---@param player PlayerID
 ---@param table StackVarTable
-function UI_SetPlayerDataContext(player,table)
+function UI_SetPlayerDataContext(player, table)
 end
 
 ---comment Sets the property propertyName on elementName to value stackVar.
 ---@param elementName String
 ---@param propertyName String
 ---@param stackVar StackVar
-function UI_SetPropertyValue(elementName,propertyName,stackVar)
+function UI_SetPropertyValue(elementName, propertyName, stackVar)
 end
 
 ---comment Sets the properties on elementName to the key/value pairs in propertyTable.
 ---@param elementName String
 ---@param propertyTable StackVarTable
-function UI_SetPropertyValues(elementName,propertyTable)
+function UI_SetPropertyValues(elementName, propertyTable)
 end
 
 ---comment Sets a callback firing when user try to skip the NIS
@@ -10937,19 +10937,19 @@ end
 ---comment Converts table to a data context exposed through squad models.
 ---@param squad SquadID
 ---@param table StackVarTable
-function UI_SetSquadDataContext(squad,table)
+function UI_SetSquadDataContext(squad, table)
 end
 
 ---comment Explicitly set the decorator a squad should use.
 ---@param squad SquadID
 ---@param decorator String
-function UI_SetSquadDecorator(squad,decorator)
+function UI_SetSquadDecorator(squad, decorator)
 end
 
 ---comment Turn on of off the squad decorator being always visible. The default is decorator not always visible.
 ---@param squad SquadID
 ---@param alwaysVisible Boolean
-function UI_SetSquadDecoratorAlwaysVisible(squad,alwaysVisible)
+function UI_SetSquadDecoratorAlwaysVisible(squad, alwaysVisible)
 end
 
 ---comment Removes a message added by Game_ShowSystemMessage.
@@ -10988,7 +10988,7 @@ end
 ---@param factor Real
 ---@param pos1 Position
 ---@param pos2 Position
-function Vector_Lerp(factor,pos1,pos2)
+function Vector_Lerp(factor, pos1, pos2)
 end
 
 ---comment Returns the normalized version of the provided vector
@@ -11047,7 +11047,7 @@ end
 ---comment Triggers a UI event cue and an audio cue that the player is about to lose the game.
 ---@param player PlayerID
 ---@param warningLevel Integer
-function WinWarning_PublishLoseReminder(player,warningLevel)
+function WinWarning_PublishLoseReminder(player, warningLevel)
 end
 
 ---comment Call UI_TitleDestroy to remove.
@@ -11055,7 +11055,7 @@ end
 ---@param fadeIn Real
 ---@param duration Real
 ---@param fadeOut Real
-function WinWarning_ShowLoseWarning(text,fadeIn,duration,fadeOut)
+function WinWarning_ShowLoseWarning(text, fadeIn, duration, fadeOut)
 end
 
 ---comment Returns the average positions of the entities in the area
@@ -11064,13 +11064,13 @@ end
 ---@param radius Real
 ---@param ownerType OwnerType
 ---@param onlyEntitiesInSquads Boolean
-function World_CalculateEntitiesAveragePositionInArea(player,pos,radius,ownerType,onlyEntitiesInSquads)
+function World_CalculateEntitiesAveragePositionInArea(player, pos, radius, ownerType, onlyEntitiesInSquads)
 end
 
 ---comment Changes target interactivity zones to adjusted interactivity (255 max), probably only safe to use post NIS
 ---@param targetInteractivity Integer
 ---@param adjustedInteractivity Integer
-function World_ChangeZoneInteractivity(targetInteractivity,adjustedInteractivity)
+function World_ChangeZoneInteractivity(targetInteractivity, adjustedInteractivity)
 end
 
 ---comment Destroys walls (entities with a wall_ext) near a marker
@@ -11082,26 +11082,26 @@ end
 ---@param egroup EGroupID
 ---@param p1 Position
 ---@param closest Boolean
-function World_DistanceEGroupToPoint(egroup,p1,closest)
+function World_DistanceEGroupToPoint(egroup, p1, closest)
 end
 
 ---comment Get the distance between two points.
 ---@param p1 Position
 ---@param p2 Position
-function World_DistancePointToPoint(p1,p2)
+function World_DistancePointToPoint(p1, p2)
 end
 
 ---comment Get the distance between a squad group and a point.
 ---@param sgroup SGroupID
 ---@param p1 Position
 ---@param closest Boolean
-function World_DistanceSGroupToPoint(sgroup,p1,closest)
+function World_DistanceSGroupToPoint(sgroup, p1, closest)
 end
 
 ---comment Get the distance squared between two points.
 ---@param p1 Position
 ---@param p2 Position
-function World_DistanceSquaredPointToPoint(p1,p2)
+function World_DistanceSquaredPointToPoint(p1, p2)
 end
 
 ---comment Determines whether empty players get converted to null resource points.
@@ -11113,13 +11113,13 @@ end
 ---@param p0 PlayerID
 ---@param p1 PlayerID
 ---@param enableSharedVision Boolean
-function World_EnableSharedLineOfSight(p0,p1,enableSharedVision)
+function World_EnableSharedLineOfSight(p0, p1, enableSharedVision)
 end
 
 ---comment Wins/loses a single team mission for the local teams, with given win reason
 ---@param localPlayerWon Boolean
 ---@param winReason WinReason
-function World_EndSP(localPlayerWon,winReason)
+function World_EndSP(localPlayerWon, winReason)
 end
 
 ---comment Clears the egroup, then finds and adds all entities to it
@@ -11130,7 +11130,7 @@ end
 ---comment Clears the egroup, then finds and adds all entities of the given type to it
 ---@param egroup EGroupID
 ---@param type String
-function World_GetAllEntitiesOfType(egroup,type)
+function World_GetAllEntitiesOfType(egroup, type)
 end
 
 ---comment Clears the egroup, then finds and adds all neutral entities to it
@@ -11151,13 +11151,13 @@ end
 ---comment Clears the sgroup, then finds and adds all squads of the given type to it
 ---@param sgroup SGroupID
 ---@param type String
-function World_GetAllSquadsOfType(sgroup,type)
+function World_GetAllSquadsOfType(sgroup, type)
 end
 
 ---comment Returns all entities with this blueprint - warning this function iterates over all entities so it is slow
 ---@param pbg ScarEntityPBG
 ---@param outEntities EGroupID
-function World_GetBlueprintEntities(pbg,outEntities)
+function World_GetBlueprintEntities(pbg, outEntities)
 end
 
 ---comment Appends all cover points to an egroup.
@@ -11170,7 +11170,7 @@ end
 ---@param egroup EGroupID
 ---@param marker MarkerID
 ---@param ownerType OwnerType
-function World_GetEntitiesNearMarker(player,egroup,marker,ownerType)
+function World_GetEntitiesNearMarker(player, egroup, marker, ownerType)
 end
 
 ---comment Clears the egroup, then finds and adds entities near the point to the egroup
@@ -11179,7 +11179,7 @@ end
 ---@param pos Position
 ---@param radius Real
 ---@param ownerType OwnerType
-function World_GetEntitiesNearPoint(player,egroup,pos,radius,ownerType)
+function World_GetEntitiesNearPoint(player, egroup, pos, radius, ownerType)
 end
 
 ---comment Clears the egroup, then finds and adds entities within the territory sector to the egroup
@@ -11187,7 +11187,7 @@ end
 ---@param egroup EGroupID
 ---@param inSectorID Integer
 ---@param ownerType OwnerType
-function World_GetEntitiesWithinTerritorySector(player,egroup,inSectorID,ownerType)
+function World_GetEntitiesWithinTerritorySector(player, egroup, inSectorID, ownerType)
 end
 
 ---comment Return the total number of game (simulation) ticks elapsed.
@@ -11201,7 +11201,7 @@ end
 ---comment returns the height of ground at 2D pos x,y
 ---@param x Real
 ---@param y Real
-function World_GetHeightAt(x,y)
+function World_GetHeightAt(x, y)
 end
 
 ---comment Returns the interaction stage of the cell in the provided position
@@ -11217,42 +11217,42 @@ end
 ---@param layerName String
 ---@param x Real
 ---@param y Real
-function World_GetMetadataBiomePBGName(layerName,x,y)
+function World_GetMetadataBiomePBGName(layerName, x, y)
 end
 
 ---comment Get the boolean value of the specified terrain metadata layer and the specified coordinates.
 ---@param layerName String
 ---@param x Real
 ---@param y Real
-function World_GetMetadataLayerBoolean(layerName,x,y)
+function World_GetMetadataLayerBoolean(layerName, x, y)
 end
 
 ---comment Get the integer value of the specified terrain metadata layer and the specified coordinates.
 ---@param layerName String
 ---@param x Real
 ---@param y Real
-function World_GetMetadataLayerInteger(layerName,x,y)
+function World_GetMetadataLayerInteger(layerName, x, y)
 end
 
 ---comment Get the numeric value of the specified terrain metadata layer and the specified coordinates.
 ---@param layerName String
 ---@param x Real
 ---@param y Real
-function World_GetMetadataLayerNumber(layerName,x,y)
+function World_GetMetadataLayerNumber(layerName, x, y)
 end
 
 ---comment Get the PBG of the specified terrain metadata layer and the specified coordinates.
 ---@param layerName String
 ---@param x Real
 ---@param y Real
-function World_GetMetadataLayerPBG(layerName,x,y)
+function World_GetMetadataLayerPBG(layerName, x, y)
 end
 
 ---comment Get the PBG of the specified terrain metadata layer and the specified coordinates.
 ---@param layerName String
 ---@param x Real
 ---@param y Real
-function World_GetMetadataLayerString(layerName,x,y)
+function World_GetMetadataLayerString(layerName, x, y)
 end
 
 ---comment returns the nearest intractable position to the supplied position
@@ -11263,27 +11263,27 @@ end
 ---comment Find and add neutral entities near the marker to the egroup
 ---@param egroup EGroupID
 ---@param marker MarkerID
-function World_GetNeutralEntitiesNearMarker(egroup,marker)
+function World_GetNeutralEntitiesNearMarker(egroup, marker)
 end
 
 ---comment Find and add neutral entities near the point to the egroup
 ---@param egroup EGroupID
 ---@param pos Position
 ---@param radius Real
-function World_GetNeutralEntitiesNearPoint(egroup,pos,radius)
+function World_GetNeutralEntitiesNearPoint(egroup, pos, radius)
 end
 
 ---comment Find and add neutral entities within the territory sector to the egroup
 ---@param egroup EGroupID
 ---@param sectorID Integer
-function World_GetNeutralEntitiesWithinTerritorySector(egroup,sectorID)
+function World_GetNeutralEntitiesWithinTerritorySector(egroup, sectorID)
 end
 
 ---comment Return the number of entities of the same ebp in the sphere volume
 ---@param ebp ScarEntityPBG
 ---@param pos Position
 ---@param radius Real
-function World_GetNumEntitiesNearPoint(ebp,pos,radius)
+function World_GetNumEntitiesNearPoint(ebp, pos, radius)
 end
 
 ---comment Returns the number of strategic points on this map (does not count strat. objectives)
@@ -11295,21 +11295,21 @@ end
 ---@param heading Position
 ---@param offset Integer
 ---@param distance Real
-function World_GetOffsetPosition(position,heading,offset,distance)
+function World_GetOffsetPosition(position, heading, offset, distance)
 end
 
 ---comment Offsets the input position relative to the facing target
 ---@param position Position
 ---@param facingTarget Position
 ---@param offset Real
-function World_GetOffsetPositionRelativeToFacingTarget(position,facingTarget,offset)
+function World_GetOffsetPositionRelativeToFacingTarget(position, facingTarget, offset)
 end
 
 ---comment Returns a position that is offset from the input position by the offset vector rotated by the direction supplied
 ---@param position Position
 ---@param heading Position
 ---@param offset Position
-function World_GetOffsetVectorPosition(position,heading,offset)
+function World_GetOffsetVectorPosition(position, heading, offset)
 end
 
 ---comment Returns the player at a given index, numbers start at one
@@ -11329,7 +11329,7 @@ end
 ---comment Returns the blueprint of a chosen squad for a race
 ---@param racePBG ScarRacePBG
 ---@param index Integer
-function World_GetPossibleSquadsBlueprint(racePBG,index)
+function World_GetPossibleSquadsBlueprint(racePBG, index)
 end
 
 ---comment Returns the number of types of squads a race can build
@@ -11345,7 +11345,7 @@ end
 ---comment Returns a random integer with range [min, max]
 ---@param min Integer
 ---@param max Integer
-function World_GetRand(min,max)
+function World_GetRand(min, max)
 end
 
 ---comment Returns maximum number of players in this match
@@ -11355,7 +11355,7 @@ end
 ---comment Given any position in the world, this function will return position safe for spawning a given entity
 ---@param around Position
 ---@param entity EntityID
-function World_GetSpawnablePosition(around,entity)
+function World_GetSpawnablePosition(around, entity)
 end
 
 ---comment Clears the sgroup, then finds and adds squads near the marker to the sgroup
@@ -11363,7 +11363,7 @@ end
 ---@param sgroup SGroupID
 ---@param marker MarkerID
 ---@param ownerType OwnerType
-function World_GetSquadsNearMarker(player,sgroup,marker,ownerType)
+function World_GetSquadsNearMarker(player, sgroup, marker, ownerType)
 end
 
 ---comment Clears the sgroup, then finds and adds squads near the point to the sgroup
@@ -11372,7 +11372,7 @@ end
 ---@param pos Position
 ---@param radius Real
 ---@param ownerType OwnerType
-function World_GetSquadsNearPoint(player,sgroup,pos,radius,ownerType)
+function World_GetSquadsNearPoint(player, sgroup, pos, radius, ownerType)
 end
 
 ---comment Clears the sgroup, then finds and adds squads within territory sector identified by sector ID
@@ -11380,26 +11380,26 @@ end
 ---@param sgroup SGroupID
 ---@param inSectorID Integer
 ---@param ownerType OwnerType
-function World_GetSquadsWithinTerritorySector(player,sgroup,inSectorID,ownerType)
+function World_GetSquadsWithinTerritorySector(player, sgroup, inSectorID, ownerType)
 end
 
 ---comment Appends all the strategic resource points to an egroup.
 ---@param group EGroupID
 ---@param bIncludeVP Boolean
-function World_GetStrategyPoints(group,bIncludeVP)
+function World_GetStrategyPoints(group, bIncludeVP)
 end
 
 ---comment Returns one or more sector IDs that would connect two unconnected pieces of territory. return value is through a table (since there can be more than one way to connect territory) - each entry in this table is a table of sector IDs.
 ---@param sectorID1 Integer
 ---@param sectorID2 Integer
 ---@param results StackVarTable
-function World_GetTeamTerritoryGaps(sectorID1,sectorID2,results)
+function World_GetTeamTerritoryGaps(sectorID1, sectorID2, results)
 end
 
 ---comment returns the cell type of the cell in the specified coordinates. 0 = Sky, 1 = Land, 2 = Water.
 ---@param x Real
 ---@param y Real
-function World_GetTerrainCellType(x,y)
+function World_GetTerrainCellType(x, y)
 end
 
 ---comment Return the sector ID from the position
@@ -11428,7 +11428,7 @@ end
 ---comment Returns true if position is in-supply for the given player
 ---@param player PlayerID
 ---@param pos Position
-function World_IsInSupply(player,pos)
+function World_IsInSupply(player, pos)
 end
 
 ---comment Returns whether or not the game type of this world is multiplayer
@@ -11438,7 +11438,7 @@ end
 ---comment Returns true if position if part of the entity territory
 ---@param player PlayerID
 ---@param position Position
-function World_IsPointInPlayerTerritory(player,position)
+function World_IsPointInPlayerTerritory(player, position)
 end
 
 ---comment Returns if a position is on walkable wall
@@ -11453,13 +11453,13 @@ end
 ---comment Find if player has ownership to this territory sector.
 ---@param player PlayerID
 ---@param inSectorID Integer
-function World_IsTerritorySectorOwnedByPlayer(player,inSectorID)
+function World_IsTerritorySectorOwnedByPlayer(player, inSectorID)
 end
 
 ---comment Kills the player with a reason.
 ---@param player PlayerID
 ---@param reason KillPlayerReason
-function World_KillPlayer(player,reason)
+function World_KillPlayer(player, reason)
 end
 
 ---comment Quit the game without declaring it over and return to frontend.
@@ -11480,14 +11480,14 @@ end
 ---@param p1 Position
 ---@param p2 Position
 ---@param prox Real
-function World_PointPointProx(p1,p2,prox)
+function World_PointPointProx(p1, p2, prox)
 end
 
 ---comment Creates a new Position object.
 ---@param x Real
 ---@param y Real
 ---@param z Real
-function World_Pos(x,y,z)
+function World_Pos(x, y, z)
 end
 
 ---comment Returns if given position is in playable area.
@@ -11507,7 +11507,7 @@ end
 ---comment Sets a particular sector in the world as a supply provider (or not)
 ---@param point Position
 ---@param bSupply Boolean
-function World_SetDesignerSupply(point,bSupply)
+function World_SetDesignerSupply(point, bSupply)
 end
 
 ---comment Set current interaction stage to value supplied, must be >= 0
@@ -11529,24 +11529,24 @@ end
 ---@param p0 PlayerID
 ---@param p1 PlayerID
 ---@param enableSharedVision Boolean
-function World_SetSharedLineOfSightEnabledAndMergeExploredMaps(p0,p1,enableSharedVision)
+function World_SetSharedLineOfSightEnabledAndMergeExploredMaps(p0, p1, enableSharedVision)
 end
 
 ---comment Sets every player on a team to a win state, with a reason for winning. Also sets all other players to a lose state, and kills them (if they're not already dead)
 ---@param winningTeam Integer
 ---@param winReason WinReason
-function World_SetTeamWin(winningTeam,winReason)
+function World_SetTeamWin(winningTeam, winReason)
 end
 
 ---comment spawn a demolitions charge at a position, 'player' is the one that owns the demolitions and can detonate them.
 ---@param player PlayerID
 ---@param pos Position
-function World_SpawnDemolitionCharge(player,pos)
+function World_SpawnDemolitionCharge(player, pos)
 end
 
 ---comment Returns true if the two points are in the same territory region, and owned by the specified territory team, Returns false otherwise.
 ---@param team_index Integer
 ---@param p1 Position
 ---@param p2 Position
-function World_TeamTerritoryPointsConnected(team_index,p1,p2)
+function World_TeamTerritoryPointsConnected(team_index, p1, p2)
 end

@@ -11,6 +11,7 @@ const DUMB_COMMENT_REPLACEMENTS = new Map<string, string>([
     ["UI_DestroyTagForPosition( same of or extremely close (std::numeric_limits<float>::min()) to an existing position. If there are multiple candidates, delete the closest. ) RETURNS:  =>Destroy a position tag", "UI_DestroyTagForPosition( Position position ) RETURNS:  =>Docs are cooked, check file:///C:/program%20files/steam/steamapps/common/age%20of%20empires%20iv/scardocs/html/function_list.htm#UI_DestroyTagForPosition"],
     ["UI_SetControlGroupSelectedCallback( in the format of function(controlGroupIndex) ) RETURNS:  =>Sets a callback firing when user select a control group either by hotkey or by control group button", "UI_SetControlGroupSelectedCallback( function callback ) RETURNS:  =>Sets a callback firing when user select a control group either by hotkey or by control group button in the format function(controlGroupIndex)"]
 ])
+const OUTPUT_DIR = "aoe4-scar/library/"
 
 export class RawFunctionDeserialisationError extends Error {
     constructor(m: string) {
@@ -93,7 +94,7 @@ export function generateLuaCats(functions: ScarFunction[]): String[] {
         func.arguments.forEach(arg => {
             luaCats = luaCats.concat(`---@param ${arg.name} ${arg.type_}\n`)
         })
-        const luaArgs = func.arguments.map(arg => arg.name).join(",")
+        const luaArgs = func.arguments.map(arg => arg.name).join(", ")
         luaCats = luaCats.concat(
             `function ${func.name}(${luaArgs})\n`,
             "end\n"
@@ -106,5 +107,5 @@ export function generateLuaCats(functions: ScarFunction[]): String[] {
 }
 
 export function writeLuaCats(luaCats: String[]) {
-    writeFileSync("ScarFunctions.lua", luaCats.join("\n"), {flag: "w"})
+    writeFileSync(`${OUTPUT_DIR}ScarFunctions.lua`, luaCats.join("\n"), {flag: "w"})
 }
